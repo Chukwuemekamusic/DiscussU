@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+
+{% block title %}
+Room Page
+{% endblock title %}
+
+
+{% block content %}
+<div>
+    <h2>{{room}}</h2>
+    <p><i>{{room.description}}</i></p>
+
+    <section class="container">
+        {% for comment in comments %}
+        <div>
+            <span>@{{comment.user}}</span>
+            <p>
+                {{comment}} <a href="{% url 'delete-comment' comment.id %}">
+                    <i class="fas fa-times"></i>
+                </a>
+            </p>
+        </div>
+        {% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="newComment">Add a comment</label>
+            <input type="text" name="newComment" placeholder="Add a comment">
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <a href="{% url 'home' %}">Back to Home Page</a>
+
+</div>
+{% endblock content %}

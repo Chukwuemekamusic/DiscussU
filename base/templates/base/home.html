@@ -7,5 +7,16 @@ Home
 
 
 {% block content %}
-<div>Hello world</div>
+<div class="p-3">
+    <a href="{% url 'create-room' %}" class="btn btn-primary">Add a New Room</a>
+    {% for room in rooms %}
+    <div> 
+        <a href="{% url 'room-detail' room.id %}"><h3>{{room}}</h3></a>
+        <p>host: @{{room.host}}</p>
+        <small>created: {{room.created}}</small><br>
+        <small>{{room.created|timesince}}</small>
+    </div>
+    {% endfor %}
+        
+</div>
 {% endblock content %}

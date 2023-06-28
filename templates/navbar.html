@@ -5,4 +5,12 @@
 </form>
 
 
+{% if request.user.is_authenticated %}
 <p>Hello {{request.user|title}}</p>
+<a href="{% url 'logout' %}">LOG OUT</a>
+{% else %}
+<a href="{% url 'login' %}">LOG IN</a> <br>
+<a href="">REGISTER</a>
+{% endif %}
+
+<hr>
