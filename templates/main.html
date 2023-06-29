@@ -11,22 +11,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
-  <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>{% block title %} {% endblock %}| DiscussU </title>
 </head>
 
-<body>
+<body class="body">
   {% include 'navbar.html' %}
 
 
   {% if messages %}
-  <ul class="messages">
+  <div class="messages">
 
     {% for message in messages %}
-    <li>{{message}}</li>
+    <div class="alert alert-warning">{{message}}</div>
     {% endfor %}
 
-  </ul>
+  </div>
 
   {% endif %}
 

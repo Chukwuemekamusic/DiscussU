@@ -3,7 +3,10 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Room, Category, Comment, Participant, Follow
-from .models import School
+from .models import School, User
+
+
+admin.site.register(User)
 
 
 class CommentInline(admin.TabularInline):

@@ -1,8 +1,22 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
+from django.contrib import messages
 
 # Create your models here.
+
+
+class User(AbstractUser):
+    first_name = models.CharField(max_length=100, blank=False)
+    last_name = models.CharField(max_length=100, blank=False)
+    email = models.EmailField(unique=True, blank=False)
+
+    # TODO MUST CONTAIN ONLY NUMERIC CHARACTERS, change blank to False
+    student_id = models.CharField(max_length=10, unique=True, blank=True)
+    school = models.CharField(max_length=100, null=True, blank=True)
+    course = models.CharField(max_length=100, null=True, blank=True)
+
+    # TODO LOG IN WITH EMAIL OR STUDENT_ID
 
 
 class Category(models.Model):

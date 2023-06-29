@@ -1,17 +1,22 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import RoomForm
-from .models import Category, Room, Comment
+from .forms import RoomForm, RegisterForm
+from .models import Category, Room, Comment, User
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.contrib import messages
+from django.db.models import Q
 # from django.shortcuts import get_object_or_404
 # Create your views here.
 
 
 def home(request):
-    rooms = Room.objects.all()
-    context = {'rooms': rooms}
+    q = request.GET.get('q') or ''
+    rooms = Room.objects.filter(
+        Q(category__name__icontains=q) | Q(name__icontains=q)
+    )
+    categories = Category.objects.all()
+    context = {'rooms': rooms, 'categories': categories}
     return render(request, 'base/home.html', context)
 
 
@@ -39,6 +44,31 @@ def loginPage(request):
 def logoutPage(request):
     logout(request)
     return redirect('home')
+
+
+def registerPage(request):
+    form = RegisterForm()
+
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            try:
+                user = form.save()
+                login(request, user)
+                return redirect('home')
+            except:
+                messages.error(request, "Something is wrong in saving this")
+        else:
+            messages.error(request, "Form is not Valid")
+            existing_user = User.objects.filter(
+                student_id=request.POST.get('student_id')
+            ).exists()
+            if existing_user:
+                messages.error(
+                    request, "User with this student ID already exists.")
+
+    context = {'form': form}
+    return render(request, 'base/register-user.html', context)
 
 
 def createRoom(request):
@@ -76,7 +106,7 @@ def roomDetail(request, pk):
             room=room,
             content=newComment
         )
-        # return redirect('room-detail')
+        return redirect('room-detail', pk=room.id)
 
     comments = Comment.objects.filter(room=room)
     context = {'room': room, 'comments': comments}

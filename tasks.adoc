@@ -1,0 +1,8 @@
+= Tasks
+
+== 29/06/23
+* include the static files
+* create user model based on AbstractUser
+* handling form validation for registration
+* using the messages framework to display error messages to users
+* implement the search functionality using filter() and 'Q' object
