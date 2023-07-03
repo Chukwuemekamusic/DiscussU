@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import RoomForm, RegisterForm
 from .models import Category, Room, Comment, User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.models import User
 from django.contrib import messages
 from django.db.models import Q
@@ -11,10 +12,17 @@ from django.db.models import Q
 
 
 def home(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     q = request.GET.get('q') or ''
+    if request.user.school:
+        user_school = request.user.school
+
     rooms = Room.objects.filter(
-        Q(category__name__icontains=q) | Q(name__icontains=q)
+        Q(category__name__icontains=q) | Q(name__icontains=q),
+        Q(school__isnull=True) | Q(school=user_school)
     )
+
     categories = Category.objects.all()
     context = {'rooms': rooms, 'categories': categories}
     return render(request, 'base/home.html', context)
@@ -96,8 +104,13 @@ def createRoom(request):
     return render(request, 'base/create-room.html', context)
 
 
+@login_required
 def roomDetail(request, pk):
     room = Room.objects.get(id=pk)
+    user_school = request.user.school
+    if room.school.exists() and user_school not in room.school.all():
+        messages.error(request, 'Not permitted in the Room!')
+        return redirect('home')
 
     if request.method == 'POST':
         newComment = request.POST.get('newComment')

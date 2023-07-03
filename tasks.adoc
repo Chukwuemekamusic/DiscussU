@@ -6,3 +6,29 @@
 * handling form validation for registration
 * using the messages framework to display error messages to users
 * implement the search functionality using filter() and 'Q' object
+* create the room page and category
+
+=== things to still do
+* be able to create category
+
+== 3/06/23
+* getting the list of the 11 schools in RGU
+    
+    ** aberdeen business school
+    ** school of applied social studies
+    ** school of computing
+    ** school of creative & cultural business
+    ** school of engineering
+    ** gray's school of art
+    ** school of health sciences
+    ** school of nursing, midwifery & paramedic practice
+    ** school of pharmacy & life sciences
+    ** law school
+    ** scott sutherland school of architecture & built environment
+* ability for students to create rooms restricted for specific schools
+
+=== things to still do
+* be able to create category 
+* ability to edit room
+* connect the participant table
+* send everybody not logged in to the login page!!!

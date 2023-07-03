@@ -1,9 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
-from django.contrib import messages
+# from django.contrib import messages
 
 # Create your models here.
+
+
+class School(models.Model):
+    name = models.CharField(max_length=500)
+    description = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class User(AbstractUser):
@@ -13,7 +21,9 @@ class User(AbstractUser):
 
     # TODO MUST CONTAIN ONLY NUMERIC CHARACTERS, change blank to False
     student_id = models.CharField(max_length=10, unique=True, blank=True)
-    school = models.CharField(max_length=100, null=True, blank=True)
+    school = models.ForeignKey(
+        School, on_delete=models.SET_NULL, null=True, blank=True)
+    # school = models.CharField(max_length=100, null=True, blank=True)
     course = models.CharField(max_length=100, null=True, blank=True)
 
     # TODO LOG IN WITH EMAIL OR STUDENT_ID
@@ -27,20 +37,12 @@ class Category(models.Model):
         return self.name
 
 
-class School(models.Model):
-    name = models.CharField(max_length=500)
-    description = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-
-
 class Room(models.Model):
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True)
-    school = models.ForeignKey(
-        School, on_delete=models.SET_NULL, null=True, blank=True)
+    school = models.ManyToManyField(
+        School, related_name='rooms', blank=True)
     name = models.CharField(max_length=500)
     description = models.TextField(null=True, blank=True)
     members = models.ManyToManyField(User, related_name='member', blank=True)

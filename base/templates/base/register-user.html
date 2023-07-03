@@ -2,24 +2,32 @@
 
 
 {% block title %}
-    Create Room
+Create Room
 {% endblock title %}
-    
+
 
 {% block content %}
-    <div class="form-control">
-        <form action="." method="post">
-            {% csrf_token %}
-            
-            {% for field in form %}
-                <div>
-                    <label for="">{{field.label}}</label>
-                    {{field}}
-                </div>
-            {% endfor %}
-                
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+<div class="form-control">
+    <form action="." method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+        {% if field.label == 'School' %}
+        <div>
+            <label for="">found</label>
+            {{field}}
+        </div>
+        {% else %}
+
+        <div>
+            <label for="">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
 {% endblock content %}
-    
