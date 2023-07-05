@@ -25,7 +25,6 @@ class User(AbstractUser):
         School, on_delete=models.SET_NULL, null=True, blank=True)
     # school = models.CharField(max_length=100, null=True, blank=True)
     course = models.CharField(max_length=100, null=True, blank=True)
-
     # TODO LOG IN WITH EMAIL OR STUDENT_ID
 
 
@@ -54,13 +53,6 @@ class Room(models.Model):
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-        if not self.pk:
-            Participant.objects.create(
-                user=self.host, room=self, is_admin=True)
 
 
 class Comment(models.Model):
@@ -111,3 +103,11 @@ class Follow(models.Model):
 
     class Meta:
         unique_together = ['follower', 'followed_user']
+
+
+# def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
+
+    #     if not self.pk:
+    #         Participant.objects.create(
+    #             user=self.host, room=self, is_admin=True)

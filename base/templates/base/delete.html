@@ -7,12 +7,16 @@ Delete
 
 
 {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        <p>Are you sure you want to delete <b>"{{obj}}"</b>?</p>
-        <a href="{{request.META.HTTP_REFERER}}">Go Back!</a>
-        <input type="submit" value="Confirm">
-    </form>
-{% endblock content %}
-    
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete
+        {% if obj %}
+        <b>"{{obj}}"</b>
+        {% endif %}?
+    </p>
 
+
+    <a href="{{request.META.HTTP_REFERER}}">Go Back!</a>
+    <input type="submit" value="Confirm">
+</form>
+{% endblock content %}

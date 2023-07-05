@@ -14,4 +14,5 @@ class RoomForm(ModelForm):
 class RegisterForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email', 'username', 'student_id', 'password1', 'password2', 'school', 'course']
+        fields = ['first_name', 'last_name', 'email', 'username',
+                  'student_id', 'password1', 'password2', 'school', 'course']

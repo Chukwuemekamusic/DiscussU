@@ -32,7 +32,8 @@ Room Page
             </form>
         </div>
     </div>
-    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home Page</a>
-
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home Page</a> <br>
+    <a href="{% url 'edit-room' room.id %}" class="btn">Edit Room</a> <br>
+    <a href="{% url 'delete-room' room.id %}" class="btn btn-danger">Delete Room</a> <br>
 </div>
 {% endblock content %}

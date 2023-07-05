@@ -32,3 +32,7 @@
 * ability to edit room
 * connect the participant table
 * send everybody not logged in to the login page!!!
+
+== 4/06/23
+* edit room
+* delete room

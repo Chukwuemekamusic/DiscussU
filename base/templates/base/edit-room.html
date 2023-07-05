@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+
+{% block title %}
+Edit Room
+{% endblock title %}
+
+
+{% block content %}
+<div class="form-control">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+        <div class="form-group">
+            <label for="room_{{field.name}}">{{field.label}}</label>
+            {{field}}
+        </div>
+
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}
+
+        <!-- {% if field.label == 'Category' %}
+        <div class="form-group">
+            <label for="room_{{field.name}}">{{field.label}}</label>
+            <input type="text" name="{{field.name}}" value="{{room.category}}" list="category-list"
+                id="id_category" required>
+            <datalist id="category-list">
+
+                {% for category in categories %}
+                <option value="{{category.name}}" data-value="{{category.id}}"></option>
+                {% endfor %}
+            </datalist>
+        </div> -->
+        <!-- {% endif %} -->
