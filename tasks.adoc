@@ -57,3 +57,8 @@
 ** logout-user
 ** school-list
 
+----
+after git push
+----
+
+* create a swagger doc to view endpoints

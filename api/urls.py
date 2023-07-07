@@ -4,12 +4,20 @@ from .views import (
     RoomDetailAPIView, RoomParticipantsAPIView,
     RoomUpdateAPIView, CommentListCreateAPIView,
     CreateUserAPIView, LoginUserView, LogoutUserView,
-    SchoolListAPIView, APIEndpointListView
+    SchoolListAPIView
 )
+# from rest_framework.routers import SimpleRouter
 app_name = 'api'
+# TODO learn about api schema https://github.com/tfranzel/drf-spectacular
+
+# router = DefaultRouter()
+# router.register('rooms', RoomDetailAPIView, basename='room-detail')
+# router.register('comments', CommentListCreateAPIView, basename='room-comment')
+
 urlpatterns = [
     path('rooms/', RoomListCreateAPIView.as_view(), name='api-room-list-create'),
     path('categories/', CategoryListAPIView.as_view(), name='api-category-list'),
+
     path('rooms/<str:pk>/comment/', CommentListCreateAPIView.as_view(), name='api-room-comment-list'),
 
     path('rooms/<str:pk>', RoomDetailAPIView.as_view(), name='api-room-detail'),
@@ -22,5 +30,5 @@ urlpatterns = [
 
     path('schools/', SchoolListAPIView.as_view(), name='api-school-list'),
 
-    path('endpoints/', APIEndpointListView.as_view(), name='api-endpoint-list'),
+    
 ]

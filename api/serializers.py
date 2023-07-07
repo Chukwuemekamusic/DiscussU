@@ -21,13 +21,17 @@ class CreateUserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course', 'password']
+                  'email', 'student_id', 'school', 'course', 'password',]
 
     def validate(self, attrs):
         email = attrs.get('email', '').strip().lower()
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError(
                 'User with this email id already exists.')
+        
+        # if attrs['password'] != attrs['password2']:
+        #     raise serializers.ValidationError(
+        #         {"password": "Password fields didn't match."})
         # if User.objects.filter(student_id=student_id).exists():
         #     raise serializers.ValidationError(
         #       'User with this student id already exists.')

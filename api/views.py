@@ -27,7 +27,6 @@ from knox.views import (LoginView as KnoxLoginView,
 from knox.auth import TokenAuthentication
 from knox.models import AuthToken
 
-from django.urls import get_resolver
 
 # participant function
 from base.views import create_participants
@@ -37,23 +36,7 @@ from base.views import create_participants
 # End point view
 
 
-class APIEndpointListView(APIView):
-    def get(self, request):
-        url_patterns = get_resolver().url_patterns
-        endpoints = []
-        for pattern in url_patterns:
-            if hasattr(pattern, 'callback') and hasattr(pattern.callback, 'view_class'):
-                view_class = pattern.callback.view_class
-                if view_class and issubclass(view_class, APIView):
-                    endpoints.append({
-                        'url': pattern.pattern._route,
-                        'name': pattern.name,
-                        'allowed_methods': view_class().allowed_methods,
-                    })
-        return Response(endpoints)
-
 # Users API views
-
 
 class CreateUserAPIView(CreateAPIView):
     queryset = User.objects.all()
@@ -85,22 +68,28 @@ class LogoutUserView(KnoxLogoutView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
+# End User API Views
 
-# Room API views
+# Room API Views
 
 
-class RoomListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
+class RoomListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
     serializer_class = RoomSerializer
     authentication_classes = [TokenAuthentication]
 
     def get_queryset(self):
         q = self.request.GET.get('q') or ''
-        user_school = self.request.user.school
+        user_school = self.request.user.school if self.request.user.is_authenticated else None
 
-        queryset = Room.objects.filter(
-            Q(category__name__icontains=q) | Q(name__icontains=q),
-            Q(school__isnull=True) | Q(school=user_school)
-        )
+        if user_school:
+            queryset = Room.objects.filter(
+                Q(category__name__icontains=q) | Q(name__icontains=q),
+                Q(school__isnull=True) | Q(school=user_school)
+            )
+        else:
+            queryset = Room.objects.filter(
+                Q(category__name__icontains=q) | Q(name__icontains=q),
+            )
         return queryset
 
     def perform_create(self, serializer):
@@ -125,9 +114,13 @@ class RoomListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
 class RoomDetailAPIView(LoginRequiredMixin, RetrieveAPIView, DestroyAPIView):
     serializer_class = RoomSerializer
 
+    def get_queryset(self):
+        return Room.objects.all()
+
     def get_object(self):
         room_id = self.kwargs.get('pk')
-        room = get_object_or_404(Room, id=room_id)
+        # room = get_object_or_404(Room, id=room_id)
+        room = self.get_queryset().get(id=room_id)
         user_school = self.request.user.school
 
         if room.school.exists() and user_school not in room.school.all():
