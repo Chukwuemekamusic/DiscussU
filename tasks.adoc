@@ -36,3 +36,24 @@
 == 4/06/23
 * edit room
 * delete room
+* connect the participant table
+* send everybody not logged in to the login page!!
+
+=== things to still do
+* create my rest API
+* start the react frontend
+* # TODO  make the room host admin in participant table
+
+== 5/06/23 to 7/06/23
+* create the api endpoints for:
+** room-list-create
+** category-list
+** room-comment-list
+** room-detail
+** room-update
+** room-participants
+** create-user
+** login-user
+** logout-user
+** school-list
+

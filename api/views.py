@@ -1,3 +1,277 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.generics import (
+    UpdateAPIView, ListCreateAPIView, ListAPIView,
+    RetrieveAPIView, DestroyAPIView,
+    CreateAPIView, RetrieveUpdateAPIView
+)
+from rest_framework.response import Response
+from rest_framework import status, serializers
+from django.shortcuts import get_object_or_404
+from base.models import (
+    Room, User, Comment, Category, Participant, School)
+from .serializers import (
+    RoomSerializer, UserSerializer, CommentSerializer,
+    CategorySerializer, ParticipantSerializer,
+    RoomUpdateSerializer, CommentCreateSerializer,
+    CreateUserSerializer, UpdateUserSerializer, LoginUserSerializer,
+    SchoolSerializer
+)
+from django.db.models import Q
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import login
+
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from knox.views import (LoginView as KnoxLoginView,
+                        LogoutView as KnoxLogoutView)
+from knox.auth import TokenAuthentication
+from knox.models import AuthToken
+
+from django.urls import get_resolver
+
+# participant function
+from base.views import create_participants
 
 # Create your views here.
+
+# End point view
+
+
+class APIEndpointListView(APIView):
+    def get(self, request):
+        url_patterns = get_resolver().url_patterns
+        endpoints = []
+        for pattern in url_patterns:
+            if hasattr(pattern, 'callback') and hasattr(pattern.callback, 'view_class'):
+                view_class = pattern.callback.view_class
+                if view_class and issubclass(view_class, APIView):
+                    endpoints.append({
+                        'url': pattern.pattern._route,
+                        'name': pattern.name,
+                        'allowed_methods': view_class().allowed_methods,
+                    })
+        return Response(endpoints)
+
+# Users API views
+
+
+class CreateUserAPIView(CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = CreateUserSerializer
+    permission_classes = (AllowAny,)
+
+
+class UpdateUserAPIView(LoginRequiredMixin, UpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UpdateUserSerializer
+
+
+class LoginUserView(KnoxLoginView):
+    permission_classes = (AllowAny,)
+    authentication_classes = (TokenAuthentication,)
+    serializer_class = LoginUserSerializer
+
+    def post(self, request, format=None):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        login(request, user)
+        _, token = AuthToken.objects.create(user)
+    #     return Response({'token': token})
+        return super(LoginUserView, self).post(request, format=None)
+
+
+class LogoutUserView(KnoxLogoutView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+
+# Room API views
+
+
+class RoomListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
+    serializer_class = RoomSerializer
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        q = self.request.GET.get('q') or ''
+        user_school = self.request.user.school
+
+        queryset = Room.objects.filter(
+            Q(category__name__icontains=q) | Q(name__icontains=q),
+            Q(school__isnull=True) | Q(school=user_school)
+        )
+        return queryset
+
+    def perform_create(self, serializer):
+        category_id = self.request.data.get('category')
+        category_name = self.request.data.get('category_name')
+
+        if category_id:
+            category, created = Category.objects.get_or_create(id=category_id)
+        elif category_name:
+            category, created = Category.objects.get_or_create(
+                name=category_name)
+        else:
+            raise serializers.ValidationError(
+                'Category ID or name is required.')
+
+        # category_name = serializer.validated_data.get('category')
+        # category, created = Category.objects.get_or_create(
+        # name=category_name)
+        serializer.save(host=self.request.user, category=category)
+
+
+class RoomDetailAPIView(LoginRequiredMixin, RetrieveAPIView, DestroyAPIView):
+    serializer_class = RoomSerializer
+
+    def get_object(self):
+        room_id = self.kwargs.get('pk')
+        room = get_object_or_404(Room, id=room_id)
+        user_school = self.request.user.school
+
+        if room.school.exists() and user_school not in room.school.all():
+            self.permission_denied(
+                self.request, message='Not permitted in this room!')
+
+        return room
+
+    def destroy(self, request, *args, **kwargs):
+        return super().destroy(request, *args, **kwargs)
+        # room = self.get_queryset()
+        # room.delete()
+        # return self.response_class(status=self.status_code)
+
+
+class RoomDetail2APIView(LoginRequiredMixin, APIView):
+    def get_object(self, pk):
+        return get_object_or_404(Room, id=pk)
+
+    def get_comment(self, pk):
+        return get_object_or_404(Comment, id=pk)
+
+    def get(self, request, pk):
+        room = self.get_object(pk)
+        user_school = request.user.school
+
+        if room.school.exists() and user_school not in room.school.all():
+            return Response(
+                {'detail': 'Not permitted in the Room'},
+                status=status.HTTP_403_FORBIDDEN
+            )
+            # raise PermissionDenied(
+            # 'You do not have permssion to access this room')
+
+        serializer = RoomSerializer(room)
+        comments = Comment.objects.filter(room=room)
+        comment_serializer = CommentSerializer(comments, many=True)
+        data = {
+            'room': serializer.data,
+            'comment': comment_serializer.data
+        }
+        return Response(data)
+
+    def post(self, request, pk):
+        room = self.get_object(pk)
+        new_content = request.data.get('content')
+        comment_data = {
+            'user': request.user.id, 'room': room.id, 'content': new_content
+        }
+        serializer = CommentCreateSerializer(data=comment_data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {'detail': 'Comment added'}, status=status.HTTP_201_CREATED
+            )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        comment = self.get_comment(pk)
+        if request.user != comment.user:
+            return Response('You do not have permssion to delete this comment',
+                            status=status.HTTP_403_FORBIDDEN)
+        comment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class CommentListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
+    serializer_class = CommentSerializer
+
+    def get_queryset(self):
+        room_id = self.kwargs.get('pk')
+        queryset = Comment.objects.filter(room=room_id)
+        return queryset
+
+    def perform_create(self, serializer):
+        room_id = self.kwargs.get('pk')
+        room = Room.objects.get(id=room_id)
+        serializer.save(user=self.request.user, room=room)
+
+# Category API views
+
+
+class CategoryListAPIView(LoginRequiredMixin, ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+# User API views
+class UserDetailAPIView(APIView):
+    # def get_object(self, pk):
+    #     return get_object_or_404(User, id=pk)
+
+    # def get(self, request, pk):
+    #     user = self.get_object(pk)
+    ...
+
+
+class RoomParticipantsAPIView(LoginRequiredMixin, ListAPIView):
+    serializer_class = ParticipantSerializer
+
+    def get_queryset(self):
+        room_id = self.kwargs.get('pk')
+        try:
+            room = Room.objects.get(id=room_id)
+        except Room.DoesNotExist:
+            # return Response({'detail': 'Room not found'}, status=404)
+            return []
+
+        comments = Comment.objects.filter(room=room)
+        queryset = create_participants(room, comments)
+        return queryset
+
+
+class RoomUpdateAPIView(UpdateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+
+    def get(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
+
+    def put(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(
+            instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
+
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+        room = get_object_or_404(Room, id=pk)
+        # if self.request.user != room.host:
+        #     self.permission_denied(self.request)
+        return room
+
+    def perform_update(self, serializer):
+        # return super().perform_update(serializer)
+        serializer.save()
+
+
+class SchoolListAPIView(ListAPIView):
+    queryset = School.objects.all()
+    serializer_class = SchoolSerializer

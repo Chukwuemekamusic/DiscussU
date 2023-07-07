@@ -27,6 +27,11 @@ class User(AbstractUser):
     course = models.CharField(max_length=100, null=True, blank=True)
     # TODO LOG IN WITH EMAIL OR STUDENT_ID
 
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+    def __str__(self) -> str:
+        return self.username
 
 class Category(models.Model):
     name = models.CharField(max_length=500)
