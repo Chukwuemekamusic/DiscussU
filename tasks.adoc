@@ -1,6 +1,6 @@
 = Tasks
 
-== 29/06/23
+== 29/07/23
 * include the static files
 * create user model based on AbstractUser
 * handling form validation for registration
@@ -11,7 +11,7 @@
 === things to still do
 * be able to create category
 
-== 3/06/23
+== 3/07/23
 * getting the list of the 11 schools in RGU
     
     ** aberdeen business school
@@ -33,7 +33,7 @@
 * connect the participant table
 * send everybody not logged in to the login page!!!
 
-== 4/06/23
+== 4/07/23
 * edit room
 * delete room
 * connect the participant table
@@ -44,7 +44,7 @@
 * start the react frontend
 * # TODO  make the room host admin in participant table
 
-== 5/06/23 to 7/06/23
+== 5/07/23 to 7/07/23
 * create the api endpoints for:
 ** room-list-create
 ** category-list
@@ -62,3 +62,9 @@ after git push
 ----
 
 * create a swagger doc to view endpoints
+
+== 10/07/23
+
+* User authentication in React
+* view room pages
+* 

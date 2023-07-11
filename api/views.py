@@ -7,11 +7,13 @@ from rest_framework.generics import (
 )
 from rest_framework.response import Response
 from rest_framework import status, serializers
+from rest_framework.permissions import AllowAny, IsAuthenticated
+
 from django.shortcuts import get_object_or_404
 from base.models import (
     Room, User, Comment, Category, Participant, School)
 from .serializers import (
-    RoomSerializer, UserSerializer, CommentSerializer,
+    RoomSerializer, UserSerializer, CommentSerializer, CommentCreateSerializer,
     CategorySerializer, ParticipantSerializer,
     RoomUpdateSerializer, CommentCreateSerializer,
     CreateUserSerializer, UpdateUserSerializer, LoginUserSerializer,
@@ -21,7 +23,6 @@ from django.db.models import Q
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
 
-from rest_framework.permissions import AllowAny, IsAuthenticated
 from knox.views import (LoginView as KnoxLoginView,
                         LogoutView as KnoxLogoutView)
 from knox.auth import TokenAuthentication
@@ -73,7 +74,29 @@ class LogoutUserView(KnoxLogoutView):
 # Room API Views
 
 
-class RoomListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
+class RoomListCreateAPIView(ListCreateAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = RoomSerializer
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        q = self.request.GET.get('q') or ''
+        user_school = self.request.user.school if self.request.user.is_authenticated else None
+
+        if user_school:
+            queryset = Room.objects.filter(
+                Q(category__name__icontains=q) | Q(name__icontains=q),
+                Q(school__isnull=True) | Q(school=user_school)
+            )
+        else:
+            queryset = Room.objects.filter(
+                Q(category__name__icontains=q) | Q(name__icontains=q),
+            )
+        return queryset
+
+
+class RoomTestListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
     serializer_class = RoomSerializer
     authentication_classes = [TokenAuthentication]
 
@@ -111,7 +134,9 @@ class RoomListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
         serializer.save(host=self.request.user, category=category)
 
 
-class RoomDetailAPIView(LoginRequiredMixin, RetrieveAPIView, DestroyAPIView):
+class RoomDetailAPIView(RetrieveAPIView, DestroyAPIView):  # LoginRequiredMixin,
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
     serializer_class = RoomSerializer
 
     def get_queryset(self):
@@ -121,7 +146,7 @@ class RoomDetailAPIView(LoginRequiredMixin, RetrieveAPIView, DestroyAPIView):
         room_id = self.kwargs.get('pk')
         # room = get_object_or_404(Room, id=room_id)
         room = self.get_queryset().get(id=room_id)
-        user_school = self.request.user.school
+        user_school = self.request.user.school if self.request.user.is_authenticated else room.school
 
         if room.school.exists() and user_school not in room.school.all():
             self.permission_denied(
@@ -191,6 +216,11 @@ class RoomDetail2APIView(LoginRequiredMixin, APIView):
 class CommentListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
     serializer_class = CommentSerializer
 
+    # def get_serializer_class(self):
+    #     if self.request.method == 'POST':
+    #         return CommentCreateSerializer
+    #     return CommentSerializer
+
     def get_queryset(self):
         room_id = self.kwargs.get('pk')
         queryset = Comment.objects.filter(room=room_id)
@@ -199,7 +229,8 @@ class CommentListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
     def perform_create(self, serializer):
         room_id = self.kwargs.get('pk')
         room = Room.objects.get(id=room_id)
-        serializer.save(user=self.request.user, room=room)
+        user = self.request.user if self.request.user.is_authenticated else None
+        serializer.save(user=user, room=room)
 
 # Category API views
 
