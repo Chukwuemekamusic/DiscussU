@@ -67,4 +67,10 @@ after git push
 
 * User authentication in React
 * view room pages
-* 
+* started the navbar
+
+=== to do
+* complete the navbar search feature
+* do register and logout
+* view room pages
+** work on the room details view.
