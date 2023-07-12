@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import axios from "axios";
+import Cookies from "js-cookie";
+
 
 import { useNavigate } from "react-router-dom";
 
-const LOGIN_URL = "/users/login/";
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
@@ -32,31 +33,42 @@ const Login = () => {
       // return
     }
     try {
-        
+
       const response = await axios.post(
         `http://localhost:8000/api/users/login/`,
-        { email:email, password:password },
+        { email: email, password: password },
         {
-            headers: {'Content-Type': 'application/json'},
-            withCredentials: true
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
         }
       );
+
       console.log(JSON.stringify(response?.data));
       const token = response.data.token
-      
-      setAuth({token})
+      console.log(token)
+      // const expiry = response.data.expiry
+      const user = response.data.user
+
+
+      Cookies.set('token', token)
+      localStorage.setItem("user", JSON.stringify(user));
+      setAuth({ token })
+      // setUser(user)
       setEmail('');
       setPassword('')
+      navigate("/")
     } catch (error) {
-        if (!error?.response) {
-            setErrMsg('No Service Response')
-        } else {
-            setErrMsg('Failed!')
-        }
-        errRef.current.focus()
+      if (!error?.response) {
+        setErrMsg('No Service Response')
+        console.error(error);
+      } else {
+        setErrMsg('Failed!')
+      }
+      errRef.current.focus()
     }
-    navigate("/")
+
   };
+
 
   return (
     <div className="container-lg p-3">
@@ -94,3 +106,12 @@ const Login = () => {
 };
 
 export default Login;
+
+// const expiresIn = expiresInMinutes(expiry)
+  // const expiresInMinutes = (expiry) => {
+  //   const expiryDate = new Date(expiry);
+  //   const currentTime = new Date();
+  //   const timeDiff = expiryDate.getTime() - currentTime.getTime();
+  //   const minutes = Math.floor(timeDiff / 60000); // Divide by 60000 to convert milliseconds to minutes
+  //   return minutes;
+  // };

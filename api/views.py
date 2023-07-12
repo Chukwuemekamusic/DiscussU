@@ -45,6 +45,20 @@ class CreateUserAPIView(CreateAPIView):
     permission_classes = (AllowAny,)
 
 
+class UserDetailView(RetrieveAPIView):
+    # permission_classes = [IsAuthenticated]
+    serializer_class = UserSerializer
+    authentication_classes = (TokenAuthentication,)
+
+    def get_object(self):
+        return self.request.user
+
+    # def get_serializer_context(self):
+    #     context = super().get_serializer_context()
+    #     context['token'] = self.request.headers.get('Authorization').split(' ')[1]
+    #     return context
+
+
 class UpdateUserAPIView(LoginRequiredMixin, UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UpdateUserSerializer
@@ -62,7 +76,15 @@ class LoginUserView(KnoxLoginView):
         login(request, user)
         _, token = AuthToken.objects.create(user)
     #     return Response({'token': token})
-        return super(LoginUserView, self).post(request, format=None)
+        user_serializer = UserSerializer(user).data
+        response_data = {
+            'user': user_serializer,
+            'token': token,
+
+        }
+        return Response(response_data)
+
+        # return super(LoginUserView, self).post(request, format=None)
 
 
 class LogoutUserView(KnoxLogoutView):
@@ -96,13 +118,14 @@ class RoomListCreateAPIView(ListCreateAPIView):
         return queryset
 
 
-class RoomTestListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
+class RoomTestListCreateAPIView(ListCreateAPIView):
     serializer_class = RoomSerializer
     authentication_classes = [TokenAuthentication]
 
     def get_queryset(self):
         q = self.request.GET.get('q') or ''
-        user_school = self.request.user.school if self.request.user.is_authenticated else None
+        user_school = self.request.user.school if (
+            self.request.user.is_authenticated) else None
 
         if user_school:
             queryset = Room.objects.filter(
@@ -134,9 +157,9 @@ class RoomTestListCreateAPIView(ListCreateAPIView):  # LoginRequiredMixin,
         serializer.save(host=self.request.user, category=category)
 
 
-class RoomDetailAPIView(RetrieveAPIView, DestroyAPIView):  # LoginRequiredMixin,
-    # authentication_classes = [TokenAuthentication]
-    # permission_classes = [IsAuthenticated]
+class RoomDetailAPIView(RetrieveAPIView, DestroyAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
     serializer_class = RoomSerializer
 
     def get_queryset(self):
@@ -156,9 +179,25 @@ class RoomDetailAPIView(RetrieveAPIView, DestroyAPIView):  # LoginRequiredMixin,
 
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
-        # room = self.get_queryset()
-        # room.delete()
-        # return self.response_class(status=self.status_code)
+
+
+class RoomCommentDestroyAPIView(DestroyAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = CommentSerializer
+    permission_denied_message = (
+        "You are not allowed to delete another user's comment!!!")
+
+    def get_queryset(self):
+        return Comment.objects.filter(user=self.request.user)
+
+    def get_object(self):
+        comment_id = self.kwargs.get('pk')
+        comment = self.get_queryset().get(id=comment_id)
+        return comment
+    
+    def destroy(self, request, *args, **kwargs):
+        return super().destroy(request, *args, **kwargs)
 
 
 class RoomDetail2APIView(LoginRequiredMixin, APIView):
@@ -213,13 +252,10 @@ class RoomDetail2APIView(LoginRequiredMixin, APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class CommentListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
+class CommentListCreateAPIView(ListCreateAPIView):
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CommentSerializer
-
-    # def get_serializer_class(self):
-    #     if self.request.method == 'POST':
-    #         return CommentCreateSerializer
-    #     return CommentSerializer
 
     def get_queryset(self):
         room_id = self.kwargs.get('pk')
@@ -229,7 +265,8 @@ class CommentListCreateAPIView(LoginRequiredMixin, ListCreateAPIView):
     def perform_create(self, serializer):
         room_id = self.kwargs.get('pk')
         room = Room.objects.get(id=room_id)
-        user = self.request.user if self.request.user.is_authenticated else None
+        user = self.request.user if (
+            self.request.user.is_authenticated) else None
         serializer.save(user=user, room=room)
 
 # Category API views

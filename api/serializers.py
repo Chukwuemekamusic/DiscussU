@@ -12,23 +12,23 @@ class UserSerializer(ModelSerializer):
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
                   'email', 'student_id', 'school', 'course', 'password']
-        extra_kwargs = {
-            'password': {'required': True}
-        }
+        # extra_kwargs = {
+        #     'password': {'required': True}
+        # }
 
 
 class CreateUserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course', 'password',]
+                  'email', 'student_id', 'school', 'course']
 
     def validate(self, attrs):
         email = attrs.get('email', '').strip().lower()
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError(
                 'User with this email id already exists.')
-        
+
         # if attrs['password'] != attrs['password2']:
         #     raise serializers.ValidationError(
         #         {"password": "Password fields didn't match."})
@@ -117,7 +117,7 @@ class CommentCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['content']
+        fields = ['content', 'parent_comment']
 
     # def create(self, validated_data):
     #     new_comment = validated_data.get('newComment')
