@@ -73,4 +73,19 @@ after git push
 * complete the navbar search feature
 * do register and logout
 * view room pages
-** work on the room details view.
+
+
+== 12/07/23
+* logout working well
+* save user to local storage 
+* view room pages done
+* view room comments
+* add comments
+* delete comments
+* highlight comment to reply to
+
+=== to do
+* reply to comment complete
+* complete the navbar search feature
+* do register
+
