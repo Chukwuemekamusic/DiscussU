@@ -48,9 +48,33 @@
   padding: 10px;
   border-radius: 4px;
   opacity: 0.7;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+}
+
+.reply-icon {
+  margin-right: 5px
 }
 
 /* Comments */
 
+.highlighted-comment {
+  background-color: #f8f8f8;
+  /* Add any other styles to highlight the comment */
+}
 
+#commentUserHeader {
+  background-color: rgb(168, 196, 206);
+}
+
+.highlighted-comment {
+  background-color: #2dadb9;
+  transition: background-color 0.5s;
+}
+
+.highlighted-comment:hover {
+  background-color: #ffffff;
+}
 

@@ -1,8 +1,8 @@
 // import { FaTimes } from "react-icons/fa";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import axios from "axios";
-import { getHeaders } from "../api/getHeaders";
-import AuthContext from "../context/AuthProvider";
+import { getHeaders } from "../../api/getHeaders";
+import AuthContext from "../../context/AuthProvider";
 import { useContext } from "react";
 
 const DeleteComment = ({ comment, handleCommentUpdated }) => {

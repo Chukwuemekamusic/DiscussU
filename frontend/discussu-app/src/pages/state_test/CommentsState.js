@@ -1,35 +1,35 @@
-import DeleteComment from "./DeleteComment";
-import ReplyComment from "./ReplyComment";
-import AuthContext from "../context/AuthProvider";
+import DeleteCommentState from "./DeleteCommentState";
+import ReplyCommentState from "./ReplyCommentState";
+import AuthContext from "../../context/AuthProvider";
 import { useContext, useRef } from "react";
 import ReplyIcon from "@mui/icons-material/Reply";
 import moment from "moment";
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 
-const Comments = ({
+import {useRoomStore }from './store'
+
+
+const CommentsState = ({
   room_id,
-  roomComment,
+  // roomComment,
   handleCommentUpdated,
   handleReply,
-  addCommentRef,
-  replyParentComment,
+  // addCommentRef,
+  // replyParentComment,
 }) => {
 
-  const { user } = useContext(AuthContext);
-  const [highlightedComment, setHighlightedComment] = useState(null);
+  const roomStore = useRoomStore();
+  const { room, replyParentComment } = roomStore;
+  const roomComment = useRoomStore((state) => state.roomComment); 
 
-  useEffect(() => {
-    if (highlightedComment) {
-      setTimeout(() => {
-        setHighlightedComment(null)
-      }, 7000);
-    }
-  }, [highlightedComment])
+  const { user } = useContext(AuthContext);
+  console.log(user.id);
 
   return (
     <div>
       {roomComment.map((comment, index) => {
+        console.log(comment.content);
         const timeSince = moment(comment.created).fromNow();
         const parentComment = comment.parent_comment
           ? comment.parent_comment_details
@@ -40,27 +40,22 @@ const Comments = ({
           <div
             id={`comment-${comment.id}`}
             key={comment.id}
-            className={`card mb-3 ${
-              highlightedComment === comment.id ? "highlighted-comment" : ""
-            }`}
+            className="card mb-3"
           >
             {parentComment && (
               <Link
                 to={`comment-${parentComment.id}`}
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={50}
                 duration={500}
-                onClick={() => setHighlightedComment(parentComment.id)}
               >
                 <div className="thumbnail mt-2 reply-thumbnail">
                   <span className="reply-icon">
                     <ReplyIcon />
                   </span>
-                  <span className="mb-0">
-                    {" "}
-                    replying @{parentComment.user} {parentComment.content}
-                  </span>
+                  <span className="mb-0"> replying @{parentComment.user} {parentComment.content}</span>
+                  
                 </div>
               </Link>
             )}
@@ -75,7 +70,7 @@ const Comments = ({
 
             <div className="card-body" id="commentBody">
               <p>{comment.content}</p>
-              <ReplyComment
+              {/* <ReplyCommentState
                 room_id={room_id}
                 comment={comment}
                 handleReply={handleReply}
@@ -83,12 +78,12 @@ const Comments = ({
                 replyParentComment={replyParentComment}
               />
               {user.username === comment.user && (
-                <DeleteComment
+                <DeleteCommentState
                   room_id={room_id}
                   comment={comment}
                   handleCommentUpdated={handleCommentUpdated}
                 />
-              )}
+              )} */}
             </div>
           </div>
         );
@@ -97,4 +92,4 @@ const Comments = ({
   );
 };
 
-export default Comments;
+export default CommentsState;

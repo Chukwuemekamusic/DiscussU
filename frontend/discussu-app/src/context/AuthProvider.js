@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
     Cookies.remove("token");
     localStorage.removeItem("user");
     setAuth({});
-    setUser({});
+    handleSetUser(null)
   };
 
   const getHeaders = (q) => {

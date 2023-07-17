@@ -4,15 +4,15 @@ import AuthContext from "../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import LogoutButton from "./LogoutButton";
 
-const Navbar = () => {
+const Navbar = ({searchQuery, setSearchQuery}) => {
   const { user } = useContext(AuthContext);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
   // const storedUser = localStorage.getItem('user')
   // const user = storedUser ? JSON.parse(storedUser) : null;
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     navigate(`/?q=${searchQuery}`);
   };

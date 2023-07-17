@@ -272,7 +272,7 @@ class CommentListCreateAPIView(ListCreateAPIView):
 # Category API views
 
 
-class CategoryListAPIView(LoginRequiredMixin, ListAPIView):
+class CategoryListAPIView(ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 

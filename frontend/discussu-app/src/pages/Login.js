@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-  const { setAuth } = useContext(AuthContext);
+  const { setAuth, setUser } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
@@ -53,6 +53,7 @@ const Login = () => {
       Cookies.set('token', token)
       localStorage.setItem("user", JSON.stringify(user));
       setAuth({ token })
+      setUser(user)
       // setUser(user)
       setEmail('');
       setPassword('')

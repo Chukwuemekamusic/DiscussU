@@ -1,7 +1,7 @@
 // import { FaReply } from "react-icons/fa";
 import QuickreplyTwoToneIcon from "@mui/icons-material/QuickreplyTwoTone";
 
-const ReplyComment = ({ comment, handleReply }) => {
+const ReplyCommentState = ({ comment, handleReply }) => {
   return (
     <>
       <QuickreplyTwoToneIcon
@@ -12,4 +12,4 @@ const ReplyComment = ({ comment, handleReply }) => {
   );
 };
 
-export default ReplyComment;
+export default ReplyCommentState;
