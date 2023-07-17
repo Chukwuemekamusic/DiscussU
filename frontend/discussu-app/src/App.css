@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +32,49 @@
     transform: rotate(360deg);
   }
 }
+
+/* my own settings */
+
+/* Main */
+
+.body {
+  background-color: snow;
+}
+
+/* Reply  */
+
+.reply-thumbnail {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  opacity: 0.7;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+}
+
+.reply-icon {
+  margin-right: 5px
+}
+
+/* Comments */
+
+.highlighted-comment {
+  background-color: #f8f8f8;
+  /* Add any other styles to highlight the comment */
+}
+
+#commentUserHeader {
+  background-color: rgb(168, 196, 206);
+}
+
+.highlighted-comment {
+  background-color: #2dadb9;
+  transition: background-color 0.5s;
+}
+
+.highlighted-comment:hover {
+  background-color: #ffffff;
+}
+

@@ -2,37 +2,37 @@ import { useState, useEffect, useContext, useRef } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import Comments from "../components/Comments";
-import AddComments from "../components/AddComments";
-import AuthContext from "../context/AuthProvider";
-import { getHeaders } from "../api/getHeaders";
-import useHandleAxiosError from "../components/utils/useHandleAxiosError";
+import CommentsState from "./CommentsState";
+import AddCommentsState from "./AddCommentsStates";
+import AuthContext from "../../context/AuthProvider";
+import { getHeaders } from "../../api/getHeaders";
+import useHandleAxiosError from "../../components/utils/useHandleAxiosError";
 import { FaTimes } from "react-icons/fa";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-const RoomPage = () => {
+import {useRoomStore} from './store'
+
+
+const RoomState = () => {
+  const roomStore = useRoomStore();
+  const { room, roomComment, replyParentComment } = roomStore;
+
   const params = useParams();
   const room_id = params.id;
   // const handleAxiosError = useHandleAxiosError();
-  const addCommentRef = useRef(null);
+  // const addCommentRef = useRef(null);
 
-  const [room, setRoom] = useState([]);
-  const [roomComment, setRoomComment] = useState([]);
-  const [replyParentComment, setReplyParentComment] = useState({});
+  // const [room, setRoom] = useState([]);
+  // const [roomComment, setRoomComment] = useState([]);
+  // const [replyParentComment, setReplyParentComment] = useState({});
 
   const { auth } = useContext(AuthContext);
 
   useEffect(() => {
-    // getRoomData();
-    // getRoomCommentData();
-    roomAndComment()
-    addCommentRef.current.focus();
+    getRoomData();
+    getRoomCommentData();
+    // addCommentRef.current.focus();
   }, [auth]);
-
-  const roomAndComment = async () => {
-    await getRoomData();
-    await getRoomCommentData();
-  };
 
   const getRoomData = async () => {
     try {
@@ -41,7 +41,8 @@ const RoomPage = () => {
         getHeaders(auth.token)
       );
       const data = response.data;
-      setRoom(data);
+      // setRoom(data);
+      roomStore.setRoom(data);
     } catch (error) {
       // handleAxiosError(error)
     }
@@ -54,7 +55,9 @@ const RoomPage = () => {
         getHeaders(auth.token)
       );
       const data = response.data;
-      setRoomComment(data);
+      // setRoomComment(data);
+      roomStore.setRoomComment(data)
+      console.log('data', data );
     } catch (error) {
       // handleAxiosError(error)
     }
@@ -66,23 +69,15 @@ const RoomPage = () => {
 
   const handleReply = (parentComment) => {
     if (parentComment) {
-      setReplyParentComment(parentComment);
-      addCommentRef.current.focus();
+      roomStore.setReplyParentComment(parentComment);
+      // addCommentRef.current.focus();
       console.log(replyParentComment.user);
     }
   };
 
   const handleCancelReply = () => {
-    setReplyParentComment({});
+    roomStore.setReplyParentComment({});
   };
-
-  // const scrollToAddComment = () => {
-  //   scroll.scrollTo("add-comment-input", {
-  //     duration: 500,
-  //     smooth: true,
-  //     offset: -100, // Adjust the offset if needed
-  //   });
-  // };
 
   return (
     <div className="container-lg">
@@ -93,14 +88,14 @@ const RoomPage = () => {
       <div className="container-sm">
         <div className="card mt-4">
           <div className="card-body">
-            <Comments
+            <CommentsState
               room_id={room_id}
-              roomComment={roomComment}
-              setRoomComment={setRoomComment}
+              // roomComment={roomComment}
+              // setRoomComment={setRoomComment}
               handleCommentUpdated={handleCommentUpdated}
               handleReply={handleReply}
-              addCommentRef={addCommentRef}
-              replyParentComment={replyParentComment}
+              // addCommentRef={addCommentRef}
+              // replyParentComment={replyParentComment}
             />
             {replyParentComment.user && (
               <div className="thumbnail mt-2 reply-thumbnail">
@@ -115,14 +110,14 @@ const RoomPage = () => {
                 </p>
               </div>
             )}
-            <AddComments
+            {/* <AddCommentsState
               room_id={room_id}
               handleCommentUpdated={handleCommentUpdated}
               addCommentRef={addCommentRef}
               replyParentComment={replyParentComment}
               setReplyParentComment={setReplyParentComment}
               // scrollToAddComment={scrollToAddComment}
-            />
+            /> */}
           </div>
         </div>
       </div>
@@ -136,4 +131,4 @@ const RoomPage = () => {
   );
 };
 
-export default RoomPage;
+export default RoomState;

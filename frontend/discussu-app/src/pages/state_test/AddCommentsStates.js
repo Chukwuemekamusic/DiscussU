@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
 import axios from "axios";
-import { getHeaders } from "../api/getHeaders";
-import AuthContext from "../context/AuthProvider";
+import { getHeaders } from "../../api/getHeaders";
+import AuthContext from "../../context/AuthProvider";
 
-const AddComments = ({
+const AddCommentsState = ({
   room_id,
   handleCommentUpdated,
   addCommentRef,
@@ -63,4 +63,4 @@ const AddComments = ({
   );
 };
 
-export default AddComments;
+export default AddCommentsState;

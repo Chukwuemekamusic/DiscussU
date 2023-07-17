@@ -8,27 +8,28 @@ from django.contrib.auth import authenticate
 
 # user serializers
 class UserSerializer(ModelSerializer):
+
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course', 'password']
-        extra_kwargs = {
-            'password': {'required': True}
-        }
+                  'email', 'student_id', 'school', 'course', 'full_name']
+        # extra_kwargs = {
+        #     'password': {'required': True}
+        # }
 
 
 class CreateUserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course', 'password',]
+                  'email', 'student_id', 'school', 'course']
 
     def validate(self, attrs):
         email = attrs.get('email', '').strip().lower()
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError(
                 'User with this email id already exists.')
-        
+
         # if attrs['password'] != attrs['password2']:
         #     raise serializers.ValidationError(
         #         {"password": "Password fields didn't match."})
@@ -82,7 +83,7 @@ class RoomSerializer(ModelSerializer):
     number_of_participants = SerializerMethodField()
     category_name = serializers.CharField(required=False)
     host = StringRelatedField()
-    # category = StringRelatedField()
+    category = StringRelatedField()
 
     class Meta:
         model = Room
@@ -103,13 +104,30 @@ class RoomUpdateSerializer(ModelSerializer):
 class CommentSerializer(ModelSerializer):
     user = StringRelatedField()
     room = StringRelatedField()
+    parent_comment_details = SerializerMethodField()
+    user_full_name = SerializerMethodField()
 
     class Meta:
         model = Comment
         fields = [
             'id', 'user', 'parent_comment', 'room', 'content',
-            'updated', 'created'
+            'updated', 'created', 'parent_comment_details', 'user_full_name'
         ]
+
+    def get_parent_comment_details(self, obj):
+        if obj.parent_comment:
+            parent_comment = Comment.objects.get(pk=obj.parent_comment.id)
+            return {
+                'id': parent_comment.id,
+                'user': parent_comment.user.username,
+                'content': parent_comment.content,
+                'created': parent_comment.created,
+            }
+        return None
+
+    def get_user_full_name(self, obj):
+        user = User.objects.get(pk=obj.user.id)
+        return user.full_name
 
 
 class CommentCreateSerializer(serializers.ModelSerializer):
@@ -117,7 +135,7 @@ class CommentCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['content']
+        fields = ['content', 'parent_comment']
 
     # def create(self, validated_data):
     #     new_comment = validated_data.get('newComment')
@@ -141,7 +159,7 @@ class ParticipantSerializer(ModelSerializer):
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ['name']
+        fields = ['id', 'name']
 
 
 class SchoolSerializer(ModelSerializer):
