@@ -89,3 +89,15 @@ after git push
 * complete the navbar search feature
 * do register
 
+== 18/07/23
+* completed reply
+* register user 
+* create rooms
+* delete rooms
+* update room list zustand hook
+
+=== to do 
+* restrict deletion of rooms to only hosts
+* expand user field to include avatar or image
+* improve design of the page
+* profile page design

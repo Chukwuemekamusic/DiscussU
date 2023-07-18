@@ -1,24 +1,40 @@
 import { useContext } from "react";
 import axios from "axios";
 import AuthContext from "../../context/AuthProvider";
-import { useNavigate } from "react-router";
 import { getHeaders } from "../../api/getHeaders";
 import { useHomeStore } from "../../store";
 import Cookies from "js-cookie";
 
-const useHandleLogout = () => {
+const title = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+
+
+const ErrorCheck = (error) => {
+  if (error.response) {
+    // Handle API error (status code 4xx or 5xx)
+    console.error(error.response.data);
+  } else if (error.request) {
+    // Handle request error (no response received)
+    console.error("No response from server.");
+  } else {
+    // Handle other errors
+    console.error("An error occurred:", error.message);
+  }
+}
+
+
+export const usePlainLogout = () => {
   const { logout } = useContext(AuthContext);
-  const navigate = useNavigate();
   const setClose = useHomeStore((state) => state.setClose);
   const token = Cookies.get('token')
 
-  const handleLogout = () => {
+  const plainLogout = () => {
     logout();
     logoutapi();
-    navigate("/login");
     setClose();
-  };
-
+  }
 
   const logoutapi = async () => {
     try {
@@ -32,8 +48,7 @@ const useHandleLogout = () => {
     }
   };
 
-  return handleLogout;
-};
+  return plainLogout
+}
 
-export default useHandleLogout;
-
+export { title, ErrorCheck }

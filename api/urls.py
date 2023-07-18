@@ -33,6 +33,6 @@ urlpatterns = [
 
     path('schools/', SchoolListAPIView.as_view(), name='api-school-list'),
 
-    #for test without login
+    # for test without login
     path('rooms-test/', RoomTestListCreateAPIView.as_view(), name='api-test-room-list-create'),
 ]

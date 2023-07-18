@@ -5,12 +5,15 @@ import "bootstrap/dist/js/bootstrap.js";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AuthProvider } from "./context/AuthProvider";
+import {BrowserRouter as Router} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthProvider>
+    <Router>
       <App />
+      </Router>
     </AuthProvider>
   </React.StrictMode>
 );

@@ -3,7 +3,7 @@ import moment from "moment";
 
 const RoomsFeed = ({ rooms }) => {
   return (
-    <div>
+    <article>
       {rooms.map((room) => {
         return (
           <div key={room.id}>
@@ -25,7 +25,7 @@ const RoomsFeed = ({ rooms }) => {
           </div>
         );
       })}
-    </div>
+    </article>
   );
 };
 

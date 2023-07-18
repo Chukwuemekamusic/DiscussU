@@ -93,8 +93,8 @@ class LogoutUserView(KnoxLogoutView):
 
 # End User API Views
 
-# Room API Views
 
+# Room API Views
 
 class RoomListCreateAPIView(ListCreateAPIView):
     authentication_classes = [TokenAuthentication]
@@ -108,7 +108,8 @@ class RoomListCreateAPIView(ListCreateAPIView):
 
         if user_school:
             queryset = Room.objects.filter(
-                Q(category__name__icontains=q) | Q(name__icontains=q),
+                Q(category__name__icontains=q) | Q(
+                    name__icontains=q) | Q(description__icontains=q),
                 Q(school__isnull=True) | Q(school=user_school)
             )
         else:
@@ -116,6 +117,28 @@ class RoomListCreateAPIView(ListCreateAPIView):
                 Q(category__name__icontains=q) | Q(name__icontains=q),
             )
         return queryset
+
+    def perform_create(self, serializer):
+        category_id = self.request.data.get('category') or ''
+        category_name = self.request.data.get('category_name') or ''
+
+        if category_id:
+            category, created = Category.objects.get_or_create(id=category_id)
+        elif category_name:
+            category, created = Category.objects.get_or_create(
+                name=category_name)
+        else:
+            raise serializers.ValidationError(
+                'Category ID or name is required.')
+
+        # category_name = serializer.validated_data.get('category')
+        # category, created = Category.objects.get_or_create(
+        # name=category_name)
+        serializer_data = serializer.validated_data
+        serializer_data.pop('category_name', None)
+
+        serializer.save(host=self.request.user,
+                        category=category, **serializer_data)
 
 
 class RoomTestListCreateAPIView(ListCreateAPIView):
@@ -129,8 +152,10 @@ class RoomTestListCreateAPIView(ListCreateAPIView):
 
         if user_school:
             queryset = Room.objects.filter(
-                Q(category__name__icontains=q) | Q(name__icontains=q),
-                Q(school__isnull=True) | Q(school=user_school)
+                Q(category__name__icontains=q) | Q(
+                    name__icontains=q) | Q(description__icontains=q),
+                Q(school__isnull=True) | Q(school=user_school),
+
             )
         else:
             queryset = Room.objects.filter(
@@ -195,7 +220,7 @@ class RoomCommentDestroyAPIView(DestroyAPIView):
         comment_id = self.kwargs.get('pk')
         comment = self.get_queryset().get(id=comment_id)
         return comment
-    
+
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
 

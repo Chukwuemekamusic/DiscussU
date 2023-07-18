@@ -2,25 +2,22 @@
 // import AuthContext from "../context/AuthProvider";
 // import { useNavigate } from "react-router";
 // import handleLogout from "./utils/useHandleLogout";
+
 import useHandleLogout from "./utils/useHandleLogout";
+// import { useHomeStore } from "../store";
 
 const LogoutButton = () => {
-    // const { logout, auth } = useContext(AuthContext);
-    // const navigate = useNavigate()
-    
-    const handleLogout = useHandleLogout()
-    
+  
+  // const { logout, auth } = useContext(AuthContext);
+  // const navigate = useNavigate()
 
-    
+  const handleLogout = useHandleLogout();
+  
 
-    return (
-        <button onClick={()=>handleLogout()}>Logout</button>
-    );
+  return <p onClick={() => handleLogout()}>Logout</p>;
 };
 
 export default LogoutButton;
-
-
 
 // import { useContext } from "react";
 // import AuthContext from "../context/AuthProvider";
@@ -33,7 +30,7 @@ export default LogoutButton;
 //     const { logout, auth } = useContext(AuthContext);
 //     const navigate = useNavigate()
 //     const handleLogout = async() => {
-    
+
 //         logout();
 //         await logoutapi()
 //         navigate('/login')
@@ -47,7 +44,7 @@ export default LogoutButton;
 //             `http://localhost:8000/api/users/logout/`,
 //             getHeaders(auth.token)
 //           )
-      
+
 //         } catch (error) {
 //           console.error(error);
 //         }
@@ -59,6 +56,3 @@ export default LogoutButton;
 // };
 
 // export default LogoutButton;
-
-
-

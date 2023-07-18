@@ -1,3 +1,12 @@
+:root {
+  --primary-bg: #242526;
+  --secondary-bg: #fff;
+  --primary-text-color: #555;
+  --secondary-text-color: #cecece;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
 .App {
   text-align: center;
 }
@@ -41,6 +50,14 @@
   background-color: snow;
 }
 
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Reply  */
 
 .reply-thumbnail {
@@ -78,3 +95,114 @@
   background-color: #ffffff;
 }
 
+/* error message */
+
+/* .form-error {
+  color: red;
+} */
+
+/* dropdown menu  */
+
+.menu-container {
+  position: relative;
+}
+
+
+
+.menu-trigger {
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right: 20px; */
+  /* height: 60px; */
+  /* width: 60px; */
+  cursor: pointer;
+  padding: 10px;
+  /* background-color: #fff; */
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius)px;
+  padding: 10px 20px;
+  display: none;
+}
+
+.dropdown-menu.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdown-menu h3 {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 18px;
+  color: var(--primary-text-color);
+  /* line-height: 1.2rem; */
+  /* border-bottom: 1px solid #ccc; */
+}
+.dropdown-menu h5 {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li a{
+  padding: 10px;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.05); TODO LIKELY TO REMOVE*/
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu ul li a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownItem{
+  display: flex;
+  margin: 10px auto;
+}
+
+.dropdownItem-img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: var(--speed);
+}
+
+.dropdown-menu ul li:hover a{
+  color: rgb(9, 185, 212);
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:last-child {
+  border-bottom: none;
+}
+
+
+
+.dropdown-menu ul li a svg {
+  margin-right: 10px;
+}

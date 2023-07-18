@@ -8,21 +8,24 @@ from django.contrib.auth import authenticate
 
 # user serializers
 class UserSerializer(ModelSerializer):
+    school_name = SerializerMethodField()
 
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course', 'full_name']
-        # extra_kwargs = {
-        #     'password': {'required': True}
-        # }
+                  'email', 'student_id', 'school', 'course', 'full_name',
+                  'school_name']
+
+    def get_school_name(self, obj):
+        school = School.objects.get(id=obj.school.id)
+        return school.name
 
 
 class CreateUserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
-                  'email', 'student_id', 'school', 'course']
+                  'email', 'student_id', 'school', 'course', 'password']
 
     def validate(self, attrs):
         email = attrs.get('email', '').strip().lower()
@@ -39,7 +42,10 @@ class CreateUserSerializer(ModelSerializer):
         return attrs
 
     def create(self, validated_data):
-        user = User.objects.create_user(**validated_data)
+        password = validated_data.pop('password')
+        user = User(**validated_data)
+        user.set_password(password)  # Hash the password before saving
+        user.save()
         return user
 
 
@@ -81,7 +87,7 @@ class LoginUserSerializer(serializers.Serializer):
 
 class RoomSerializer(ModelSerializer):
     number_of_participants = SerializerMethodField()
-    category_name = serializers.CharField(required=False)
+    # category_name = serializers.CharField(required=False)
     host = StringRelatedField()
     category = StringRelatedField()
 
@@ -167,7 +173,7 @@ class SchoolSerializer(ModelSerializer):
 
     class Meta:
         model = School
-        fields = ['name', 'description', 'number_of_students']
+        fields = ['id', 'name', 'description', 'number_of_students']
 
     def get_number_of_students(self, obj):
         return obj.user_set.all().count()

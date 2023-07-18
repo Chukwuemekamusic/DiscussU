@@ -10,9 +10,19 @@ import useHandleAxiosError from "../components/utils/useHandleAxiosError";
 import { FaTimes } from "react-icons/fa";
 import CancelIcon from "@mui/icons-material/Cancel";
 
+import { useHomeStore } from "../store";
+import DeleteRoom from "../components/DeleteRoom";
+
 const RoomPage = () => {
   const params = useParams();
   const room_id = params.id;
+  const searchQuery = useHomeStore((state) => state.searchQuery)
+  const setSearchQuery = useHomeStore((state) => state.setSearchQuery)
+  // const [rooms] = useHomeStore((state) => [
+  //   state.rooms
+  // ]);
+  // const room = rooms.find((room) => room.id == room_id);
+  
   // const handleAxiosError = useHandleAxiosError();
   const addCommentRef = useRef(null);
 
@@ -21,18 +31,18 @@ const RoomPage = () => {
   const [replyParentComment, setReplyParentComment] = useState({});
 
   const { auth } = useContext(AuthContext);
+  
 
   useEffect(() => {
-    // getRoomData();
-    // getRoomCommentData();
-    roomAndComment()
+    getRoomData();
+    getRoomCommentData();
     addCommentRef.current.focus();
   }, [auth]);
 
-  const roomAndComment = async () => {
-    await getRoomData();
-    await getRoomCommentData();
-  };
+  // const roomAndComment = async () => {
+  //   await getRoomData();
+  //   await getRoomCommentData();
+  // };
 
   const getRoomData = async () => {
     try {
@@ -90,6 +100,7 @@ const RoomPage = () => {
       <p>
         <i>{room.description}</i>
       </p>
+      <DeleteRoom roomId={room.id} />
       <div className="container-sm">
         <div className="card mt-4">
           <div className="card-body">
@@ -126,10 +137,18 @@ const RoomPage = () => {
           </div>
         </div>
       </div>
-
-      <Link to={"/"}>
-        <div className="btn btn-primary">Back to Home Page</div>
+        {searchQuery ? (
+          <Link to={"/"}>
+          <div className="btn btn-primary">Back to Searched results</div>
+        </Link>
+        ): (
+          <Link to={"/"} onClick={() => setSearchQuery("")}>
+        <div className="btn btn-primary" >Back to Home Page</div>
       </Link>
+        )}
+      {/* <Link to={"/"}>
+        <div className="btn btn-primary">Back to Home Page</div>
+      </Link> */}
       {/* <a href="{% url 'edit-room' room.id %}" class="btn">Edit Room</a> <br>
     <a href="{% url 'delete-room' room.id %}" class="btn btn-danger">Delete Room</a> <br> */}
     </div>
