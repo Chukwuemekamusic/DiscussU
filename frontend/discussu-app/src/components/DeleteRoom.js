@@ -14,17 +14,17 @@ const DeleteRoom = ({ roomId }) => {
   };
 
   return (
-    <div>
+    <>
       {showConfirm ? (
         <div>
           <p>Are you sure you want to delete this room?</p>
-          <button onClick={handleDelete}>Yes, delete</button>
+          <button onClick={handleDelete} >Yes, delete</button>
           <button onClick={() => setShowConfirm(false)}>Cancel</button>
         </div>
       ) : (
-        <button onClick={() => setShowConfirm(true)}>Delete Room</button>
+        <button onClick={() => setShowConfirm(true)} className="btn btn-danger btn-sm">Delete Room</button>
       )}
-    </div>
+    </>
   );
 };
 

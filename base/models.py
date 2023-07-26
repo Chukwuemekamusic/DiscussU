@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
+import os
 # from django.contrib import messages
 
 # Create your models here.
@@ -14,6 +16,14 @@ class School(models.Model):
         return self.name
 
 
+def get_upload_path(instance, filename):
+    return os.path.join('images', 'avatars', str(instance.pk), filename)
+
+
+def upload_to(instance, filename):
+    return 'profile_pics/{filename}'.format(filename=filename)
+
+
 class User(AbstractUser):
     first_name = models.CharField(max_length=100, blank=False)
     last_name = models.CharField(max_length=100, blank=False)
@@ -25,7 +35,14 @@ class User(AbstractUser):
         School, on_delete=models.SET_NULL, null=True, blank=True)
     # school = models.CharField(max_length=100, null=True, blank=True)
     course = models.CharField(max_length=100, null=True, blank=True)
-    # TODO LOG IN WITH EMAIL OR STUDENT_ID
+    bio = models.TextField(null=True, blank=True)
+    profile_pic = models.ImageField(
+        _("Profile Picture"), upload_to="profile_pics/",
+        default="default_profile_pic.png"
+    )
+    avatar = models.ImageField(
+        upload_to=get_upload_path, blank=True, null=True
+    )
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -36,6 +53,12 @@ class User(AbstractUser):
 
     def __str__(self) -> str:
         return self.username
+
+    def get_no_of_followers(self):
+        return self.followed_user.count()
+
+    def get_no_of_followed(self):
+        return self.follower.count()
 
 
 class Category(models.Model):
@@ -54,6 +77,7 @@ class Room(models.Model):
         School, related_name='rooms', blank=True)
     name = models.CharField(max_length=500)
     description = models.TextField(null=True, blank=True)
+    permit_all = models.BooleanField(default=False)
     members = models.ManyToManyField(User, related_name='member', blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)

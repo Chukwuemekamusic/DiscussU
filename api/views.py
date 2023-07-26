@@ -15,9 +15,9 @@ from base.models import (
 from .serializers import (
     RoomSerializer, UserSerializer, CommentSerializer, CommentCreateSerializer,
     CategorySerializer, ParticipantSerializer,
-    RoomUpdateSerializer, CommentCreateSerializer,
+    CommentCreateSerializer,  # RoomUpdateSerializer,
     CreateUserSerializer, UpdateUserSerializer, LoginUserSerializer,
-    SchoolSerializer
+    ProfileSerializer, SchoolSerializer
 )
 from django.db.models import Q
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -28,9 +28,11 @@ from knox.views import (LoginView as KnoxLoginView,
 from knox.auth import TokenAuthentication
 from knox.models import AuthToken
 
-
 # participant function
 from base.views import create_participants
+
+# image
+from rest_framework.parsers import MultiPartParser, FormParser
 
 # Create your views here.
 
@@ -43,25 +45,49 @@ class CreateUserAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = CreateUserSerializer
     permission_classes = (AllowAny,)
+    parser_classes = [MultiPartParser, FormParser]
+    # new additions
 
 
-class UserDetailView(RetrieveAPIView):
-    # permission_classes = [IsAuthenticated]
+class UserAvatarUpload(APIView):
+    permission_classes = (AllowAny,)
+    parser_classes = [MultiPartParser, FormParser]
+
+    def post(self, request, format=None):
+        print(request.data)
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response()
+
+
+class AllUsersListView(ListAPIView):
+    serializer_class = ProfileSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = User.objects.all()
+
+
+
+class UserDetailAPIView(RetrieveAPIView):
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
     serializer_class = UserSerializer
-    authentication_classes = (TokenAuthentication,)
+    queryset = User.objects.all()
 
     def get_object(self):
+        # Return the currently logged-in user
         return self.request.user
 
-    # def get_serializer_context(self):
-    #     context = super().get_serializer_context()
-    #     context['token'] = self.request.headers.get('Authorization').split(' ')[1]
-    #     return context
 
-
-class UpdateUserAPIView(LoginRequiredMixin, UpdateAPIView):
+class UserUpdateAPIView(UpdateAPIView):
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
     queryset = User.objects.all()
     serializer_class = UpdateUserSerializer
+    parser_classes = [MultiPartParser, FormParser]
 
 
 class LoginUserView(KnoxLoginView):
@@ -74,15 +100,12 @@ class LoginUserView(KnoxLoginView):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
         login(request, user)
-        _, token = AuthToken.objects.create(user)
-    #     return Response({'token': token})
-        user_serializer = UserSerializer(user).data
-        response_data = {
-            'user': user_serializer,
-            'token': token,
+        return super(LoginUserView, self).post(request, format=None)
 
-        }
-        return Response(response_data)
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
         # return super(LoginUserView, self).post(request, format=None)
 
@@ -91,6 +114,16 @@ class LogoutUserView(KnoxLogoutView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
+
+# not used though
+class UserParticipatedRoomsAPIView(ListAPIView):
+    serializer_class = RoomSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        # Retrieve the rooms where the current user is a member
+        return Room.objects.filter(participant__user=self.request.user)
 # End User API Views
 
 
@@ -100,17 +133,19 @@ class RoomListCreateAPIView(ListCreateAPIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     serializer_class = RoomSerializer
-    authentication_classes = [TokenAuthentication]
+    # authentication_classes = [TokenAuthentication]
 
     def get_queryset(self):
         q = self.request.GET.get('q') or ''
-        user_school = self.request.user.school if self.request.user.is_authenticated else None
+        user = self.request.user
+        user_school = user.school if user.is_authenticated else None
 
         if user_school:
             queryset = Room.objects.filter(
                 Q(category__name__icontains=q) | Q(
                     name__icontains=q) | Q(description__icontains=q),
-                Q(school__isnull=True) | Q(school=user_school)
+                Q(school__isnull=True) | Q(school=user_school) | Q(
+                    permit_all=True) | Q(host=user)
             )
         else:
             queryset = Room.objects.filter(
@@ -131,14 +166,53 @@ class RoomListCreateAPIView(ListCreateAPIView):
             raise serializers.ValidationError(
                 'Category ID or name is required.')
 
-        # category_name = serializer.validated_data.get('category')
-        # category, created = Category.objects.get_or_create(
-        # name=category_name)
         serializer_data = serializer.validated_data
         serializer_data.pop('category_name', None)
 
-        serializer.save(host=self.request.user,
-                        category=category, **serializer_data)
+        serializer.save(category=category, **serializer_data)
+
+
+class RoomUpdateAPIView(UpdateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+
+    def get(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
+
+    def put(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(
+            instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
+
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+        room = get_object_or_404(Room, id=pk)
+        # if self.request.user != room.host:
+        #     self.permission_denied(self.request)
+        return room
+
+    def perform_update(self, serializer):
+        category_id = self.request.data.get('category') or ''
+        category_name = self.request.data.get('category_name') or ''
+
+        if category_id:
+            category, _ = Category.objects.get_or_create(id=category_id)
+        elif category_name:
+            category, _ = Category.objects.get_or_create(
+                name=category_name)
+        else:
+            serializer.save()
+
+        serializer_data = serializer.validated_data
+        serializer_data.pop('category_name', None)
+
+        serializer.save(category=category, **serializer_data)
 
 
 class RoomTestListCreateAPIView(ListCreateAPIView):
@@ -155,7 +229,6 @@ class RoomTestListCreateAPIView(ListCreateAPIView):
                 Q(category__name__icontains=q) | Q(
                     name__icontains=q) | Q(description__icontains=q),
                 Q(school__isnull=True) | Q(school=user_school),
-
             )
         else:
             queryset = Room.objects.filter(
@@ -194,7 +267,11 @@ class RoomDetailAPIView(RetrieveAPIView, DestroyAPIView):
         room_id = self.kwargs.get('pk')
         # room = get_object_or_404(Room, id=room_id)
         room = self.get_queryset().get(id=room_id)
-        user_school = self.request.user.school if self.request.user.is_authenticated else room.school
+        user = self.request.user
+        user_school = user.school if user.is_authenticated else room.school
+
+        if user == room.host:
+            return room
 
         if room.school.exists() and user_school not in room.school.all():
             self.permission_denied(
@@ -278,9 +355,10 @@ class RoomDetail2APIView(LoginRequiredMixin, APIView):
 
 
 class CommentListCreateAPIView(ListCreateAPIView):
-    # authentication_classes = [TokenAuthentication]
-    # permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
     serializer_class = CommentSerializer
+    # parser_classes = [MultiPartParser, FormParser]
 
     def get_queryset(self):
         room_id = self.kwargs.get('pk')
@@ -302,16 +380,6 @@ class CategoryListAPIView(ListAPIView):
     serializer_class = CategorySerializer
 
 
-# User API views
-class UserDetailAPIView(APIView):
-    # def get_object(self, pk):
-    #     return get_object_or_404(User, id=pk)
-
-    # def get(self, request, pk):
-    #     user = self.get_object(pk)
-    ...
-
-
 class RoomParticipantsAPIView(LoginRequiredMixin, ListAPIView):
     serializer_class = ParticipantSerializer
 
@@ -328,36 +396,33 @@ class RoomParticipantsAPIView(LoginRequiredMixin, ListAPIView):
         return queryset
 
 
-class RoomUpdateAPIView(UpdateAPIView):
-    queryset = Room.objects.all()
-    serializer_class = RoomSerializer
-
-    def get(self, request, *args, **kwargs):
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        return Response(serializer.data)
-
-    def put(self, request, *args, **kwargs):
-        partial = kwargs.pop('partial', False)
-        instance = self.get_object()
-        serializer = self.get_serializer(
-            instance, data=request.data, partial=partial)
-        serializer.is_valid(raise_exception=True)
-        self.perform_update(serializer)
-        return Response(serializer.data)
-
-    def get_object(self):
-        pk = self.kwargs.get('pk')
-        room = get_object_or_404(Room, id=pk)
-        # if self.request.user != room.host:
-        #     self.permission_denied(self.request)
-        return room
-
-    def perform_update(self, serializer):
-        # return super().perform_update(serializer)
-        serializer.save()
-
-
 class SchoolListAPIView(ListAPIView):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
+
+# class LoginUserView(KnoxLoginView):
+#     permission_classes = (AllowAny,)
+#     authentication_classes = (TokenAuthentication,)
+#     serializer_class = LoginUserSerializer
+
+#     def post(self, request, format=None):
+#         serializer = self.serializer_class(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         user = serializer.validated_data['user']
+#         login(request, user)
+#         _, token = AuthToken.objects.create(user)
+#     #     return Response({'token': token})
+#         user_serializer = UserSerializer(user).data
+#         response_data = {
+#             'user': user_serializer,
+#             'token': token,
+
+#         }
+#         return Response(response_data)
+
+#     def get_serializer_context(self):
+#         context = super().get_serializer_context()
+#         context['request'] = self.request
+#         return context
+
+    # return super(LoginUserView, self).post(request, format=None)

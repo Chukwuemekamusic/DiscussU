@@ -11,7 +11,7 @@ const RoomsFeed = ({ rooms }) => {
               <Link to={`/room/${room.id}`}>{room.name}</Link>
             </h3>
             <p>
-              @<i>{room.host} </i>
+              @<i>{room.host_name} </i>
               <small>created: {moment(room).fromNow()}</small>
             </p>
             {room.description && (

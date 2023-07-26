@@ -4,8 +4,9 @@ from .views import (
     RoomDetailAPIView, RoomParticipantsAPIView,
     RoomUpdateAPIView, CommentListCreateAPIView,
     RoomCommentDestroyAPIView, CreateUserAPIView, LoginUserView,
-    LogoutUserView, UserDetailAPIView, SchoolListAPIView,
-    RoomTestListCreateAPIView,
+    LogoutUserView, UserDetailAPIView, UserUpdateAPIView, SchoolListAPIView,
+    RoomTestListCreateAPIView, UserAvatarUpload,
+    UserParticipatedRoomsAPIView, AllUsersListView
 )
 # from rest_framework.routers import SimpleRouter
 app_name = 'api'
@@ -27,9 +28,13 @@ urlpatterns = [
     path('rooms/<str:pk>/participants/', RoomParticipantsAPIView.as_view(), name='api-room-participants'),
 
     path('users/create/', CreateUserAPIView.as_view(), name='api-create-user'),
+    path('avatar/create/', UserAvatarUpload.as_view(), name='api-create-avatar'),
     path('users/login/', LoginUserView.as_view(), name='api-login-user'),
-    path('users/logout/', LogoutUserView.as_view(), name='api-logout-user'),
+    path('users/logout/', LogoutUserView.as_view(), name='api-logout-user'),    
+    path('users/<str:pk>/update/', UserUpdateAPIView.as_view(), name='api-user-update'),
     path('users/details/', UserDetailAPIView.as_view(), name='api-user-detail'),
+    path('users/profiles/', AllUsersListView.as_view(), name='api-student-profiles'),
+    path('user/participated-rooms/', UserParticipatedRoomsAPIView.as_view(), name='api-user-participated-rooms'),
 
     path('schools/', SchoolListAPIView.as_view(), name='api-school-list'),
 

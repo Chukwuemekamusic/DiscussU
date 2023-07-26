@@ -16,38 +16,41 @@ import { Nav } from "react-bootstrap";
 
 const UserNav = ({ isopen, setIsOpen }) => {
   const handleLogout = useHandleLogout();
-  const {getStoredUser} = useContext(AuthContext);
+  const { getStoredUser } = useContext(AuthContext);
   const user = getStoredUser();
   // const user = JSON.parse(localStorage.getItem("user"));
 
   return (
     <Nav.Link className="menu-container ">
       <div className="menu-trigger">
-        <Link onClick={() => setIsOpen(!isopen)}>Hello {user.username}</Link>
+        <Link onClick={() => setIsOpen(!isopen)}>
+          Hello {user.username}{" "}
+          {/* <img src={user.profile_pic} alt="Profile Picture" /> */}
+        </Link>
       </div>
-
+      {/* {console.log(user.profile_pic)} */}
       <div className={`dropdown-menu ${isopen ? "active" : "inactive"}`}>
         <h3>{user.full_name}</h3>
         <h5 className="text-center">{user.school_name}</h5>
         <ul>
           <DropdownItem
-            icon={<Person2OutlinedIcon classname={"dropdownItem-img"} />}
+            icon={<Person2OutlinedIcon className={"dropdownItem-img"} />}
             text={"My Profile"}
-            route={"./"}
+            route={"/user/profile"}
           />
           <DropdownItem
-            icon={<EditOutlinedIcon />}
+            icon={<EditOutlinedIcon className={"dropdownItem-img"} />}
             text={"Edit Profile"}
             route={"./"}
           />
-          <DropdownItem icon={<EmailTwoToneIcon />} text={"Inbox"} />
+          <DropdownItem icon={<EmailTwoToneIcon className={"dropdownItem-img"} />} text={"Inbox"} />
           <DropdownItem
-            icon={<SettingsOutlinedIcon />}
+            icon={<SettingsOutlinedIcon className={"dropdownItem-img"} />}
             text={"Settings"}
             route={"./"}
           />
           <DropdownItem
-            icon={<LogoutTwoToneIcon />}
+            icon={<LogoutTwoToneIcon className={"dropdownItem-img"} />}
             text={"Logout"}
             handle={handleLogout}
           />
@@ -59,36 +62,4 @@ const UserNav = ({ isopen, setIsOpen }) => {
 
 export default UserNav;
 
-// {
-/* <li class="nav-item dropdown">
-      {user ? (
-        <>
-          <Link
-            classname="nav-link dropdown-toggle"
-            
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <LogoutButton />
-          </Link>
-        </>
-      ) : (
-        <>
-          <Link
-            className="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Login/Sign-up
-          </Link>
-        </>
-      )}
-    </li> */
-// }
+

@@ -1,20 +1,11 @@
-// import { useContext } from "react";
-// import AuthContext from "../context/AuthProvider";
-// import { useNavigate } from "react-router";
-// import handleLogout from "./utils/useHandleLogout";
-
 import useHandleLogout from "./utils/useHandleLogout";
 // import { useHomeStore } from "../store";
 
 const LogoutButton = () => {
-  
-  // const { logout, auth } = useContext(AuthContext);
-  // const navigate = useNavigate()
 
-  const handleLogout = useHandleLogout();
-  
+  const handleLogout = useHandleLogout();  
 
-  return <p onClick={() => handleLogout()}>Logout</p>;
+  return <span onClick={() => handleLogout()}> Logout </span>;
 };
 
 export default LogoutButton;

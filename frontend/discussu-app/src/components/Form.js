@@ -9,14 +9,16 @@ import useHandleLogout from "./utils/useHandleLogout";
 import { useNavigate } from "react-router";
 import AuthContext from "../context/AuthProvider";
 import { useContext } from "react";
+import { ErrorCheck } from "./utils/utilFunctions";
 
 const Form = () => {
   const schools = useHomeStore((state) => state.schools);
+  const returnUserData = useHomeStore((state) => state.returnUserData);
   const token = Cookies.get("token");
   const handleLogout = useHandleLogout();
   const navigate = useNavigate();
 
-  const { setAuth, setUser } = useContext(AuthContext);
+  const { setAuth} = useContext(AuthContext);
 
   //   logout anyone who want to access the form
   if (token) {
@@ -24,7 +26,10 @@ const Form = () => {
   }
 
   const schema = yup.object().shape({
-    username: yup.string().required(),
+    username: yup.string().required().matches(
+      /^[a-zA-Z0-9@/./+/-/_]+$/,
+      "Username may only contain letters, numbers, and @/./+/-/_ characters"
+    ),
     first_name: yup.string().required(),
     last_name: yup.string().required(),
     email: yup.string().email().required(),
@@ -44,45 +49,54 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
-    console.log(data.username);
-    const user = {
-      username: data.username,
-      first_name: data.first_name,
-      last_name: data.last_name,
-      email: data.email,
-      student_id: data.student_id,
-      school: data.school,
-      course: data.course,
-      password: data.password,
-    };
+  const handleFileChange = (e) => {
+    // Set the selected file in the form data
+    const file = e.target.files;
+    setValue("profile_image", file);
+  };
 
-    // logout any user still logged in just in case
-    // plainLogout();
+  const onSubmit = async (data) => {
+    // console.log('profile_image', data.profile_image[0]);
+
+    let formData = new FormData();
+    formData.append('username', data.username);
+    formData.append('first_name', data.first_name);
+    formData.append('last_name', data.last_name);
+    formData.append('email', data.email);
+    formData.append('student_id', data.student_id);
+    formData.append('school', data.school);
+    formData.append('course', data.course);
+    formData.append('password', data.password);
+    if (data.profile_image) {
+        formData.append('profile_pic', data.profile_image[0]);
+        console.log('profile_image', 'yes');
+      }
+    
 
     try {
       const registrationResponse = await axios.post(
         `http://localhost:8000/api/users/create/`,
-        user,
+        formData,
         {
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "multipart/form-data" },
           withCredentials: true,
         }
       );
-      console.log("Registration data", registrationResponse.data);
+      // console.log("Registration data", registrationResponse.data);
 
-      // login user immediately
+    //   login user immediately
       if (registrationResponse.data.username) {
         handleLogin(data);
       } else {
         console.error("Registration failed.");
       }
     } catch (error) {
-      console.error(error);
+      ErrorCheck(error)
     }
   };
 
@@ -101,11 +115,10 @@ const Form = () => {
       Cookies.set("token", newToken);
 
       // set the user
-      const user = loginResponse.data.user;
+      const user = await returnUserData(token)
       localStorage.setItem("user", JSON.stringify(user));
 
       setAuth({ newToken });
-      setUser(user);
 
       navigate("/");
     } catch (error) {
@@ -116,9 +129,23 @@ const Form = () => {
 
   return (
     <div className="container">
+      <h3  style={{color: 'skyblue'}}>Registration Form</h3>
       <form className="needs-validation" onSubmit={handleSubmit(onSubmit)}>
         {/* 'id', 'username', 'first_name', 'last_name',
                   'email', 'student_id', 'school', 'course' */}
+        <div className="mb-3">
+          <label htmlFor="profile_image" className="form-label">
+            Profile Image
+          </label>
+          <input
+            type="file"
+            accept="image/*"
+            id="profile_image"
+            className={`form-control`}
+            onChange={handleFileChange}
+          />
+        </div>
+
         <div className="mb-3">
           <label htmlFor="first_name" className="form-label">
             First Name
@@ -265,3 +292,4 @@ const Form = () => {
 };
 
 export default Form;
+

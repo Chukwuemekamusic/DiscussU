@@ -1,0 +1,16 @@
+= some point
+
+== use of signals
+Signal were used to update the participants model whenever a comment was deleted or added (‘Signals’ n.d.)
+(Olayiwola 2023)
+
+def get_host_profile_pic(self, obj):
+        user = obj.host
+        profile_pic = user.profile_pic
+        if profile_pic:  # Check if the profile picture exists
+            with profile_pic.open(mode='rb') as f:
+                encoded_image = b64encode(f.read()).decode('utf-8')
+            return f"data:image/png;base64,{encoded_image}"
+        else:
+            # Return a default profile picture URL if the user has no profile picture
+            return "path/to/default_profile_pic.png"

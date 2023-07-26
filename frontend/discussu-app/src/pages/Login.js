@@ -2,12 +2,15 @@ import { useState, useRef, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 import LoginTwoToneIcon from "@mui/icons-material/LoginTwoTone"; // login
+import { useHomeStore } from "../store";
 
 const Login = () => {
-  const { setAuth, setUser } = useContext(AuthContext);
+  const { setAuth} = useContext(AuthContext);
+  const returnUserData = useHomeStore((state) => state.returnUserData)
   const userRef = useRef();
   const errRef = useRef();
 
@@ -43,17 +46,21 @@ const Login = () => {
 
       console.log(JSON.stringify(response?.data));
       const token = response.data.token;
+      const expiry = response.data.expiry
       console.log(token);
       // const expiry = response.data.expiry
-      const user = response.data.user;
+      // const user = response.data.user;
 
       Cookies.set("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
+      Cookies.set("expiry", expiry)
+      
       setAuth({ token });
-      setUser(user);
-      // setUser(user)
+      
+      // reset input
       setEmail("");
       setPassword("");
+      const user = await returnUserData(token) // retrieves the user detail and save to local storage
+      localStorage.setItem("user", JSON.stringify(user))
       navigate("/");
     } catch (error) {
       if (!error?.response) {
@@ -67,17 +74,21 @@ const Login = () => {
   };
 
   return (
-    <div className="container-lg p-3">
+    <div className="container-md p-3">
+      <h3 style={{color: 'skyblue'}}>Log in Your Details</h3>
       <p
         ref={errRef}
         // className={errMsg ? "errmsg" : "offscreen"}
         aria-live="assertive"
+        className="text-danger"
       >
         {errMsg}
       </p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
+      <div className="mb-3">
+        <label htmlFor="email" className="form-label">Email</label>
         <input
+          className="form-control"
           type="text"
           id="email"
           ref={userRef}
@@ -86,8 +97,12 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <label htmlFor="password"> Password</label>
+        </div>
+
+        <div className="mb-3">
+        <label htmlFor="password" className="form-label"> Password</label>
         <input
+        className="form-control"
           type="password"
           id="password"
           placeholder="Password"
@@ -95,22 +110,16 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">
+        </div>
+        <button type="submit" className="btn btn-primary">
           {" "}
           <LoginTwoToneIcon /> Login
         </button>
       </form>
+      <p>If you don't have an account, click below</p>
+      <Link to={"/register"}>register here</Link>
     </div>
   );
 };
 
 export default Login;
-
-// const expiresIn = expiresInMinutes(expiry)
-// const expiresInMinutes = (expiry) => {
-//   const expiryDate = new Date(expiry);
-//   const currentTime = new Date();
-//   const timeDiff = expiryDate.getTime() - currentTime.getTime();
-//   const minutes = Math.floor(timeDiff / 60000); // Divide by 60000 to convert milliseconds to minutes
-//   return minutes;
-// };

@@ -1,28 +1,35 @@
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import '../css/Category.css'
 
-const CategoriesFeed = ({sortRoomsByCategory, categories}) => {
+const CategoriesFeed = ({ sortRoomsByCategory, categories }) => {
   return (
-    <div>
-      <div>
-        <h3>
-          <Link onClick={() => sortRoomsByCategory("")}>All</Link>
-        </h3>
-      </div>
-      <div>
+    <Container>
+      <Row>
+        <Col>
+          <h3>
+            <Link onClick={() => sortRoomsByCategory("")}>All</Link>
+          </h3>
+        </Col>
+      </Row>
+
+      <Row>
         {categories.map((category) => {
           // console.log('category id', category.id);
           return (
-            <div key={category.id}>
-              <h3>
-                <Link onClick={() => sortRoomsByCategory(category.name)}>
-                  {category.name}
-                </Link>
-              </h3>
-            </div>
+            <Col key={category.id} xs={6} md={4}>
+              <div className="category-card">
+                <h3>
+                  <Link onClick={() => sortRoomsByCategory(category.name)}>
+                    {category.name}
+                  </Link>
+                </h3>
+              </div>
+            </Col>
           );
         })}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
 

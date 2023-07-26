@@ -25,6 +25,7 @@ Home
 
         </div>
         <div class="col-lg-8">
+            <img src="{{request.user.profile_pic.url}}" alt="Profile pic">
             <!-- Discussion Room -->
             <a href="{% url 'create-room' %}" class="btn btn-primary">Add a New Room</a>
             {% for room in rooms %}
@@ -32,7 +33,8 @@ Home
                 <a href="{% url 'room-detail' room.id %}">
                     <h3>{{room}}</h3>
                 </a>
-                <p>host: @{{room.host}}</p>
+                <p>host: @{{room.host}} </p>
+                
                 <small>created: {{room.created}}</small><br>
                 <small>{{room.created|timesince}}</small><br>
                 <small>{{room.category}}</small>

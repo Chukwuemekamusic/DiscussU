@@ -5,18 +5,23 @@ import axios from "axios";
 import { useHomeStore } from "../store";
 import { getHeaders } from "../api/getHeaders";
 import Cookies from "js-cookie";
-import useHandleLogout from "./utils/useHandleLogout";
 import { useNavigate } from "react-router";
-import AuthContext from "../context/AuthProvider";
-import { useContext, useState } from "react";
+import {useState } from "react";
+import { ErrorCheck } from "./utils/utilFunctions";
+import useErrorCheck from "./utils/useErrorCheck"
+import useHandleLogout from "./utils/useHandleLogout"
 
-const RoomForm = ({ getRoomsData }) => {
+
+const RoomCreateForm = () => {
+  // const errorCheck = useErrorCheck()
+  const handleLogout = useHandleLogout()
   const categories = useHomeStore((state) => state.categories);
   const schools = useHomeStore((state) => state.schools);
   const token = Cookies.get("token");
   //   const handleLogout = useHandleLogout();
   const navigate = useNavigate();
   const [category_name, setCategory_name] = useState('')
+  const user = JSON.parse(localStorage.getItem("user"))
 
   const schema = yup.object().shape({
     name: yup.string().required(),
@@ -38,8 +43,10 @@ const RoomForm = ({ getRoomsData }) => {
   const onSubmit = async (data) => {
     console.log(data);
     let room;
+    let permit_all = false;
     if (data.school.includes('all')) {
-      data.school = []
+      data.school = data.school.filter(school => school !== 'all');
+      permit_all = true;
     }
 
     console.log("school data", data.school);
@@ -49,6 +56,8 @@ const RoomForm = ({ getRoomsData }) => {
         "description": data.description,
         "school": data.school,
         "category_name": data.newCategory,
+        "permit_all": permit_all,
+        "host": user.id
       }
     } else {
       room = {
@@ -56,7 +65,9 @@ const RoomForm = ({ getRoomsData }) => {
         "description": data.description,
         "school": data.school,
         "category_name": null,
-        "category": data.category
+        "category": data.category,
+        "permit_all": permit_all,
+        "host": user.id
       }
     }
 
@@ -69,8 +80,8 @@ const RoomForm = ({ getRoomsData }) => {
       console.log("Room create data", response.data);
       // await getRoomsData()
       navigate(`/room/${response.data.id}`)
-    } catch (error) {
-      ErrorCheck(error);
+    }catch (error) {
+      ErrorCheck(error)
     }
 
 
@@ -79,6 +90,9 @@ const RoomForm = ({ getRoomsData }) => {
       if (error.response) {
         // Handle API error (status code 4xx or 5xx)
         console.error(error.response.data);
+        if (error.response.data.details === "Invalid token.") {
+          handleLogout()
+        }
       } else if (error.request) {
         // Handle request error (no response received)
         console.error("No response from server.");
@@ -131,7 +145,7 @@ const RoomForm = ({ getRoomsData }) => {
             id="school"
             className={`form-control ${errors.school ? "is-invalid" : ""}`}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Select School...
             </option>
             <option value="all">All Schools...</option>
@@ -195,4 +209,4 @@ const RoomForm = ({ getRoomsData }) => {
   );
 };
 
-export default RoomForm;
+export default RoomCreateForm;

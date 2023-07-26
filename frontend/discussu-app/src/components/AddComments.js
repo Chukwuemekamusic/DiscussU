@@ -17,8 +17,8 @@ const AddComments = ({
   const { auth } = useContext(AuthContext);
 
   const handleCommentSubmit = async (e) => {
-    console.log(newComment);
-    console.log(parentComment.id);
+    // console.log(newComment);
+    // console.log(parentComment.id);
     e.preventDefault();
     const id = parentComment ? parentComment.id : null
 
@@ -33,17 +33,17 @@ const AddComments = ({
       setNewComment("");
       setReplyParentComment({});
 
-      console.log(response.data);
-      console.log(room_id);
+      // console.log(response.data);
+      // console.log(room_id);
       handleCommentUpdated();
     } catch (error) {
       console.error(error);
     }
   };
   return (
-    <div>
+    <div className=" p-2">
       <form onSubmit={handleCommentSubmit}>
-        <label htmlFor="content">Add a comment</label>
+        <label htmlFor="content" className="form-label">Add a comment</label>
         <input
           type="text"
           name="content"

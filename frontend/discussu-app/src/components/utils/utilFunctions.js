@@ -1,20 +1,22 @@
-import { useContext } from "react";
-import axios from "axios";
-import AuthContext from "../../context/AuthProvider";
-import { getHeaders } from "../../api/getHeaders";
-import { useHomeStore } from "../../store";
-import Cookies from "js-cookie";
+import moment from "moment";
+import { useNavigate } from "react-router";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const title = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
+const handleDateAndTime = (date) =>
+  moment(date).format("MMMM DD, YYYY [at] HH:mm:ss");
 
+const handleDate = (date) => moment(date).format("MMMM DD, YYYY");
 
 const ErrorCheck = (error) => {
   if (error.response) {
     // Handle API error (status code 4xx or 5xx)
     console.error(error.response.data);
+    if (error.response.data.detail == "Invalid token") {
+    }
   } else if (error.request) {
     // Handle request error (no response received)
     console.error("No response from server.");
@@ -22,33 +24,22 @@ const ErrorCheck = (error) => {
     // Handle other errors
     console.error("An error occurred:", error.message);
   }
-}
+};
 
-
-export const usePlainLogout = () => {
-  const { logout } = useContext(AuthContext);
-  const setClose = useHomeStore((state) => state.setClose);
-  const token = Cookies.get('token')
-
-  const plainLogout = () => {
-    logout();
-    logoutapi();
-    setClose();
-  }
-
-  const logoutapi = async () => {
-    try {
-      await axios.post(
-        `http://localhost:8000/api/users/logout/`,
-        null,
-        getHeaders(token)
-      );
-    } catch (error) {
-      console.error(error);
-    }
+const useGoBack = () => {
+  const navigate = useNavigate();
+  const handleGoBack = () => {
+    navigate(-1);
   };
+  const GoBackButton = () => (
+    <ArrowBackIcon
+      onClick={handleGoBack}
+      style={{ cursor: "pointer" }}
+      className="float-left"
+    />
+  );
 
-  return plainLogout
-}
+  return GoBackButton;
+};
 
-export { title, ErrorCheck }
+export { title, ErrorCheck, handleDateAndTime, handleDate, useGoBack };

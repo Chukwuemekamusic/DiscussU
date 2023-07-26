@@ -1,6 +1,7 @@
 = Tasks
 
 == 29/07/23
+=== done
 * include the static files
 * create user model based on AbstractUser
 * handling form validation for registration
@@ -12,6 +13,7 @@
 * be able to create category
 
 == 3/07/23
+=== done
 * getting the list of the 11 schools in RGU
     
     ** aberdeen business school
@@ -34,6 +36,8 @@
 * send everybody not logged in to the login page!!!
 
 == 4/07/23
+=== done 
+(using django template)
 * edit room
 * delete room
 * connect the participant table
@@ -45,6 +49,7 @@
 * # TODO  make the room host admin in participant table
 
 == 5/07/23 to 7/07/23
+=== done
 * create the api endpoints for:
 ** room-list-create
 ** category-list
@@ -64,7 +69,7 @@ after git push
 * create a swagger doc to view endpoints
 
 == 10/07/23
-
+=== done
 * User authentication in React
 * view room pages
 * started the navbar
@@ -76,6 +81,7 @@ after git push
 
 
 == 12/07/23
+=== done
 * logout working well
 * save user to local storage 
 * view room pages done
@@ -85,11 +91,12 @@ after git push
 * highlight comment to reply to
 
 === to do
-* reply to comment complete
+* complete reply to comment
 * complete the navbar search feature
 * do register
 
 == 18/07/23
+=== done
 * completed reply
 * register user 
 * create rooms
@@ -101,3 +108,36 @@ after git push
 * expand user field to include avatar or image
 * improve design of the page
 * profile page design
+
+== 19/07/23
+=== done
+* update Room details
+* improved the permit_all view method
+* fixed the image path 
+* restrict deletion of room to only host
+* restrict update of room to only host
+* expand user field to include avatar or image
+
+== to do
+* improve design of the page
+* profile page design
+* update proflie page
+* create a back arrow from room page to the exact page it is coming from
+
+== 21/07/23
+* expanded my view to allow host to always see their rooms
+* under profile show rooms I am involved in
+* others can see only the rooms you have created when visiting your profile
+
+=== issues 
+* NB: when I log in the profile url is relative until it loads again, I have to fix this....
+** issue resolved... had to separate the api functions
+
+== 24/07/23
+* updated my errorCheck to logout any user with an 'Invalid token.' with the useErrorCheck hook
+* rooms I have participated in
+* update user profile
+* profile page design
+* improved the rooms feed design
+* worked on the nav sidebar
+* quick edit of bio headline

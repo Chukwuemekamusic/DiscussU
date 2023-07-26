@@ -1,24 +1,19 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import axios from "axios";
-import AuthContext from "../../context/AuthProvider";
 import { useNavigate } from "react-router";
 import { getHeaders } from "../../api/getHeaders";
-import { useHomeStore } from "../../store";
 import Cookies from "js-cookie";
 
+
 const useHandleLogout = () => {
-  const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
-  const setClose = useHomeStore((state) => state.setClose);
-  const token = Cookies.get('token')
+  const token = Cookies.get("token");
 
-  const handleLogout = () => {
-    logout();
-    logoutapi();
+  const handleLogout = async () => {
+    // logout();
+    await logoutapi();
     navigate("/login");
-    setClose();
   };
-
 
   const logoutapi = async () => {
     try {
@@ -28,7 +23,10 @@ const useHandleLogout = () => {
         getHeaders(token)
       );
     } catch (error) {
-      console.error(error);
+      console.error(error.response.data.detail);
+    } finally {
+      Cookies.remove("token");
+      localStorage.removeItem("user");
     }
   };
 
@@ -36,4 +34,3 @@ const useHandleLogout = () => {
 };
 
 export default useHandleLogout;
-
