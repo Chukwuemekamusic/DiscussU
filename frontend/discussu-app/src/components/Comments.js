@@ -16,7 +16,7 @@ const Comments = ({
   addCommentRef,
   replyParentComment,
 }) => {
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse(localStorage.getItem("user"));
   const [highlightedComment, setHighlightedComment] = useState(null);
 
   useEffect(() => {
@@ -26,15 +26,16 @@ const Comments = ({
       }, 7000);
     }
   }, [highlightedComment]);
-  
 
   return (
     <>
-      {roomComment.map((comment, index) => {
+      {roomComment.map((comment) => {
         const timeSince = moment(comment.created).fromNow();
         const parentComment = comment.parent_comment
           ? comment.parent_comment_details
           : null;
+          console.log("comment", comment);
+          // const isUserComment = user && user.id === comment.user
 
         return (
           <Card
@@ -43,6 +44,7 @@ const Comments = ({
             className={`mb-4 ${
               highlightedComment === comment.id ? "highlighted-comment" : ""
             }`}
+            style={{ width: "500px" }}
           >
             <Card.Body>
               {/* className="card-header" id="commentUserHeader" */}
@@ -69,15 +71,10 @@ const Comments = ({
                   duration={500}
                   onClick={() => setHighlightedComment(parentComment.id)}
                 >
-                  {/* <Badge variant="info" className="cursor-pointer">
-                    <ReplyIcon />
-                    <span className="ml-1">
-                      Replying to @{parentComment.user} {parentComment.content}
-                    </span>
-                  </Badge> */}
                   <div className="thumbnail mt-2 reply-thumbnail">
                     <span className="mb-0">
-                      <i>replying</i> @{parentComment.user} {parentComment.content}
+                      <i>replying</i> @{parentComment.user}{" "}
+                      {parentComment.content}
                     </span>
                     <span className="reply-icon">
                       <ReplyIcon />
@@ -89,18 +86,18 @@ const Comments = ({
 
               <div className="d-flex justify-content-between mt-3">
                 <ReplyComment
-                room_id={room_id}
-                comment={comment}
-                handleReply={handleReply}
-                addCommentRef={addCommentRef}
-                replyParentComment={replyParentComment}
-              />
-                {user.username === comment.user && (
-                  <DeleteComment
                   room_id={room_id}
                   comment={comment}
-                  handleCommentUpdated={handleCommentUpdated}
+                  handleReply={handleReply}
+                  addCommentRef={addCommentRef}
+                  replyParentComment={replyParentComment}
                 />
+                {user.username === comment.user && (
+                  <DeleteComment
+                    room_id={room_id}
+                    comment={comment}
+                    handleCommentUpdated={handleCommentUpdated}
+                  />
                 )}
               </div>
             </Card.Body>
@@ -109,76 +106,77 @@ const Comments = ({
       })}
     </>
   );
-  // return (
-  //   <div>
-  //     {roomComment.map((comment, index) => {
-  //       const timeSince = moment(comment.created).fromNow();
-  //       const parentComment = comment.parent_comment
-  //         ? comment.parent_comment_details
-  //         : null;
-
-  //       // console.log('this is parent comment', parentComment);
-  //       return (
-  //         <div
-  //           id={`comment-${comment.id}`}
-  //           key={comment.id}
-  //           className={`card mb-3 ${
-  //             highlightedComment === comment.id ? "highlighted-comment" : ""
-  //           }`}
-  //         >
-
-  //           <div className="card-header" id="commentUserHeader">
-  //             <span>
-  //               <b>{comment.user_full_name}</b>{" "}
-  //               <small>
-  //                 @{comment.user} <i>{timeSince}</i>
-  //               </small>
-  //             </span>
-  //           </div>
-  //           {parentComment && (
-  //             <Link
-  //               to={`comment-${parentComment.id}`}
-  //               spy={true}
-  //               smooth={true}
-  //               offset={0}
-  //               duration={500}
-  //               onClick={() => setHighlightedComment(parentComment.id)}
-  //             >
-  //               <div className="thumbnail mt-2 reply-thumbnail">
-  //                 <span className="reply-icon">
-  //                   <ReplyIcon />
-  //                 </span>
-  //                 <span className="mb-0">
-  //                   {" "}
-  //                   replying @{parentComment.user} {parentComment.content}
-  //                 </span>
-  //               </div>
-  //             </Link>
-  //           )}
-
-  //           <div className="card-body" id="commentBody">
-  //             <p>{comment.content}</p>
-  //             <ReplyComment
-  //               room_id={room_id}
-  //               comment={comment}
-  //               handleReply={handleReply}
-  //               addCommentRef={addCommentRef}
-  //               replyParentComment={replyParentComment}
-  //             />
-  //             {/* TODO fix to user.id */}
-  //             {user.username === comment.user && (
-  //               <DeleteComment
-  //                 room_id={room_id}
-  //                 comment={comment}
-  //                 handleCommentUpdated={handleCommentUpdated}
-  //               />
-  //             )}
-  //           </div>
-  //         </div>
-  //       );
-  //     })}
-  //   </div>
-  // );
 };
 
 export default Comments;
+
+// return (
+//   <div>
+//     {roomComment.map((comment, index) => {
+//       const timeSince = moment(comment.created).fromNow();
+//       const parentComment = comment.parent_comment
+//         ? comment.parent_comment_details
+//         : null;
+
+//       // console.log('this is parent comment', parentComment);
+//       return (
+//         <div
+//           id={`comment-${comment.id}`}
+//           key={comment.id}
+//           className={`card mb-3 ${
+//             highlightedComment === comment.id ? "highlighted-comment" : ""
+//           }`}
+//         >
+
+//           <div className="card-header" id="commentUserHeader">
+//             <span>
+//               <b>{comment.user_full_name}</b>{" "}
+//               <small>
+//                 @{comment.user} <i>{timeSince}</i>
+//               </small>
+//             </span>
+//           </div>
+//           {parentComment && (
+//             <Link
+//               to={`comment-${parentComment.id}`}
+//               spy={true}
+//               smooth={true}
+//               offset={0}
+//               duration={500}
+//               onClick={() => setHighlightedComment(parentComment.id)}
+//             >
+//               <div className="thumbnail mt-2 reply-thumbnail">
+//                 <span className="reply-icon">
+//                   <ReplyIcon />
+//                 </span>
+//                 <span className="mb-0">
+//                   {" "}
+//                   replying @{parentComment.user} {parentComment.content}
+//                 </span>
+//               </div>
+//             </Link>
+//           )}
+
+//           <div className="card-body" id="commentBody">
+//             <p>{comment.content}</p>
+//             <ReplyComment
+//               room_id={room_id}
+//               comment={comment}
+//               handleReply={handleReply}
+//               addCommentRef={addCommentRef}
+//               replyParentComment={replyParentComment}
+//             />
+//             {/* TODO fix to user.id */}
+//             {user.username === comment.user && (
+//               <DeleteComment
+//                 room_id={room_id}
+//                 comment={comment}
+//                 handleCommentUpdated={handleCommentUpdated}
+//               />
+//             )}
+//           </div>
+//         </div>
+//       );
+//     })}
+//   </div>
+// );

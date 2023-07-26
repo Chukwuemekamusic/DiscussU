@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useHomeStore } from "../store";
 import Cookies from "js-cookie";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate } from "react-router";
 import { ErrorCheck } from "./utils/utilFunctions";
 
 const BioForm = ({ user, setShowEditBio }) => {
@@ -19,7 +19,7 @@ const BioForm = ({ user, setShowEditBio }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
     setValue,
   } = useForm({
     resolver: yupResolver(schema),
@@ -37,7 +37,7 @@ const BioForm = ({ user, setShowEditBio }) => {
     formData.append("bio", data.bio);
 
     try {
-      const updateResponse = await axios.put(
+      await axios.put(
         `http://localhost:8000/api/users/${user.id}/update/`,
         formData,
         {

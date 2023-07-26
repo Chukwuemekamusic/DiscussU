@@ -3,7 +3,6 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useHomeStore } from "../store";
-import { getHeaders } from "../api/getHeaders";
 import Cookies from "js-cookie";
 import useHandleLogout from "./utils/useHandleLogout";
 import { useNavigate } from "react-router";

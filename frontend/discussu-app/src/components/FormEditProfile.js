@@ -3,11 +3,9 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useHomeStore } from "../store";
-import { getHeaders } from "../api/getHeaders";
+
 import Cookies from "js-cookie";
-import { useNavigate, useLocation } from "react-router";
-import AuthContext from "../context/AuthProvider";
-import { useContext } from "react";
+import { useNavigate } from "react-router";
 import { ErrorCheck } from "./utils/utilFunctions";
 import { useState, useEffect } from "react";
 

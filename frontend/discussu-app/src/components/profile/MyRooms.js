@@ -1,7 +1,6 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import {  Row, Col, Card, Button } from "react-bootstrap";
 import { useHomeStore } from "../../store";
 import { Link } from "react-router-dom";
-import moment from "moment";
 import { handleDateAndTime } from "../utils/utilFunctions";
 import { useState } from "react";
 
@@ -9,11 +8,9 @@ const MyRooms = ({ user, title }) => {
   const rooms = useHomeStore((state) => state.rooms);
   const user_rooms = rooms.filter((room) => room.host === user.id);
   // console.log("user_id fact", user.id);
-  const participated_rooms = rooms.filter((room) => {
-    return room.participants.find((participant) => participant.id === user.id);
-  });
-  // console.log("participants", participated_rooms);
-  // console.log("user_rooms", user_rooms);
+  // const participated_rooms = rooms.filter((room) => {
+  //   return room.participants.find((participant) => participant.id === user.id);
+  // });
 
   const [showUserRooms, setShowUserRooms] = useState(false);
   

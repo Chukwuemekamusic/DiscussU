@@ -12,7 +12,7 @@ import { useHomeStore } from "../store";
 import DeleteRoom from "../components/DeleteRoom";
 import Cookies from "js-cookie";
 import useErrorCheck from "../components/utils/useErrorCheck";
-import { Card, Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Card, Container} from "react-bootstrap";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import RoomHeader from "../components/RoomHeader";
 import '../css/RoomHeader.css'
@@ -30,7 +30,7 @@ const RoomPage = () => {
   const errorCheck = useErrorCheck();
 
   const addCommentRef = useRef(null);
-  const [commentsLoaded, setCommentsLoaded] = useState(false);
+  
 
   const [room, setRoom] = useState({});
   const [roomComment, setRoomComment] = useState([]);

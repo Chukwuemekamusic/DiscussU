@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useHomeStore } from "../store";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import MyRooms from "../components/profile/MyRooms";
-import MyParticipatedRooms from "../components/profile/MyParticipatedRooms";
-import BioForm from "../components/BioForm";
 import { useGoBack } from "../components/utils/utilFunctions";
 // import { useHomeStore } from "../store";
 
@@ -12,7 +10,6 @@ const StudentProfilePage = () => {
   const GoBackButton = useGoBack();
   const params = useParams();
   const student_id = params.id;
-  const navigate = useNavigate();
 
   const rooms = useHomeStore((state) => state.rooms);
   const students = JSON.parse(localStorage.getItem("students"));
@@ -29,7 +26,6 @@ const StudentProfilePage = () => {
 
   const [showFollowers, setShowFollowers] = useState(false);
   const [showFollowedUsers, setShowFollowedUsers] = useState(false);
-  const [showEditBio, setShowEditBio] = useState(false);
 
   return (
     <Container>

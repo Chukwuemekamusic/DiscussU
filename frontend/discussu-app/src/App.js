@@ -26,9 +26,9 @@ import RoomUpdateForm from "./components/RoomUpdateForm";
 import UserProfilePage from "./pages/UserProfile";
 
 import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "./components/Sidebar";
+// import Sidebar from "./components/Sidebar";
 import Sidebar2 from "./components/Sidebar2";
-import Sidebar3 from "./components/Sidebar3";
+// import Sidebar3 from "./components/Sidebar3";
 import FormEditProfile from "./components/FormEditProfile";
 import StudentProfilePage from "./pages/StudentProfile";
 
@@ -48,7 +48,7 @@ function App() {
     isopen,
     setIsOpen,
     setSchools,
-    schools,
+    // schools,
     updateUserData,
     getStudentsProfile,
   ] = useHomeStore((state) => [
@@ -58,7 +58,7 @@ function App() {
     state.isopen,
     state.setIsopen,
     state.setSchools,
-    state.schools,
+    // state.schools,
     state.updateUserData,
     state.getStudentsProfile
   ]);

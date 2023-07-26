@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import {  useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import LogoutButton from "./LogoutButton";
-import UserNav from "./dropdown/UserNav";
 import { Navbar, Nav, FormControl } from "react-bootstrap";
 
 // import UserNav from "./dropdown/UserNav";
