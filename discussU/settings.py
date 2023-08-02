@@ -133,11 +133,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # MEDIA_URL = 'images/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static',
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -167,3 +167,5 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r'^https://discussu-production\.up\.railway\.app$',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://discussu-production.up.railway.app/']
