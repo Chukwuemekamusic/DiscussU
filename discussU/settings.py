@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&1=$s^ct0(v!2_w)w95a_^yx-0-*o-*0h!-$53q_uywmks2q^2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # TODO change to false
 
 ALLOWED_HOSTS = []
 
@@ -58,6 +58,8 @@ AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     # corsheader
     "corsheaders.middleware.CorsMiddleware",
@@ -143,9 +145,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # MEDIA_URL = 'images/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

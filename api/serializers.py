@@ -1,9 +1,10 @@
 from rest_framework.serializers import (
-    ModelSerializer, SerializerMethodField, StringRelatedField, ImageField
+    ModelSerializer, SerializerMethodField, StringRelatedField
 )
 from rest_framework import serializers
 from base.models import (Room, User, Participant,
-                         Category, Comment, School, Follow)
+                         Category, Comment, School, Follow,
+                         ReportCategory, ReportComment, Message)
 from django.contrib.auth import authenticate
 
 from base64 import b64encode
@@ -40,7 +41,7 @@ class UserSerializer(ModelSerializer):
         followers = Follow.objects.filter(followed_user=obj)
         return [{
             "id": follower.follower.id,
-            "full_name": follower.follower.full_name,
+            "full_name": follower.follower.full_name.title(),
             "username": follower.follower.username
         } for follower in followers]
 
@@ -48,24 +49,52 @@ class UserSerializer(ModelSerializer):
         followed_users = Follow.objects.filter(follower=obj)
         return [{
             "id": followed.followed_user.id,
-            "full_name": followed.followed_user.full_name,
+            "full_name": followed.followed_user.full_name.title(),
             "username": followed.followed_user.username
         } for followed in followed_users]
 
 
 class ProfileSerializer(ModelSerializer):
     school_name = SerializerMethodField()
+    no_of_followers = SerializerMethodField()
+    no_of_followed = SerializerMethodField()
+
+    followers = SerializerMethodField()
+    followed_users = SerializerMethodField()
     # profile_pic_url = SerializerMethodField()
 
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name',
                   'email', 'student_id', 'school', 'course', 'full_name',
-                  'school_name', 'profile_pic', 'avatar']
+                  'school_name', 'profile_pic', 'avatar', 'no_of_followers',
+                  'no_of_followed', 'followers', 'followed_users', 'bio']
 
     def get_school_name(self, obj):
         school = School.objects.get(id=obj.school.id)
         return school.name
+
+    def get_no_of_followers(self, obj):
+        return obj.get_no_of_followers()
+
+    def get_no_of_followed(self, obj):
+        return obj.get_no_of_followed()
+
+    def get_followers(self, obj):
+        followers = Follow.objects.filter(followed_user=obj)
+        return [{
+            "id": follower.follower.id,
+            "full_name": follower.follower.full_name.title(),
+            "username": follower.follower.username
+        } for follower in followers]
+
+    def get_followed_users(self, obj):
+        followed_users = Follow.objects.filter(follower=obj)
+        return [{
+            "id": followed.followed_user.id,
+            "full_name": followed.followed_user.full_name.title(),
+            "username": followed.followed_user.username
+        } for followed in followed_users]
 
 
 class CreateUserSerializer(ModelSerializer):
@@ -194,7 +223,8 @@ class RoomSerializer(ModelSerializer):
 
 
 class CommentSerializer(ModelSerializer):
-    user = StringRelatedField()
+    # user = StringRelatedField()
+    username = SerializerMethodField()
     room = StringRelatedField()
     parent_comment_details = SerializerMethodField()
     user_full_name = SerializerMethodField()
@@ -205,7 +235,7 @@ class CommentSerializer(ModelSerializer):
         fields = [
             'id', 'user', 'parent_comment', 'room', 'content',
             'updated', 'created', 'parent_comment_details', 'user_full_name',
-            'user_profile_pic'
+            'user_profile_pic', 'username'
         ]
 
     def get_parent_comment_details(self, obj):
@@ -221,7 +251,11 @@ class CommentSerializer(ModelSerializer):
 
     def get_user_full_name(self, obj):
         user = User.objects.get(pk=obj.user.id)
-        return user.full_name
+        return user.full_name.title()
+
+    def get_username(self, obj):
+        user = User.objects.get(pk=obj.user.id)
+        return user.username
 
     def get_user_profile_pic(self, obj):
         user = obj.user
@@ -242,15 +276,6 @@ class CommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ['content', 'parent_comment']
-
-    # def create(self, validated_data):
-    #     new_comment = validated_data.get('newComment')
-    #     room_id = self.context['view'].kwargs['pk']
-    #     room = Room.objects.get(id=room_id)
-    #     user = self.context['request'].user
-    #     comment = Comment.objects.create(
-    #         user=user, room=room, content=new_comment)
-    #     return comment
 
 
 class ParticipantSerializer(ModelSerializer):
@@ -277,3 +302,71 @@ class SchoolSerializer(ModelSerializer):
 
     def get_number_of_students(self, obj):
         return obj.user_set.all().count()
+
+
+class FollowSerializer(ModelSerializer):
+    class Meta:
+        model = Follow
+        fields = '__all__'
+
+
+class ReportCategorySerializer(ModelSerializer):
+    class Meta:
+        model = ReportCategory
+        fields = '__all__'
+
+
+class ReportCommentSerializer(ModelSerializer):
+    reporter_name = SerializerMethodField()
+    category_name = SerializerMethodField()
+
+    class Meta:
+        model = ReportComment
+        fields = '__all__'
+
+    def get_reporter_name(self, obj):
+        reporter = User.objects.get(id=obj.reporter.id)
+        return reporter.username
+
+    def get_category_name(self, obj):
+        category = ReportCategory.objects.get(id=obj.category.id)
+        return category.name
+
+
+# inbox
+class MessageSerializer(serializers.ModelSerializer):
+    sender_name = SerializerMethodField()
+    sender_full_name = SerializerMethodField()
+    receiver_name = SerializerMethodField()
+    receiver_full_name = SerializerMethodField()
+
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+    def get_sender_name(self, obj):
+        sender = User.objects.get(id=obj.sender.id)
+        return sender.username
+
+    def get_sender_full_name(self, obj):
+        sender = User.objects.get(id=obj.sender.id)
+        return sender.full_name
+
+    def get_receiver_name(self, obj):
+        receiver = User.objects.get(id=obj.receiver.id)
+        return receiver.username
+
+    def get_receiver_full_name(self, obj):
+        receiver = User.objects.get(id=obj.receiver.id)
+        return receiver.full_name
+    
+    # def get_sender_pic(self,obj):
+    #     user = obj.user
+    #     profile_pic = user.profile_pic
+    #     if profile_pic:  # Check if the profile picture exists
+    #         with profile_pic.open(mode='rb') as f:
+    #             encoded_image = b64encode(f.read()).decode('utf-8')
+    #         return f"data:image/png;base64,{encoded_image}"
+    #     else:
+    #         # Return a default profile picture URL if the user has no profile picture
+    #         return "path/to/default_profile_pic.png"

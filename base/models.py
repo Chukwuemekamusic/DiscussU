@@ -78,12 +78,16 @@ class Room(models.Model):
     name = models.CharField(max_length=500)
     description = models.TextField(null=True, blank=True)
     permit_all = models.BooleanField(default=False)
-    members = models.ManyToManyField(User, related_name='member', blank=True)
+    # members = models.ManyToManyField(User, related_name='member', blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         unique_together = ['host', 'name']
+
+    @property
+    def get_member_count(self):
+        return Participant.objects.filter(room=self).count()
 
     def __str__(self):
         return self.name
@@ -137,6 +141,39 @@ class Follow(models.Model):
 
     class Meta:
         unique_together = ['follower', 'followed_user']
+
+
+# handling reporting bad comments
+class ReportCategory(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class ReportComment(models.Model):
+    reporter = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    category = models.ForeignKey(ReportCategory, on_delete=models.CASCADE)
+    description = models.TextField(blank=True, null=True)
+    reported_at = models.DateTimeField(auto_now_add=True)
+    handled = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'Reporter: {self.reporter}, Comment: {self.comment.id}, Category: {self.category}'
+
+
+class Message(models.Model):
+    sender = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="sent_messages")
+    receiver = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="received_messages")
+    content = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)  # created
+
+    def __str__(self):
+        return f"Message from {self.sender.username} to {self.receiver.username}"
 
 
 # def save(self, *args, **kwargs):

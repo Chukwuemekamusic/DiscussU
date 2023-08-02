@@ -141,3 +141,7 @@ after git push
 * improved the rooms feed design
 * worked on the nav sidebar
 * quick edit of bio headline
+
+=== todo
+* # TODO A USER CAN'T FOLLOW OR UNFOLLOW ONESELF
+* fix the update pic display in the edit-profile

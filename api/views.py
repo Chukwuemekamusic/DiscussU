@@ -1,9 +1,10 @@
 # from django.shortcuts import render
+from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.generics import (
     UpdateAPIView, ListCreateAPIView, ListAPIView,
     RetrieveAPIView, DestroyAPIView,
-    CreateAPIView, RetrieveUpdateAPIView
+    CreateAPIView
 )
 from rest_framework.response import Response
 from rest_framework import status, serializers
@@ -11,13 +12,15 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 
 from django.shortcuts import get_object_or_404
 from base.models import (
-    Room, User, Comment, Category, Participant, School)
+    Room, User, Comment, Category, Participant, School, Follow,
+    ReportCategory, ReportComment, Message)
 from .serializers import (
     RoomSerializer, UserSerializer, CommentSerializer, CommentCreateSerializer,
-    CategorySerializer, ParticipantSerializer,
-    CommentCreateSerializer,  # RoomUpdateSerializer,
+    CategorySerializer, ParticipantSerializer,  # RoomUpdateSerializer,
     CreateUserSerializer, UpdateUserSerializer, LoginUserSerializer,
-    ProfileSerializer, SchoolSerializer
+    ProfileSerializer, SchoolSerializer, FollowSerializer,
+    ReportCategorySerializer, ReportCommentSerializer,
+    MessageSerializer
 )
 from django.db.models import Q
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -26,7 +29,6 @@ from django.contrib.auth import login
 from knox.views import (LoginView as KnoxLoginView,
                         LogoutView as KnoxLogoutView)
 from knox.auth import TokenAuthentication
-from knox.models import AuthToken
 
 # participant function
 from base.views import create_participants
@@ -68,7 +70,6 @@ class AllUsersListView(ListAPIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     queryset = User.objects.all()
-
 
 
 class UserDetailAPIView(RetrieveAPIView):
@@ -291,7 +292,7 @@ class RoomCommentDestroyAPIView(DestroyAPIView):
         "You are not allowed to delete another user's comment!!!")
 
     def get_queryset(self):
-        return Comment.objects.filter(user=self.request.user)
+        return Comment.objects.filter(user=self.request.user.id)
 
     def get_object(self):
         comment_id = self.kwargs.get('pk')
@@ -399,6 +400,136 @@ class RoomParticipantsAPIView(LoginRequiredMixin, ListAPIView):
 class SchoolListAPIView(ListAPIView):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
+
+
+# Follow API
+
+class FollowAPIView(CreateAPIView):
+    serializer_class = FollowSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+
+class UnfollowAPIView(DestroyAPIView):
+    serializer_class = FollowSerializer
+    queryset = Follow.objects.all()
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get_object(self):
+        follower = self.request.user
+        followed_user = self.kwargs['pk']
+        return Follow.objects.get(follower=follower, followed_user=followed_user)
+
+
+class FollowListAPIView(ListAPIView):
+    serializer_class = FollowSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def get_queryset(self):
+        # Filter the follow data based on the logged-in user
+        logged_in_user = self.request.user
+        queryset = Follow.objects.filter(follower=logged_in_user)
+        return queryset
+
+
+class CreateFollowAPIView(CreateAPIView):
+    serializer_class = FollowSerializer
+    queryset = Follow.objects.all()
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+
+    def perform_create(self, serializer):
+        # Get the authenticated user as the follower
+        follower = self.get_object()[1]
+
+        # Get the user to be followed based on the provided 'pk' URL parameter
+        followed_user = self.get_object()[0]
+
+        # Set the follower and followed_user fields in the serializer data
+        serializer.validated_data['follower'] = follower
+        serializer.validated_data['followed_user'] = followed_user
+
+        serializer.save()
+
+    def get_object(self):
+        # Get the user to be followed based on the 'pk' URL parameter
+        followed_user = get_object_or_404(User, pk=self.kwargs['pk'])
+        return followed_user, self.request.user
+
+
+class ReportCategoryListAPIView(ListAPIView):
+    serializer_class = ReportCategorySerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+    queryset = ReportCategory.objects.all()
+
+
+class ReportCommentAPIView(ListCreateAPIView):
+    serializer_class = ReportCommentSerializer
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+    queryset = ReportComment.objects.all()
+
+
+class MessageListCreateView(ListCreateAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = Message.objects.all()
+    serializer_class = MessageSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        return Message.objects.filter(receiver=user)
+
+
+class MessageDeleteAPIView(DestroyAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = MessageSerializer
+    permission_denied_message = (
+        "You are not allowed to delete another user's comment!!!")
+
+    def get_queryset(self):
+        return Message.objects.filter(sender=self.request.user.id)
+
+    def get_object(self):
+        message_id = self.kwargs.get('pk')
+        # message = self.get_queryset().get(id=message_id)
+        message = get_object_or_404(self.get_queryset(), id=message_id)
+
+        return message
+
+    def destroy(self, request, *args, **kwargs):
+        return super().destroy(request, *args, **kwargs)
+
+
+class ConversationListView(ListAPIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    serializer_class = MessageSerializer
+
+    def get_object(self):
+        student_id = self.kwargs.get('pk')
+        try:
+            student = get_object_or_404(User, id=student_id)
+            # student = User.objects.get(id=student_id)
+            user = self.request.user
+        except Http404:
+            return None, None
+        return student, user
+
+    def get_queryset(self):
+        student, user = self.get_object()
+
+        queryset = Message.objects.filter(
+            Q(sender=student, receiver=user) | Q(
+                sender=user, receiver=student)
+        )
+        queryset = queryset.order_by('created')
+        return queryset
+
 
 # class LoginUserView(KnoxLoginView):
 #     permission_classes = (AllowAny,)

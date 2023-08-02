@@ -6,7 +6,11 @@ from .views import (
     RoomCommentDestroyAPIView, CreateUserAPIView, LoginUserView,
     LogoutUserView, UserDetailAPIView, UserUpdateAPIView, SchoolListAPIView,
     RoomTestListCreateAPIView, UserAvatarUpload,
-    UserParticipatedRoomsAPIView, AllUsersListView
+    UserParticipatedRoomsAPIView, AllUsersListView,
+    FollowAPIView, UnfollowAPIView, FollowListAPIView,
+    ReportCategoryListAPIView, ReportCommentAPIView,
+    MessageListCreateView, ConversationListView, MessageDeleteAPIView
+    # CreateFollowAPIView
 )
 # from rest_framework.routers import SimpleRouter
 app_name = 'api'
@@ -35,9 +39,25 @@ urlpatterns = [
     path('users/details/', UserDetailAPIView.as_view(), name='api-user-detail'),
     path('users/profiles/', AllUsersListView.as_view(), name='api-student-profiles'),
     path('user/participated-rooms/', UserParticipatedRoomsAPIView.as_view(), name='api-user-participated-rooms'),
+    path('users/follow/', FollowAPIView.as_view(), name='api-follow'),
+    path('users/follow/', FollowAPIView.as_view(), name='api-follow'),
+    path('users/follow-status/', FollowListAPIView.as_view(), name='api-follow-status'),
+    # path('follow/<int:pk>/', CreateFollowAPIView.as_view(), name='api-follow-unfollow'),
+
+    path('users/unfollow/<str:pk>/', UnfollowAPIView.as_view(), name='api-unfollow'),
 
     path('schools/', SchoolListAPIView.as_view(), name='api-school-list'),
 
     # for test without login
     path('rooms-test/', RoomTestListCreateAPIView.as_view(), name='api-test-room-list-create'),
+
+    # flag comments
+    path('flag-comment/', ReportCommentAPIView.as_view(), name='api-flag-comment'),
+    path('report-categories/', ReportCategoryListAPIView.as_view(), name='api-report-categories'),
+
+    # inbox
+    path('inbox/', MessageListCreateView.as_view(), name='api-inbox'),
+    path('inbox/<int:pk>/', ConversationListView.as_view(), name='api-inbox'),
+    path('inbox/<str:pk>/delete/', MessageDeleteAPIView.as_view(), name='api-inbox'),
+
 ]
