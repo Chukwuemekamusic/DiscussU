@@ -1,1 +1,1 @@
-web: gunicorn discussU.usgi
+web: gunicorn discussU.wsgi
