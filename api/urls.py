@@ -40,7 +40,7 @@ urlpatterns = [
     path('users/profiles/', AllUsersListView.as_view(), name='api-student-profiles'),
     path('user/participated-rooms/', UserParticipatedRoomsAPIView.as_view(), name='api-user-participated-rooms'),
     path('users/follow/', FollowAPIView.as_view(), name='api-follow'),
-    path('users/follow/', FollowAPIView.as_view(), name='api-follow'),
+    # path('users/follow/', FollowAPIView.as_view(), name='api-follow'),
     path('users/follow-status/', FollowListAPIView.as_view(), name='api-follow-status'),
     # path('follow/<int:pk>/', CreateFollowAPIView.as_view(), name='api-follow-unfollow'),
 
@@ -57,7 +57,7 @@ urlpatterns = [
 
     # inbox
     path('inbox/', MessageListCreateView.as_view(), name='api-inbox'),
-    path('inbox/<int:pk>/', ConversationListView.as_view(), name='api-inbox'),
-    path('inbox/<str:pk>/delete/', MessageDeleteAPIView.as_view(), name='api-inbox'),
+    path('inbox/<int:pk>/', ConversationListView.as_view(), name='api-list-conversation'),
+    path('inbox/<str:pk>/delete/', MessageDeleteAPIView.as_view(), name='api-delete-message'),
 
 ]
