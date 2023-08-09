@@ -1,0 +1,5320 @@
+[
+{
+    "model": "sessions.session",
+    "pk": "06u094beqpp0z3fhewl22l8s43ktw6rf",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIqte:EsDSk2BeO1UC6joFGdtoBK0cY1_NHbc92AELAXluYLs",
+        "expire_date": "2023-07-24T13:25:46.332Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "16th5kdmmhqcujm458vl5m487yvy54gj",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIq77:DD8w4ih_cUJIwVzYiZcK1gesE_JyHbsex6wgn1NCxhI",
+        "expire_date": "2023-07-24T12:35:37.500Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "19slsdctm0ii8s1rys06fulnvhma3sbm",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIyoB:3i5MOXPK6mUHDfGqA4MGOs1QSXCO38gxSSwEG4GQvX8",
+        "expire_date": "2023-07-24T21:52:39.960Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1dwanm8yne68z39yzjusxt7k7hd68zky",
+    "fields": {
+        "session_data": "e30:1qErdJ:4FR6P_pkS0ZCuOvszR7S7_Yct2QFZw8Yhy5emUU8whQ",
+        "expire_date": "2023-07-13T13:24:25.159Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4l1q8f6vuv5jpt4fv6vznimlm1sim4db",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qIyQf:1eoVKfNR_9CMZqYI9CQ6NVUQU_euCuoAe-aZ34N4iYA",
+        "expire_date": "2023-07-24T21:28:21.424Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5fwqbv1fkxsyl3slai8d5vtma8g327tz",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qH1mY:e0f9Is_TwjoyFDCLxqYQ2ffYRIVzApWx-8150sO2-oA",
+        "expire_date": "2023-07-19T12:38:54.377Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5kyj5h9oohpdmcbeezaavy5dgzqdnpqh",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIz6M:whqjzroJ_pDDPucFAyHoN8syx4KVaNnkiG_21KS8SgE",
+        "expire_date": "2023-07-24T22:11:26.528Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5pys4596azcglpirfbdpwm49uues939i",
+    "fields": {
+        "session_data": "e30:1qJEj5:JK8oOwJ6SOllox_1xM0Un1AWLg-FXVLO9P13BKRQFdc",
+        "expire_date": "2023-07-25T14:52:27.575Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6uwa625qqoupsjio05m8s4ps4wyxs80w",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIqlX:j8ag0UujXsH5SF8yWJE8ivh7ppbQASiUUCRBrrTKlBA",
+        "expire_date": "2023-07-24T13:17:23.114Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "88ddfr62rax5t7mtb2bdjk5zms9nbn7k",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIrqm:06OdDxTLmSURWx7hDyB8NlJ49mq86x7_g_hPgBxN6oE",
+        "expire_date": "2023-07-24T14:26:52.401Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9cwld3xswk1u4br6pmcn6q0eb13b56dx",
+    "fields": {
+        "session_data": "e30:1qJEp5:wtrtT614dh-gPv_FmNliapCsj0Rdcb28fOIQdqc4ZaE",
+        "expire_date": "2023-07-25T14:58:39.809Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9we5pm2j7wsm3qoa1ey65hvwxvx9t4y7",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qIyNR:p3GRGnuJ7V-Y9XTPGyBu880nVnIyNMJmLrPiTjAJLCw",
+        "expire_date": "2023-07-24T21:25:01.192Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "a9rpswlhg1zjl51rqzuaw5xbcmwvl9xo",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qLS76:69S6JaavJAp1ihBt00e_dZItPlwADNPyexv5f5UbczU",
+        "expire_date": "2023-07-31T17:34:24.538Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "b9atsc734qps8c56ij2blpnuuexfktee",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIq8O:-C6P6W37SieaW0nSqi2-cS3PcTX1m7RX2T8KkmtF8os",
+        "expire_date": "2023-07-24T12:36:56.184Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bunlpf1h4izyhgellyekp8peqmb1xh0s",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAUBe_iGlnxEi-U9JzB-ouNA8iR4qRC3B0ipYD2zcx7iQTbWtPW85ImFmehvDj9jgj0yG0nfId2myXNbV0mlLsiD9rldeb8vBzu30GFXr-18T4GNG7EMhJQYM-WNAQwZAZt9WANZqcwFhNscSUwcYleeVKANlvx_gANlzhx:1qQRWM:-Mn2sHZ93xYo-5otMH1KUVL0UQGBPPwgWQev7h8o8g0",
+        "expire_date": "2023-08-14T11:57:06.334Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "culuqpetai9wkb1mhxu0zgw6g4cjd2b9",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIrvw:SWQFZCmnsnhjUBgC7UaqM81avmt586nSAuUW5q87-nI",
+        "expire_date": "2023-07-24T14:32:12.504Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "e8ft3598br3ylegx8jnbtacg7hs8ta2c",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIqTI:9FMl3_Jrm7BdvF43ujDADMUmP5AXEt6iPUOATA4LB0s",
+        "expire_date": "2023-07-24T12:58:32.115Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fz706zjzhpovi7l5tr8qss4earujir22",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAUBe_iGlnxEi-U9JzB-ouNA8iR4qRC3B0ipYD2zcx7iQTbWtPW85ImFmehvDj9jgj0yG0nfId2myXNbV0mlLsiD9rldeb8vBzu30GFXr-18T4GNG7EMhJQYM-WNAQwZAZt9WANZqcwFhNscSUwcYleeVKANlvx_gANlzhx:1qRYXo:kHvwAAGONj0nX5713ZCm79xWBiFJhzZoTCCF0rYDGNs",
+        "expire_date": "2023-08-17T13:39:12.431Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gcmrdfafrjcc9whcgjwiolmt67xb4xil",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qTFll:HjZvsKa68wExZ-GuVUXvWpXXB4mvq8NEbNbKyOsnNOw",
+        "expire_date": "2023-08-22T06:00:37.840Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ij8pfpipfuk6bu92uig3mnccxfetczfx",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qLRRS:jhCJNvSvDtDYpayr0adHPYyDG4ptxuGn1aWVMuan_ww",
+        "expire_date": "2023-07-31T16:51:22.662Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kmtqpi2jtmfmgtadpf2c6ts673919t53",
+    "fields": {
+        "session_data": "e30:1qEtZF:0oILdp1u9732H52STe3sWGb9-8n_03oiYozdowYkwaU",
+        "expire_date": "2023-07-13T15:28:21.105Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "l2tn6z58ii1yb7vfbxua6orbtl0pwyef",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qJA9j:hlQC1Onl9j-mKTo5KzH8s3yH_qzs-rGv02yKNUuRYCk",
+        "expire_date": "2023-07-25T09:59:39.703Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lmowosmxe56735q9b44cg5q3blmscz5z",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qIs4a:B9aT95C9mtAJlzriV05UrRQ3XvMeXJoVmFGqSufh4LQ",
+        "expire_date": "2023-07-24T14:41:08.237Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "m6cd1ar211s4u2d0ohuwzxjrfi1qknq7",
+    "fields": {
+        "session_data": "e30:1qJEte:EHIlT67AvOCdm0PbMYdZ3uqDbmJtE88mU7ypxRkJcV8",
+        "expire_date": "2023-07-25T15:03:22.159Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mzikxgtdii2n6g604sf7vp74q3cyp968",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIrZw:yAmehOqWjjMWFJeoJsdg7vkhrhhd9yBQVZlDK_eSkeY",
+        "expire_date": "2023-07-24T14:09:28.400Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "oecef64r3hn313tww6043b81x8dawk5o",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qHj2T:oeakpfQaJBr8olWmVqLALX-6rocOGjJrqxdoVMQJx0o",
+        "expire_date": "2023-07-21T10:50:13.474Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pm9q930wwiruq62237v3z8eg97imxkyn",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIrrN:iwYeF6oUKwEkYDyD5fTmDOniZgreA-SlhDJSlk8Jwbo",
+        "expire_date": "2023-07-24T14:27:29.140Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "r3p87uwlu4rqnqjos3nnra669j3pakks",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIquV:3f1rTLBpAxCE59rTqV-xFLeeaEYQqT4j74qYiH5yjvE",
+        "expire_date": "2023-07-24T13:26:39.718Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rcd28o25nq13g2y6blag4z2lcq6buk1v",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIs3y:pph7z8HzlYedu3aGGzb_DpNDlDhpnr0HNcJvuV_-LZw",
+        "expire_date": "2023-07-24T14:40:30.861Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rdxal2zrnd04gath9676hnk2k12jc40d",
+    "fields": {
+        "session_data": "e30:1qJEq1:tUbPK7-S82zHj0p2X__UKmY3Pr7az9FcpBnEzekUz58",
+        "expire_date": "2023-07-25T14:59:37.377Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rss8br0fe5aqcx3alittbezlk2gffrlf",
+    "fields": {
+        "session_data": ".eJxVjDkOwjAUBe_iGlnxEi-U9JzB-ouNA8iR4qRC3B0ipYD2zcx7iQTbWtPW85ImFmehvDj9jgj0yG0nfId2myXNbV0mlLsiD9rldeb8vBzu30GFXr-18T4GNG7EMhJQYM-WNAQwZAZt9WANZqcwFhNscSUwcYleeVKANlvx_gANlzhx:1qTnT3:E0Q_LhLrIeQenl7jAxF6HpfLrhkFDGSkD3eQeKM25B0",
+        "expire_date": "2023-08-23T17:59:33.679Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ur7m0c1qgpmtyjt139yen8c0cv2yddt2",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIqAT:FesE9zH2-SflZLzq7QUaOKDBuaYTwEXgvmxEzzNTMmc",
+        "expire_date": "2023-07-24T12:39:05.351Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "utepiv442bevfui7uuc1d3oe7nvsdmj0",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qJACn:pTIN0Lmilnofbl1Z0paMCXwYg4fLtrwh-acYiYp9HFY",
+        "expire_date": "2023-07-25T10:02:49.831Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vtoi68tkrqfk36oqb31ywshlp4h0bxzo",
+    "fields": {
+        "session_data": "e30:1qNIOn:P_x0k8fM7zn5Z-rkiTsz7yK_3oRji6kWQz-hxMnePpo",
+        "expire_date": "2023-08-05T19:36:17.987Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wrjtv388yz1421p1z0tuj96lo667oqjj",
+    "fields": {
+        "session_data": "e30:1qJEtm:H8BCKIsN2VtGz4tGFMedCxa5scZM55xlszbztRg1qlw",
+        "expire_date": "2023-07-25T15:03:30.440Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x1oqb6pkj35pmkcp2i3eqy9qanjkwj4h",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIrba:zxYuG5DjW6UQWiW722Dvn_jG6aK9_YKz-KFHuT8k6mk",
+        "expire_date": "2023-07-24T14:11:10.473Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yocqhridw5aewupsetlei8b2t376n45n",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFdKJR69N5vILssSNVAUtqT8d9tkx70Npn3Zt7C47Zmv7W4-JnFVWhx-e0IwzOWA_ADy73KUMu6zCQPRZ60yalyfN1O9-8gY8v7uusBDVsYBkcOdK9JYTdGC8nZoF00jiAZItaIvGdLMJIi5SAkFZMVny_OoDf3:1qIqUi:-9VKhF5SVt2mKEg6zjEAqPEPSZW3oV3zu2UF-SBCSGU",
+        "expire_date": "2023-07-24T13:00:00.802Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zk9kgopkeqeezks9h8wxz05h6aig0wi3",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyHQBQGP3vsNZGFXqRpISnsy_rtt0oNe5jDvzbxFxHUpce08x4nERWhx-u0S5ifXHdAD673J3OoyT0nuijxol2Mjfl0P9--gYC_b-kbakcWQg7fgldEU7GAgJAjoFWi1BaDDc8rIRjPTYJGRvfHg0ATx-QLKbzd0:1qJAYc:RmAqiUPiUCl7wZcIo3RiTZE_43SWiPT22Y9n1e6Je7w",
+        "expire_date": "2023-07-25T10:25:22.739Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zrzt8h8e81k4hpbfpog2ta3kyqx4pgzx",
+    "fields": {
+        "session_data": "e30:1qJEi2:LBx5x1JzQzousmTJ9ATIEMMcg7ago97hXNfKyUzAJF0",
+        "expire_date": "2023-07-25T14:51:22.831Z"
+    }
+},
+{
+    "model": "base.school",
+    "pk": 1,
+    "fields": {
+        "name": "School of Applied Social Studies",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 2,
+    "fields": {
+        "name": "School of Computing",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 3,
+    "fields": {
+        "name": "School of Creative & Cultural Business",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 4,
+    "fields": {
+        "name": "School of Engineering",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 5,
+    "fields": {
+        "name": "Gray's School of Art",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 6,
+    "fields": {
+        "name": "School of Health Sciences",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 7,
+    "fields": {
+        "name": "School of Nursing, Midwifery & Paramedic Practice",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 8,
+    "fields": {
+        "name": "School of Pharmacy & Life Sciences",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 9,
+    "fields": {
+        "name": "Law School",
+        "description": null
+    }
+},
+{
+    "model": "base.school",
+    "pk": 10,
+    "fields": {
+        "name": "Scott Sutherland School of Architecture & Built Environment",
+        "description": null
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$EJ1cImBJJ7HNygX43wQdAI$6ptg56NCtUaFCLX/ntP0LwAV2t6dvS943GdROGr9i20=",
+        "last_login": "2023-08-09T08:12:24.938Z",
+        "is_superuser": true,
+        "username": "emeka_of_life",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-06-29T12:19:57Z",
+        "first_name": "Emeka",
+        "last_name": "Anyaegbunam",
+        "email": "chukwuemeka@gmail.com",
+        "student_id": "2217892",
+        "school": 2,
+        "course": "Msc. Information Technology",
+        "bio": "Software enthusiast and Student | Lover of God's word",
+        "profile_pic": "profile_pics/firebrand_SbxMvlW.jpeg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$r0RglNuZpez9twtTbrPEzM$IfgxFFKPa29w122NORUYAcghDmSGFyQTSzjiVAXM4p8=",
+        "last_login": "2023-07-27T11:46:46.223Z",
+        "is_superuser": false,
+        "username": "tobi",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-29T13:28:12Z",
+        "first_name": "Joseph",
+        "last_name": "Tobi",
+        "email": "tobi@gmail.com",
+        "student_id": "123456789",
+        "school": 5,
+        "course": "Msc. Information Technology",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$8Mq9IzCM4I8CKQTuEFEGB3$MheH3YurSK/96/DXAK1xfy7nArXxk6MmWBxeCi5cZpQ=",
+        "last_login": "2023-07-17T21:35:11.976Z",
+        "is_superuser": false,
+        "username": "emmanuel",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-06-29T15:28:20Z",
+        "first_name": "Emmanuel",
+        "last_name": "Okon",
+        "email": "emma@yahoo.com",
+        "student_id": "22222",
+        "school": 3,
+        "course": "creative media",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$CYiYPO4tUob0Oc3APrSZno$RY/77O0IrXaUpdy7jVUXQiixfoGQlXqcYmyFX1KCxgE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "friday",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-06T10:26:26.455Z",
+        "first_name": "Friday",
+        "last_name": "Samson",
+        "email": "friday@gmail.com",
+        "student_id": "1234987",
+        "school": 5,
+        "course": "creative media",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$qHG56YljtAyGXWqj6jqTlI$XdZbGe73JM/Y4+FXv2J7lo2LnKCFf97RfWibXm3qKus=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "solomon",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-07T03:29:29.751Z",
+        "first_name": "Solomon",
+        "last_name": "Candiff",
+        "email": "solomon@gmail.com",
+        "student_id": "124559",
+        "school": 2,
+        "course": "Msc. Information Technology",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "!3UUtgAShoLULIbFnlOS3pC80G1VlIJ0Cr9N5sApg",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "anyibaba",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-18T07:40:04.963Z",
+        "first_name": "Ifeanyi",
+        "last_name": "Chukwu",
+        "email": "ifeanyi@gmail.com",
+        "student_id": "444444",
+        "school": 1,
+        "course": "1",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "!3D2p32uN8HUrjmb0wi4iUwK9Yekem8YuBwxHKN47",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fff",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-18T08:26:29.916Z",
+        "first_name": "fff",
+        "last_name": "fff",
+        "email": "kelly@gmail.com",
+        "student_id": "4444",
+        "school": 10,
+        "course": "ffff",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "!aLWVN83nHR0TedVfhsai66eqdJI1GU7pvZ9BExCS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Richie",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-18T08:38:59.857Z",
+        "first_name": "joe",
+        "last_name": "Kelly",
+        "email": "richie@gmail.com",
+        "student_id": "7777",
+        "school": 2,
+        "course": "IT",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$6tnPjTG0CkSIIP4EEYiSSF$R58bhcS1aFUJJsyLTWxIbuD1AOipSUcWSunlbZPWt7c=",
+        "last_login": "2023-07-18T09:29:37.006Z",
+        "is_superuser": false,
+        "username": "happy",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-18T09:29:35.815Z",
+        "first_name": "happy",
+        "last_name": "happy",
+        "email": "happy@gmail.com",
+        "student_id": "3333",
+        "school": 10,
+        "course": "happy",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$bI1nZQi2WqSj5i4Y3tu2Uk$LL2grWHrp8WzzXCUXkiuB1sq6/vEuX3rA6t7x4AQuRQ=",
+        "last_login": "2023-08-04T07:22:24.749Z",
+        "is_superuser": false,
+        "username": "angry",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-18T09:36:13Z",
+        "first_name": "angry",
+        "last_name": "angry",
+        "email": "angry@gmail.com",
+        "student_id": "999",
+        "school": 5,
+        "course": "angry",
+        "bio": "Social Media Critic | Lover of sports | Chess",
+        "profile_pic": "profile_pics/Sarah.jpg",
+        "avatar": "images/avatars/15/profile_icon2.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$5ww5xUSGB6An1J83k1UA0F$OsI+g4iFyKY/cYH8eEX3FyNceGMCjcuAnsBtndlFPy8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sammy",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-19T10:39:11.891Z",
+        "first_name": "samuel",
+        "last_name": "jackson",
+        "email": "samuel@gmail.com",
+        "student_id": "4444555",
+        "school": 2,
+        "course": "IT",
+        "bio": null,
+        "profile_pic": "profile_pics/Sarah_hzNcwIj.jpg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$5qnd67HkQcTVE9R8TTPjXE$Bg3n6wNlrLrafsAhg1BJKRUupANbr3Q0gJG+ZuGUoRU=",
+        "last_login": "2023-08-09T17:59:33.669Z",
+        "is_superuser": false,
+        "username": "love",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-19T19:19:15.890Z",
+        "first_name": "love",
+        "last_name": "love",
+        "email": "love@gmail.com",
+        "student_id": "488892",
+        "school": 9,
+        "course": "love",
+        "bio": "Software enthusiast and friend of God",
+        "profile_pic": "profile_pics/love.jpeg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$MKpbWFXSKjkU5f8jNZ17ZH$mgIL2YbUFGXdJb/7p6acbY2rgTPiv02QidlVqmC5PDA=",
+        "last_login": "2023-07-19T19:50:01.888Z",
+        "is_superuser": false,
+        "username": "fine",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-19T19:49:59.567Z",
+        "first_name": "fine",
+        "last_name": "fine",
+        "email": "fine@gmail.com",
+        "student_id": "4638843",
+        "school": 8,
+        "course": "fine",
+        "bio": null,
+        "profile_pic": "default_profile_pic.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$VvtgU9sK0ZQL6RSrE2aTJG$bCfX7Xu+pKPP6AkHijCd5JT5+jOkxYvmUByJj1ZoeyM=",
+        "last_login": "2023-07-26T00:23:40.055Z",
+        "is_superuser": false,
+        "username": "trial",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-20T15:09:20.741Z",
+        "first_name": "trial",
+        "last_name": "trial",
+        "email": "trial@gmail.com",
+        "student_id": "232313",
+        "school": 8,
+        "course": "trial",
+        "bio": null,
+        "profile_pic": "profile_pics/firebrand.jpeg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$5PvGonqJQqJs0Iqhmo38sG$Q35iSJlBu+SEly4ue1GwR7Lu0/PcnVP5KaQejqbUBBc=",
+        "last_login": "2023-07-22T20:33:59.695Z",
+        "is_superuser": false,
+        "username": "image",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-22T20:33:58.527Z",
+        "first_name": "image",
+        "last_name": "image",
+        "email": "image@gmail.com",
+        "student_id": "289934",
+        "school": 5,
+        "course": "image",
+        "bio": null,
+        "profile_pic": "profile_pics/Zeus.jpg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$W8m8tIBh63m6L2lX9Jqs1W$tYsXGNGKcZNxglDaAQkZ/Po/jdXrCD+isnVXyd1RDEs=",
+        "last_login": "2023-07-25T11:50:34.930Z",
+        "is_superuser": false,
+        "username": "sir_Tunde_untouched",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-07-25T04:33:47.501Z",
+        "first_name": "Tunde",
+        "last_name": "Bassey",
+        "email": "tunde@gmail.com",
+        "student_id": "489924",
+        "school": 4,
+        "course": "Medicine",
+        "bio": "Civil Engineer| VolleyBall player",
+        "profile_pic": "profile_pics/asian.png",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$rlev7S3hyqBdNSGQHaAzGP$/zDQfQuuVZG+J1eyI1JmrMx23us3DVy/7KWbW5Koblk=",
+        "last_login": "2023-08-03T06:12:28.285Z",
+        "is_superuser": false,
+        "username": "jacob",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-08-02T09:42:38.079Z",
+        "first_name": "Jacob",
+        "last_name": "Samuel",
+        "email": "jacob@example.com",
+        "student_id": "123456",
+        "school": 10,
+        "course": "finance",
+        "bio": null,
+        "profile_pic": "profile_pics/profile8.jpeg",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "base.category",
+    "pk": 1,
+    "fields": {
+        "name": "python"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 2,
+    "fields": {
+        "name": "mySql"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 3,
+    "fields": {
+        "name": "Java"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 4,
+    "fields": {
+        "name": "REACT"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 5,
+    "fields": {
+        "name": "Agile"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 6,
+    "fields": {
+        "name": "social construct"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 7,
+    "fields": {
+        "name": "Regulated breaks"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 9,
+    "fields": {
+        "name": "spiderman"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 10,
+    "fields": {
+        "name": "Database"
+    }
+},
+{
+    "model": "base.category",
+    "pk": 12,
+    "fields": {
+        "name": "Science"
+    }
+},
+{
+    "model": "base.room",
+    "pk": 2,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 4,
+        "name": "Software Development final",
+        "description": "This is for people with no experience in project development...",
+        "permit_all": false,
+        "updated": "2023-07-21T15:06:43.951Z",
+        "created": "2023-06-29T12:36:54.522Z",
+        "school": [
+            1
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 5,
+    "fields": {
+        "host": [
+            "emma@yahoo.com"
+        ],
+        "category": 6,
+        "name": "Social trends updated again",
+        "description": "This is a lovely place and I love it here",
+        "permit_all": false,
+        "updated": "2023-07-04T08:22:24.412Z",
+        "created": "2023-07-03T16:50:06.730Z",
+        "school": [
+            3,
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 14,
+    "fields": {
+        "host": [
+            "emma@yahoo.com"
+        ],
+        "category": 6,
+        "name": "the beauty of a detached system in tech",
+        "description": "This is nonsense! I fear for it",
+        "permit_all": true,
+        "updated": "2023-08-03T07:18:20.145Z",
+        "created": "2023-07-04T08:33:44.497Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 15,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 4,
+        "name": "Study with Joseph",
+        "description": "We will study React",
+        "permit_all": true,
+        "updated": "2023-08-03T07:18:07.820Z",
+        "created": "2023-07-04T12:34:51.303Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 16,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 1,
+        "name": "The Law of chemostat with no fact",
+        "description": "This is for people with no experience in project development...",
+        "permit_all": false,
+        "updated": "2023-07-21T12:30:04.393Z",
+        "created": "2023-07-05T15:47:59.748Z",
+        "school": [
+            1
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 17,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 6,
+        "name": "The L-might",
+        "description": "This is for people with no experience in project development...",
+        "permit_all": false,
+        "updated": "2023-08-03T07:17:48.517Z",
+        "created": "2023-07-05T15:51:22.962Z",
+        "school": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 19,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 2,
+        "name": "modern arts of war updated",
+        "description": "this is a room of romance",
+        "permit_all": true,
+        "updated": "2023-08-03T07:17:07.629Z",
+        "created": "2023-07-05T21:45:32.386Z",
+        "school": [
+            9
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 20,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 3,
+        "name": "Study with Simon on the break",
+        "description": "",
+        "permit_all": true,
+        "updated": "2023-08-03T07:16:56.955Z",
+        "created": "2023-07-05T22:15:13.021Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 22,
+    "fields": {
+        "host": [
+            "tobi@gmail.com"
+        ],
+        "category": 3,
+        "name": "far away with Java",
+        "description": "",
+        "permit_all": false,
+        "updated": "2023-08-03T07:19:26.563Z",
+        "created": "2023-07-05T23:03:26.624Z",
+        "school": [
+            2
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 27,
+    "fields": {
+        "host": [
+            "angry@gmail.com"
+        ],
+        "category": 1,
+        "name": "fine grain renewed",
+        "description": "into the saints",
+        "permit_all": false,
+        "updated": "2023-07-26T12:08:38.805Z",
+        "created": "2023-07-18T14:33:09.342Z",
+        "school": [
+            2
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 35,
+    "fields": {
+        "host": [
+            "angry@gmail.com"
+        ],
+        "category": 2,
+        "name": "the mighty ocean",
+        "description": "like a bird",
+        "permit_all": true,
+        "updated": "2023-08-03T07:15:29.935Z",
+        "created": "2023-07-19T06:50:13.942Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 38,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 9,
+        "name": "checking again ooo",
+        "description": "this was just there",
+        "permit_all": true,
+        "updated": "2023-07-23T13:41:31.408Z",
+        "created": "2023-07-23T13:41:31.408Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 39,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 1,
+        "name": "joseph",
+        "description": "find a way to manage the best data",
+        "permit_all": true,
+        "updated": "2023-07-24T07:02:58.268Z",
+        "created": "2023-07-24T07:02:58.268Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 42,
+    "fields": {
+        "host": [
+            "love@gmail.com"
+        ],
+        "category": 4,
+        "name": "this si googoog",
+        "description": "gggggggggggggggggggg",
+        "permit_all": true,
+        "updated": "2023-07-25T16:29:54.558Z",
+        "created": "2023-07-25T16:29:54.558Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 44,
+    "fields": {
+        "host": [
+            "love@gmail.com"
+        ],
+        "category": 10,
+        "name": "this is my new room",
+        "description": "far away",
+        "permit_all": true,
+        "updated": "2023-07-28T10:32:19.736Z",
+        "created": "2023-07-28T10:32:19.736Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 45,
+    "fields": {
+        "host": [
+            "angry@gmail.com"
+        ],
+        "category": null,
+        "name": "as cool as Charlie 2",
+        "description": "charlier",
+        "permit_all": true,
+        "updated": "2023-07-28T11:26:47.935Z",
+        "created": "2023-07-28T11:22:40.781Z",
+        "school": []
+    }
+},
+{
+    "model": "base.room",
+    "pk": 46,
+    "fields": {
+        "host": [
+            "angry@gmail.com"
+        ],
+        "category": 1,
+        "name": "The law of unbiased raises",
+        "description": "here we will discuss possibilities of making raises",
+        "permit_all": true,
+        "updated": "2023-08-01T10:14:17.747Z",
+        "created": "2023-08-01T10:14:17.747Z",
+        "school": [
+            5
+        ]
+    }
+},
+{
+    "model": "base.room",
+    "pk": 47,
+    "fields": {
+        "host": [
+            "chukwuemeka@gmail.com"
+        ],
+        "category": 12,
+        "name": "Chemistry 104",
+        "description": "this is for analysing data report",
+        "permit_all": true,
+        "updated": "2023-08-03T06:16:28.845Z",
+        "created": "2023-08-03T06:16:28.845Z",
+        "school": []
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "you are welcome to my site... let's code",
+        "updated": "2023-06-29T12:37:16.387Z",
+        "created": "2023-06-29T12:37:16.387Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "alright so what is the best way?",
+        "updated": "2023-06-29T13:28:36.990Z",
+        "created": "2023-06-29T13:28:36.990Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "emma@yahoo.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "I like a new beginning",
+        "updated": "2023-07-04T09:01:48.191Z",
+        "created": "2023-07-04T09:01:48.191Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "same with myself",
+        "updated": "2023-07-04T09:08:23.407Z",
+        "created": "2023-07-04T09:08:23.407Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "fjkl;jk;faf",
+        "updated": "2023-07-04T09:09:14.056Z",
+        "created": "2023-07-04T09:09:14.056Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "it starts with love",
+        "updated": "2023-07-04T13:42:06.539Z",
+        "created": "2023-07-04T13:42:06.539Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "let's start again ",
+        "updated": "2023-07-04T16:07:30.520Z",
+        "created": "2023-07-04T16:07:30.520Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "This is by far the most interesting room",
+        "updated": "2023-07-06T08:03:11.714Z",
+        "created": "2023-07-06T08:03:11.714Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "I don't get why you are mad about him",
+        "updated": "2023-07-06T08:08:29.401Z",
+        "created": "2023-07-06T08:08:29.401Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "but maybe I should stop talking!",
+        "updated": "2023-07-06T08:17:16.438Z",
+        "created": "2023-07-06T08:17:16.438Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 30,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "and again",
+        "updated": "2023-07-12T11:47:49.940Z",
+        "created": "2023-07-12T11:47:49.940Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 41,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "so this is how it goes",
+        "updated": "2023-07-13T00:45:43.909Z",
+        "created": "2023-07-13T00:45:43.909Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 42,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "finally",
+        "updated": "2023-07-13T00:48:43.617Z",
+        "created": "2023-07-13T00:48:43.617Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 43,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "yes ooo",
+        "updated": "2023-07-13T01:02:11.807Z",
+        "created": "2023-07-13T01:02:11.807Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 53,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "fjaklsl;kfl;jf",
+        "updated": "2023-07-13T01:19:17.569Z",
+        "created": "2023-07-13T01:19:17.569Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 54,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "gggggfff",
+        "updated": "2023-07-13T01:23:15.418Z",
+        "created": "2023-07-13T01:23:15.418Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 74,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 30,
+        "room": 2,
+        "content": "yes it should be so",
+        "updated": "2023-07-13T10:12:19.995Z",
+        "created": "2023-07-13T10:12:19.995Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 75,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 74,
+        "room": 2,
+        "content": "maybe this is fine",
+        "updated": "2023-07-13T11:12:08.548Z",
+        "created": "2023-07-13T11:12:08.548Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 76,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "but this is not funny",
+        "updated": "2023-07-13T11:27:08.411Z",
+        "created": "2023-07-13T11:27:08.411Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 77,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "let's not go there",
+        "updated": "2023-07-13T13:33:49.545Z",
+        "created": "2023-07-13T13:33:49.545Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 78,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "no now",
+        "updated": "2023-07-13T13:38:39.713Z",
+        "created": "2023-07-13T13:38:39.713Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 80,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "why no update",
+        "updated": "2023-07-13T13:47:24.183Z",
+        "created": "2023-07-13T13:47:24.183Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 81,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "that's not fair",
+        "updated": "2023-07-13T13:48:24.763Z",
+        "created": "2023-07-13T13:48:24.763Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 82,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 76,
+        "room": 2,
+        "content": "this is what I meant",
+        "updated": "2023-07-13T13:48:37.589Z",
+        "created": "2023-07-13T13:48:37.589Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 83,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 19,
+        "content": "surely I don't fance war",
+        "updated": "2023-07-13T16:11:44.916Z",
+        "created": "2023-07-13T16:11:44.916Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 85,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 83,
+        "room": 19,
+        "content": "this is the same place",
+        "updated": "2023-07-13T20:03:03.817Z",
+        "created": "2023-07-13T20:03:03.817Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 86,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 1,
+        "room": 2,
+        "content": "let's stop right here",
+        "updated": "2023-07-13T20:21:21.507Z",
+        "created": "2023-07-13T20:21:21.507Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 88,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 9,
+        "room": 14,
+        "content": "oooooo",
+        "updated": "2023-07-13T20:30:45.653Z",
+        "created": "2023-07-13T20:30:45.653Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 89,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "ffff",
+        "updated": "2023-07-13T20:31:13.893Z",
+        "created": "2023-07-13T20:31:13.893Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 90,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "ffff",
+        "updated": "2023-07-13T20:31:16.874Z",
+        "created": "2023-07-13T20:31:16.874Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 91,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "parent_comment": 6,
+        "room": 14,
+        "content": "fffff",
+        "updated": "2023-07-13T20:31:25.618Z",
+        "created": "2023-07-13T20:31:25.618Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 92,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": 1,
+        "room": 2,
+        "content": "this is great!",
+        "updated": "2023-07-14T09:05:53.126Z",
+        "created": "2023-07-14T09:05:53.126Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 95,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 16,
+        "content": "let this be done",
+        "updated": "2023-07-17T06:58:51.901Z",
+        "created": "2023-07-17T06:58:51.901Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 96,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": 95,
+        "room": 16,
+        "content": "for a great feast",
+        "updated": "2023-07-17T06:59:00.403Z",
+        "created": "2023-07-17T06:59:00.403Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 100,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "I am angry!!!!",
+        "updated": "2023-07-18T09:46:09.136Z",
+        "created": "2023-07-18T09:46:09.136Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 104,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 15,
+        "content": "Hi Joseph",
+        "updated": "2023-07-19T23:44:33.979Z",
+        "created": "2023-07-19T23:44:33.980Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 106,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 22,
+        "content": "this is just beautiful",
+        "updated": "2023-07-21T12:31:12.375Z",
+        "created": "2023-07-21T12:31:12.375Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 109,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 22,
+        "content": "yes I agree",
+        "updated": "2023-07-24T10:48:03.896Z",
+        "created": "2023-07-24T10:48:03.896Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 111,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": 6,
+        "room": 14,
+        "content": "this is goooddd",
+        "updated": "2023-07-25T16:26:26.265Z",
+        "created": "2023-07-25T16:26:26.265Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 112,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "hello",
+        "updated": "2023-07-25T16:30:20.249Z",
+        "created": "2023-07-25T16:30:20.249Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 113,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 15,
+        "content": "fineeeeee",
+        "updated": "2023-07-25T16:31:16.767Z",
+        "created": "2023-07-25T16:31:16.767Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 114,
+    "fields": {
+        "user": [
+            "tunde@gmail.com"
+        ],
+        "parent_comment": 104,
+        "room": 15,
+        "content": "let's go for a ride",
+        "updated": "2023-07-25T17:23:56.768Z",
+        "created": "2023-07-25T17:23:56.768Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 116,
+    "fields": {
+        "user": [
+            "trial@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "that's it",
+        "updated": "2023-07-26T00:23:51.360Z",
+        "created": "2023-07-26T00:23:51.360Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 117,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "welcome back",
+        "updated": "2023-07-26T00:48:31.543Z",
+        "created": "2023-07-26T00:48:31.543Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 118,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 27,
+        "content": "angry",
+        "updated": "2023-07-26T01:24:07.086Z",
+        "created": "2023-07-26T01:24:07.086Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 119,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": 118,
+        "room": 27,
+        "content": "hiya",
+        "updated": "2023-07-26T01:24:15.856Z",
+        "created": "2023-07-26T01:24:15.857Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 121,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": 104,
+        "room": 15,
+        "content": "Hi angry",
+        "updated": "2023-07-26T09:07:49.172Z",
+        "created": "2023-07-26T09:07:49.172Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 122,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "hello",
+        "updated": "2023-07-27T00:04:08.486Z",
+        "created": "2023-07-27T00:04:08.486Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 123,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": 122,
+        "room": 14,
+        "content": "why so early",
+        "updated": "2023-07-27T00:04:20.807Z",
+        "created": "2023-07-27T00:04:20.807Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 124,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": 111,
+        "room": 14,
+        "content": "hiya",
+        "updated": "2023-07-27T00:06:11.970Z",
+        "created": "2023-07-27T00:06:11.970Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 127,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 44,
+        "content": "hiya",
+        "updated": "2023-07-28T10:32:25.645Z",
+        "created": "2023-07-28T10:32:25.645Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 128,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": 116,
+        "room": 14,
+        "content": "hallos",
+        "updated": "2023-07-28T12:16:19.737Z",
+        "created": "2023-07-28T12:16:19.737Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 129,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 46,
+        "content": "I am delighted to be here with everyone",
+        "updated": "2023-08-01T10:14:46.252Z",
+        "created": "2023-08-01T10:14:46.252Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 130,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 2,
+        "content": "show me the way my friend",
+        "updated": "2023-08-02T08:23:11.960Z",
+        "created": "2023-08-02T08:23:11.960Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 132,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "hi Emeka",
+        "updated": "2023-08-02T13:45:20.400Z",
+        "created": "2023-08-02T13:45:20.400Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 133,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "Hi Love",
+        "updated": "2023-08-02T13:45:35.166Z",
+        "created": "2023-08-02T13:45:35.166Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 134,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "how are you today?",
+        "updated": "2023-08-02T13:45:50.585Z",
+        "created": "2023-08-02T13:45:50.585Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 135,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "I am doing fine",
+        "updated": "2023-08-02T13:46:01.445Z",
+        "created": "2023-08-02T13:46:01.445Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 136,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 42,
+        "content": "I can see",
+        "updated": "2023-08-02T13:46:08.078Z",
+        "created": "2023-08-02T13:46:08.079Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 137,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 47,
+        "content": "I like a proper game",
+        "updated": "2023-08-03T06:16:43.164Z",
+        "created": "2023-08-03T06:16:43.164Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 140,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "i have to add to this",
+        "updated": "2023-08-03T12:53:49.654Z",
+        "created": "2023-08-03T12:53:49.654Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 141,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "exactly",
+        "updated": "2023-08-03T12:54:13.603Z",
+        "created": "2023-08-03T12:54:13.605Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 142,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "now that is new",
+        "updated": "2023-08-03T12:54:45.658Z",
+        "created": "2023-08-03T12:54:45.659Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 143,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "find a way",
+        "updated": "2023-08-03T13:03:09.373Z",
+        "created": "2023-08-03T13:03:09.373Z"
+    }
+},
+{
+    "model": "base.comment",
+    "pk": 144,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "parent_comment": null,
+        "room": 14,
+        "content": "fine",
+        "updated": "2023-08-03T13:19:58.094Z",
+        "created": "2023-08-03T13:19:58.094Z"
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "room": 2,
+        "joined_at": "2023-07-04T16:00:35.420Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "tobi@gmail.com"
+        ],
+        "room": 2,
+        "joined_at": "2023-07-04T16:00:35.420Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "room": 14,
+        "joined_at": "2023-07-24T10:19:56.757Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "room": 22,
+        "joined_at": "2023-07-24T10:48:03.905Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "room": 14,
+        "joined_at": "2023-07-25T04:06:15.854Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "room": 42,
+        "joined_at": "2023-07-25T16:30:20.260Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "room": 15,
+        "joined_at": "2023-07-25T16:31:16.778Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "tunde@gmail.com"
+        ],
+        "room": 15,
+        "joined_at": "2023-07-25T17:23:56.777Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "trial@gmail.com"
+        ],
+        "room": 14,
+        "joined_at": "2023-07-26T00:23:51.371Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "room": 14,
+        "joined_at": "2023-07-26T00:48:31.552Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "room": 27,
+        "joined_at": "2023-07-26T01:24:07.097Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "room": 15,
+        "joined_at": "2023-07-26T09:07:49.184Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "love@gmail.com"
+        ],
+        "room": 44,
+        "joined_at": "2023-07-28T10:32:25.655Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "angry@gmail.com"
+        ],
+        "room": 46,
+        "joined_at": "2023-08-01T10:14:46.262Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "room": 42,
+        "joined_at": "2023-08-02T13:45:35.175Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.participant",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "room": 47,
+        "joined_at": "2023-08-03T06:16:43.178Z",
+        "is_admin": false
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 5,
+    "fields": {
+        "follower": [
+            "trial@gmail.com"
+        ],
+        "followed_user": [
+            "love@gmail.com"
+        ],
+        "followed_at": "2023-07-22T19:39:52.399Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 14,
+    "fields": {
+        "follower": [
+            "tobi@gmail.com"
+        ],
+        "followed_user": [
+            "tobi@gmail.com"
+        ],
+        "followed_at": "2023-07-27T11:49:50.088Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 15,
+    "fields": {
+        "follower": [
+            "tobi@gmail.com"
+        ],
+        "followed_user": [
+            "angry@gmail.com"
+        ],
+        "followed_at": "2023-07-27T11:52:09.111Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 17,
+    "fields": {
+        "follower": [
+            "tobi@gmail.com"
+        ],
+        "followed_user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "followed_at": "2023-07-27T11:52:20.136Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 19,
+    "fields": {
+        "follower": [
+            "tobi@gmail.com"
+        ],
+        "followed_user": [
+            "trial@gmail.com"
+        ],
+        "followed_at": "2023-07-27T12:24:01.547Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 21,
+    "fields": {
+        "follower": [
+            "tobi@gmail.com"
+        ],
+        "followed_user": [
+            "love@gmail.com"
+        ],
+        "followed_at": "2023-07-27T20:39:53.477Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 40,
+    "fields": {
+        "follower": [
+            "angry@gmail.com"
+        ],
+        "followed_user": [
+            "love@gmail.com"
+        ],
+        "followed_at": "2023-07-28T16:43:16.914Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 44,
+    "fields": {
+        "follower": [
+            "love@gmail.com"
+        ],
+        "followed_user": [
+            "angry@gmail.com"
+        ],
+        "followed_at": "2023-07-28T19:42:57.597Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 49,
+    "fields": {
+        "follower": [
+            "love@gmail.com"
+        ],
+        "followed_user": [
+            "emma@yahoo.com"
+        ],
+        "followed_at": "2023-07-31T09:12:58.018Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 56,
+    "fields": {
+        "follower": [
+            "chukwuemeka@gmail.com"
+        ],
+        "followed_user": [
+            "angry@gmail.com"
+        ],
+        "followed_at": "2023-08-03T05:53:40.940Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 57,
+    "fields": {
+        "follower": [
+            "angry@gmail.com"
+        ],
+        "followed_user": [
+            "tobi@gmail.com"
+        ],
+        "followed_at": "2023-08-03T06:09:46.439Z"
+    }
+},
+{
+    "model": "base.follow",
+    "pk": 58,
+    "fields": {
+        "follower": [
+            "chukwuemeka@gmail.com"
+        ],
+        "followed_user": [
+            "love@gmail.com"
+        ],
+        "followed_at": "2023-08-03T06:14:47.263Z"
+    }
+},
+{
+    "model": "base.reportcategory",
+    "pk": 5,
+    "fields": {
+        "name": "Inappropriate Content",
+        "description": "Flag content that contains offensive language, imagery, hate speech, or harassment/bullying."
+    }
+},
+{
+    "model": "base.reportcategory",
+    "pk": 6,
+    "fields": {
+        "name": "Spam or Self-promotion",
+        "description": "Flag content that is irrelevant, off-topic, self-promotion, or advertising."
+    }
+},
+{
+    "model": "base.reportcategory",
+    "pk": 7,
+    "fields": {
+        "name": "Misinformation/Fake News",
+        "description": "Flag content that is misinformation or fake news."
+    }
+},
+{
+    "model": "base.reportcategory",
+    "pk": 8,
+    "fields": {
+        "name": "Other",
+        "description": "Flag content for other reasons not covered by the above categories."
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 1,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 121,
+        "category": 5,
+        "description": "",
+        "reported_at": "2023-07-31T09:58:31.739Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 2,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 121,
+        "category": 5,
+        "description": "",
+        "reported_at": "2023-07-31T09:59:26.956Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 3,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 121,
+        "category": 6,
+        "description": "",
+        "reported_at": "2023-07-31T09:59:44.819Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 4,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 121,
+        "category": 5,
+        "description": "",
+        "reported_at": "2023-07-31T10:00:06.152Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 5,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 113,
+        "category": 7,
+        "description": "",
+        "reported_at": "2023-07-31T10:00:51.313Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 6,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 114,
+        "category": 5,
+        "description": "",
+        "reported_at": "2023-07-31T10:06:08.361Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 7,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 114,
+        "category": 5,
+        "description": "rude",
+        "reported_at": "2023-07-31T10:30:48.993Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 8,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 114,
+        "category": 5,
+        "description": "rude",
+        "reported_at": "2023-07-31T10:31:16.777Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 9,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 114,
+        "category": 5,
+        "description": "rude",
+        "reported_at": "2023-07-31T10:37:45.536Z",
+        "handled": true
+    }
+},
+{
+    "model": "base.reportcomment",
+    "pk": 10,
+    "fields": {
+        "reporter": [
+            "love@gmail.com"
+        ],
+        "comment": 114,
+        "category": 5,
+        "description": "rude",
+        "reported_at": "2023-07-31T10:39:41.697Z",
+        "handled": false
+    }
+},
+{
+    "model": "base.message",
+    "pk": 1,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "is this how we started",
+        "created": "2023-07-31T11:56:13.535Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 3,
+    "fields": {
+        "sender": [
+            "solomon@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "Baba how body ?",
+        "created": "2023-07-31T12:36:42.816Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 4,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "solomon@gmail.com"
+        ],
+        "content": "oga Solomon, \r\nI hail ooo",
+        "created": "2023-07-31T12:37:03.654Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 5,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "showbor",
+        "created": "2023-07-31T14:20:26.409Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 6,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "ggggggg",
+        "created": "2023-07-31T14:20:49.173Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 8,
+    "fields": {
+        "sender": [
+            "angry@gmail.com"
+        ],
+        "receiver": [
+            "emma@yahoo.com"
+        ],
+        "content": "this is the place we have to see",
+        "created": "2023-08-01T15:29:38.192Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 9,
+    "fields": {
+        "sender": [
+            "angry@gmail.com"
+        ],
+        "receiver": [
+            "emma@yahoo.com"
+        ],
+        "content": "hello",
+        "created": "2023-08-01T15:41:23.939Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 10,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "hey how are you doing",
+        "created": "2023-08-02T13:39:27.169Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 11,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "I am alright",
+        "created": "2023-08-02T13:40:09.723Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 12,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "i can't hear you",
+        "created": "2023-08-02T13:41:05.929Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 13,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "i sent you the message first",
+        "created": "2023-08-02T13:42:04.200Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 14,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "now this is second",
+        "created": "2023-08-02T13:42:13.723Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 15,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "solomon@gmail.com"
+        ],
+        "content": "I saw the message",
+        "created": "2023-08-03T05:54:23.083Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 16,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "ok cool",
+        "created": "2023-08-03T06:15:29.857Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 17,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "hi",
+        "created": "2023-08-03T06:49:29.366Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 18,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "hey Love",
+        "created": "2023-08-03T06:49:50.335Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 19,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "I got your message the other day",
+        "created": "2023-08-03T06:52:50.136Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 20,
+    "fields": {
+        "sender": [
+            "chukwuemeka@gmail.com"
+        ],
+        "receiver": [
+            "love@gmail.com"
+        ],
+        "content": "ooh cool",
+        "created": "2023-08-03T06:56:10.086Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 21,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "I thought you saw it",
+        "created": "2023-08-03T06:56:26.443Z"
+    }
+},
+{
+    "model": "base.message",
+    "pk": 22,
+    "fields": {
+        "sender": [
+            "love@gmail.com"
+        ],
+        "receiver": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content": "finally",
+        "created": "2023-08-03T13:20:45.735Z"
+    }
+},
+{
+    "model": "knox.authtoken",
+    "pk": "5a5267834d57272d1080bd2427fd44a38d847a59031352b05edbaa8519c9d283b51282edd001e9f735c92a491adcb2bbc4de92d46712ee7d1e7bf7074ae1e520",
+    "fields": {
+        "token_key": "788adc2f",
+        "user": [
+            "angry@gmail.com"
+        ],
+        "created": "2023-08-04T07:22:24.739Z",
+        "expiry": "2023-08-04T17:22:24.739Z"
+    }
+},
+{
+    "model": "knox.authtoken",
+    "pk": "80b9048d7ec2a9afa1027f949a5b7155bb945224dd4eeda8aff295ee5eb15f874c01d8c270f526956fa4be3c1b8379f01d4dfc2d2a641d197d1abc0e834b03ef",
+    "fields": {
+        "token_key": "4fea7bb5",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "created": "2023-08-08T06:00:37.822Z",
+        "expiry": "2023-08-08T16:00:37.821Z"
+    }
+},
+{
+    "model": "knox.authtoken",
+    "pk": "8a94a3eea5fc0281fe4706e43f8e6ce6b2283edc809bbefb2c5443515ed4ded2ba020c71f3c5867250b5f51455e5e064906faf08aa0d6041f199bb1f7a4a1db3",
+    "fields": {
+        "token_key": "d1ef2514",
+        "user": [
+            "love@gmail.com"
+        ],
+        "created": "2023-08-09T17:59:33.661Z",
+        "expiry": "2023-08-10T03:59:33.661Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-06-29T12:21:56.858Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Student id\", \"School\", \"Course\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-06-29T12:33:14.056Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "python",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-06-29T12:33:27.101Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "mySql",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-06-29T12:33:51.141Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Java",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-06-29T12:33:58.940Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "REACT",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-06-29T12:34:03.773Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Agile",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-06-29T15:20:16.646Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-07-03T15:47:35.758Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-07-03T15:47:46.831Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "Tobi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-07-03T15:48:01.333Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "emmanuel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-07-03T15:49:17.924Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-07-03T15:55:03.490Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "emmanuel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\", \"Course\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-07-03T16:49:04.641Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "social construct",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-07-03T16:50:06.735Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "5",
+        "object_repr": "Social trends",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-07-04T08:07:09.411Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "10",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-07-04T08:07:09.419Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "9",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-07-04T08:07:09.427Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "8",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-07-04T08:07:09.435Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "7",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-07-04T08:07:09.442Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "6",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-07-04T08:11:00.619Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "12",
+        "object_repr": "Social trends or basic tenets",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-07-04T08:11:00.629Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "11",
+        "object_repr": "Social trends",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-07-04T09:07:02.458Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "tobi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-07-04T09:07:53.740Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "tobi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-07-06T06:53:19.116Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "comment"
+        ],
+        "object_id": "18",
+        "object_repr": "ffffffffffffffffffff",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-07-06T06:53:57.442Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "21",
+        "object_repr": "aaaaaaaa",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-07-06T08:49:53.907Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "23",
+        "object_repr": "vvvvvvvvvvvvvvvvvvvv",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-07-06T08:50:10.357Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "comment"
+        ],
+        "object_id": "22",
+        "object_repr": "fffffffffffffffffffffffffff",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-07-06T08:50:21.767Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "comment"
+        ],
+        "object_id": "23",
+        "object_repr": "ffffffffffffffffddddddddddddddd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-07-11T10:45:27.956Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "ff7101b7b5ff5cb99db99aa15577a7c9134c8e4d1f71ceaad13a642493b66c64eb0c66ff79bb1e524a22c37beece6f9ab70bfe1d60735dd8e6acf0ee497c94a0",
+        "object_repr": "ff7101b7b5ff5cb99db99aa15577a7c9134c8e4d1f71ceaad13a642493b66c64eb0c66ff79bb1e524a22c37beece6f9ab70bfe1d60735dd8e6acf0ee497c94a0 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-07-11T10:45:27.966Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "ecaf7f14791763982ed8c3ae470367223ca5338f7c344bcfb793e099bb03e2acd23c62d5650fdc88f079690aee63e7033185d848ee77e63a724fc90e4d335785",
+        "object_repr": "ecaf7f14791763982ed8c3ae470367223ca5338f7c344bcfb793e099bb03e2acd23c62d5650fdc88f079690aee63e7033185d848ee77e63a724fc90e4d335785 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-07-11T10:45:27.975Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "e97437773399402039ffebb920f8a336f6142e64620a973a4808ad29098b39b851820438e5fadf525aa2cbdaf41508cda9c7c1cf5db9226f83e67b8fba808d78",
+        "object_repr": "e97437773399402039ffebb920f8a336f6142e64620a973a4808ad29098b39b851820438e5fadf525aa2cbdaf41508cda9c7c1cf5db9226f83e67b8fba808d78 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-07-11T10:45:27.984Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "dd4451b1d28b4e7011d757dbd1dd84b32c11ca6c7728f006914e6566e4a3232506e50da1927247a3b546940603c45cc806d39cf796f71ab9c5f7381c18096e60",
+        "object_repr": "dd4451b1d28b4e7011d757dbd1dd84b32c11ca6c7728f006914e6566e4a3232506e50da1927247a3b546940603c45cc806d39cf796f71ab9c5f7381c18096e60 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-07-11T10:45:27.992Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "d56d1d431f67ced2f855c19e7c256c572805687c8d9c099e72f952d807c03f85f286812cef3003dee3f235ba35b2a33f78674490e2fbe191662d2478b9d481f2",
+        "object_repr": "d56d1d431f67ced2f855c19e7c256c572805687c8d9c099e72f952d807c03f85f286812cef3003dee3f235ba35b2a33f78674490e2fbe191662d2478b9d481f2 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.004Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "d171dce6d498b48e37d2355744ccf90ede5aa61eac2db6e0d75d378d03995aa1686722df3142cebc74e431b842bffe1913d636198e18fe5fe1281f69c4ccb235",
+        "object_repr": "d171dce6d498b48e37d2355744ccf90ede5aa61eac2db6e0d75d378d03995aa1686722df3142cebc74e431b842bffe1913d636198e18fe5fe1281f69c4ccb235 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.013Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "ca08e0ace11bee4eb6ba2e674218a078d8c3b07c9e2eb962937e0733fd993d44fd30643f85e541e8f71ade47d56e1563e85e31114943b2845a47983c2f91e8ab",
+        "object_repr": "ca08e0ace11bee4eb6ba2e674218a078d8c3b07c9e2eb962937e0733fd993d44fd30643f85e541e8f71ade47d56e1563e85e31114943b2845a47983c2f91e8ab : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.022Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "c9a5b08305e94a5938579aaacd309d2b887bbabfdf7cad159581cd8278f2416a677d56d860b6ceede9a9744133c170d25d024762a8ef8d4205007db754a94554",
+        "object_repr": "c9a5b08305e94a5938579aaacd309d2b887bbabfdf7cad159581cd8278f2416a677d56d860b6ceede9a9744133c170d25d024762a8ef8d4205007db754a94554 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.029Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "c1f8a1fa33d41875bb6241a20dece78b2f30f77187888d37f0d2cc46955524433c0f6787213c3240b3f9bd8a2965e404819f7e6fe7166086aaacddfbc5b8f765",
+        "object_repr": "c1f8a1fa33d41875bb6241a20dece78b2f30f77187888d37f0d2cc46955524433c0f6787213c3240b3f9bd8a2965e404819f7e6fe7166086aaacddfbc5b8f765 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.037Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "c1976c0ea62cacfbba7dc08cf8b4da163b4350c74578347cf8ae821acbb55696375526fffd03fe032453b2944cfc0508f0f18022c058d358f50bd1ec7c446c97",
+        "object_repr": "c1976c0ea62cacfbba7dc08cf8b4da163b4350c74578347cf8ae821acbb55696375526fffd03fe032453b2944cfc0508f0f18022c058d358f50bd1ec7c446c97 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.046Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "ba50af2a46c031e2c6a317e351ddd596bf02571e6fd991157b7841b3bb7ddf953df975f454d97eff7346432444a6aacca912729ec6cc600a2b6722604929f34c",
+        "object_repr": "ba50af2a46c031e2c6a317e351ddd596bf02571e6fd991157b7841b3bb7ddf953df975f454d97eff7346432444a6aacca912729ec6cc600a2b6722604929f34c : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.054Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "acc45c8e2a4771bbb13a10ac3a51bef3f9a84be4c41299891bc13fdc194714c0e0ebf4ff7a72dd617778ac059177e8d15dd47dea1fcbf1fbc9c0280552ceb97d",
+        "object_repr": "acc45c8e2a4771bbb13a10ac3a51bef3f9a84be4c41299891bc13fdc194714c0e0ebf4ff7a72dd617778ac059177e8d15dd47dea1fcbf1fbc9c0280552ceb97d : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.062Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "ab7cfcd788aecb73b121344247de7f033dafc21eed317585da8302786ae498a315242f41b16a5a086129641648e03001c89c3721048f0ff7d03a5526a227b942",
+        "object_repr": "ab7cfcd788aecb73b121344247de7f033dafc21eed317585da8302786ae498a315242f41b16a5a086129641648e03001c89c3721048f0ff7d03a5526a227b942 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.069Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "a13792d715cc28c0195ed0253cf53e96e9951335f903204256581683dc335d0acda7bc72efa179084043908461fc5e5f981858fcc1b64814e9d247e8b3cdac99",
+        "object_repr": "a13792d715cc28c0195ed0253cf53e96e9951335f903204256581683dc335d0acda7bc72efa179084043908461fc5e5f981858fcc1b64814e9d247e8b3cdac99 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.078Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "9e2fc2c143fd247836a2c6f5ca5c7ef8ca9300f149be40a449cfbb70c1c974332d2ecb0d44a1b4eaacbfaaaf1051855856b0d03292a36504f4c395b5f5602840",
+        "object_repr": "9e2fc2c143fd247836a2c6f5ca5c7ef8ca9300f149be40a449cfbb70c1c974332d2ecb0d44a1b4eaacbfaaaf1051855856b0d03292a36504f4c395b5f5602840 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.090Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "8c0892b4f93e4de1d9f40b65a4ac9d72113f014cf97584751b151bf657a7145969c9c8f35a0716ba16cac14f9c1d1bc70c4fbd9dc7597ed1a14b6a3ab502c1c8",
+        "object_repr": "8c0892b4f93e4de1d9f40b65a4ac9d72113f014cf97584751b151bf657a7145969c9c8f35a0716ba16cac14f9c1d1bc70c4fbd9dc7597ed1a14b6a3ab502c1c8 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.098Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "81d491c3f40ae909d0dfe131a2e1882065e9df0cca29e047d8d080d7706fca0e8ccb420d500fcc76ec1e334db6f622c055b0c73ccf0a7d70a55af535c547670f",
+        "object_repr": "81d491c3f40ae909d0dfe131a2e1882065e9df0cca29e047d8d080d7706fca0e8ccb420d500fcc76ec1e334db6f622c055b0c73ccf0a7d70a55af535c547670f : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.107Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "81456cf9f0ba4024eb44354bec6c4a4c06ac689528321a3301a91bddd5152e338000a3797eab2e64d6484e9a68bdb4879408aba17de116bd07d9a34f5565d499",
+        "object_repr": "81456cf9f0ba4024eb44354bec6c4a4c06ac689528321a3301a91bddd5152e338000a3797eab2e64d6484e9a68bdb4879408aba17de116bd07d9a34f5565d499 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.116Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "7ddd6b682df4257a9a6001d405a205cee410829a44a42448b55d8dd8c890690be92c308ca8970b34a1b66ece50d2b40acbca9e1df77a68da04bd6893dcc7d4bd",
+        "object_repr": "7ddd6b682df4257a9a6001d405a205cee410829a44a42448b55d8dd8c890690be92c308ca8970b34a1b66ece50d2b40acbca9e1df77a68da04bd6893dcc7d4bd : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.124Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "625826e7ee524df817bed8b6c3743aee15410cd3e055cfe2b0f5df7f58c17c80193f7938e059620bd3ece0574854d487f9afb6b3568b3d06a3065453296b21db",
+        "object_repr": "625826e7ee524df817bed8b6c3743aee15410cd3e055cfe2b0f5df7f58c17c80193f7938e059620bd3ece0574854d487f9afb6b3568b3d06a3065453296b21db : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.133Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "4d53604a582e68162c1c407c7c6dca0c79cb0598526ceb26220124cc2525ab5886da1b73486b24e40175e8223f6e3a81b5436d508ec55addf5e0b6329fbe5b8d",
+        "object_repr": "4d53604a582e68162c1c407c7c6dca0c79cb0598526ceb26220124cc2525ab5886da1b73486b24e40175e8223f6e3a81b5436d508ec55addf5e0b6329fbe5b8d : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.142Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "4d29410b92b8f38143c17830d9ef8d902faf1f9ac3ff21c53a83fc9d62a962b9617d1d5f9bedc1f157e2b7e1f494beeea6376c567f9748283f23d3e5d643b596",
+        "object_repr": "4d29410b92b8f38143c17830d9ef8d902faf1f9ac3ff21c53a83fc9d62a962b9617d1d5f9bedc1f157e2b7e1f494beeea6376c567f9748283f23d3e5d643b596 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.150Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "465d610f074773a5ff99f96fb16c02aec4a2b2c29c1d5c5c2f84a175e9a89988b9497b38fb2cf924e487a4559a47e4eb1984171a28800363bcb55e320d4a22b6",
+        "object_repr": "465d610f074773a5ff99f96fb16c02aec4a2b2c29c1d5c5c2f84a175e9a89988b9497b38fb2cf924e487a4559a47e4eb1984171a28800363bcb55e320d4a22b6 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.158Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "449e1ed9113f0399a5a2138bc5b1932f5482d5f9772291bac9437f9fa7bc33ab6026ce89abcbc7ad658d7a31c6eab1844283fcdf837d80c6f823aac69b5c1273",
+        "object_repr": "449e1ed9113f0399a5a2138bc5b1932f5482d5f9772291bac9437f9fa7bc33ab6026ce89abcbc7ad658d7a31c6eab1844283fcdf837d80c6f823aac69b5c1273 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.166Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "3d4d507a9e8173e4d5f4a817b9fa1901fed1324de458a236f23615fa9a4db423c3515fbefc869b5c5f00c458ff749457c3cfacc1c42b5e53c8883a2ab4a9d0e0",
+        "object_repr": "3d4d507a9e8173e4d5f4a817b9fa1901fed1324de458a236f23615fa9a4db423c3515fbefc869b5c5f00c458ff749457c3cfacc1c42b5e53c8883a2ab4a9d0e0 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.175Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "3904b8afb2b94893038f2eb9ca1b719d900f972594d94a7887f8686fca73146425e84bc69a2c4ba4a6eb27eac16af75de36a3f76d2a79bf93f527c0310526a5a",
+        "object_repr": "3904b8afb2b94893038f2eb9ca1b719d900f972594d94a7887f8686fca73146425e84bc69a2c4ba4a6eb27eac16af75de36a3f76d2a79bf93f527c0310526a5a : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.183Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "32e9c881b8f1d6dc0fc2286c83fe3666bc6dbfaae2f427528de82de471df21346649500456361b6cff59bbf1971c282d278140f3c07c086b5eeed7dc9b704e54",
+        "object_repr": "32e9c881b8f1d6dc0fc2286c83fe3666bc6dbfaae2f427528de82de471df21346649500456361b6cff59bbf1971c282d278140f3c07c086b5eeed7dc9b704e54 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.191Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "3063d82aeb5deee2533c23f1a26fdd7eb25c63f5a7c79e351edab8ad611fd16dd99fabb097a23827f7c7a78a04a761d6b861b525793df4e8fee0d99eb1017509",
+        "object_repr": "3063d82aeb5deee2533c23f1a26fdd7eb25c63f5a7c79e351edab8ad611fd16dd99fabb097a23827f7c7a78a04a761d6b861b525793df4e8fee0d99eb1017509 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.199Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "2e9946f55d7e72ac5ed57e983e82e9735d052e5fbb686601f356951e1ed3a6b13da6402aabb5eee9742247269e855fffc3658df2a74812ac4df83858f8e7f8b6",
+        "object_repr": "2e9946f55d7e72ac5ed57e983e82e9735d052e5fbb686601f356951e1ed3a6b13da6402aabb5eee9742247269e855fffc3658df2a74812ac4df83858f8e7f8b6 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.208Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "2243d733c577aafadd1f02c497f30cb5d8e21e6d6c9a60d1d7b38a0d5d6cd8f3ee681c0107dc2118c64e8a9f9c5d6ecdc8f71c0b8c774ff562ec830f58cd8148",
+        "object_repr": "2243d733c577aafadd1f02c497f30cb5d8e21e6d6c9a60d1d7b38a0d5d6cd8f3ee681c0107dc2118c64e8a9f9c5d6ecdc8f71c0b8c774ff562ec830f58cd8148 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-07-11T10:45:28.217Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "0714322c3307984be8770f4c0a4f61f3b1a11f497d54fb0f6f423833f76719617d8a98d9de041aaf8d3a00567d094421d4c8cfe12b9c9bfe693b1f2ad76c14ff",
+        "object_repr": "0714322c3307984be8770f4c0a4f61f3b1a11f497d54fb0f6f423833f76719617d8a98d9de041aaf8d3a00567d094421d4c8cfe12b9c9bfe693b1f2ad76c14ff : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.308Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "c6efedbb090a416481e341e014afc9fdd681211c4670d50b570fb98f0d9946930ca11f46cfbd76af6fd328fb63049a56822f77c47fafa27a194504b947c08c8c",
+        "object_repr": "c6efedbb090a416481e341e014afc9fdd681211c4670d50b570fb98f0d9946930ca11f46cfbd76af6fd328fb63049a56822f77c47fafa27a194504b947c08c8c : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.318Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "9be33b057d7a0596fbcf6f404ee5663adc9f269d42188187f1c1e3ad4ab76dfc130b351067ac527b7d2c29fab53b6baa3adf55a23e6fec3b7c429c25ed46079f",
+        "object_repr": "9be33b057d7a0596fbcf6f404ee5663adc9f269d42188187f1c1e3ad4ab76dfc130b351067ac527b7d2c29fab53b6baa3adf55a23e6fec3b7c429c25ed46079f : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.327Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "8f83cdd3f67ea53c4395f630a36a2a7a06cedb7983eaad8ec71fedf619542f0d00b04704adce0d6d8f5870c5bfa00d2055b59bd18eb67332d6d35ffeb5a09dc1",
+        "object_repr": "8f83cdd3f67ea53c4395f630a36a2a7a06cedb7983eaad8ec71fedf619542f0d00b04704adce0d6d8f5870c5bfa00d2055b59bd18eb67332d6d35ffeb5a09dc1 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.335Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "810016e03d505df58b3f8bf7ef70330b5dd6e463530ff0093b1ed6ffb6bcc721a5f5a564fb1e033aa4db74bf901d4dbdf307bef9d05e687d301eb2e0866ced8c",
+        "object_repr": "810016e03d505df58b3f8bf7ef70330b5dd6e463530ff0093b1ed6ffb6bcc721a5f5a564fb1e033aa4db74bf901d4dbdf307bef9d05e687d301eb2e0866ced8c : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.343Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "6c0e48ff6ed322c895d9f5db52cc4b6d5721864cff7b02a47c5fc7bb78c3326cc2c1903f31a7ebb98d0c57a0a553497305277fc798a8b66f2d03ed651a42c897",
+        "object_repr": "6c0e48ff6ed322c895d9f5db52cc4b6d5721864cff7b02a47c5fc7bb78c3326cc2c1903f31a7ebb98d0c57a0a553497305277fc798a8b66f2d03ed651a42c897 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.351Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "5d19f064e77bfe025d21e2c7ef2630c9545c7eea54c75634a1cf00ac7c1b5346f2638f726f16fb284d5ae3ae5906bd3faa2036e65157555b88a7d8a4799d49ed",
+        "object_repr": "5d19f064e77bfe025d21e2c7ef2630c9545c7eea54c75634a1cf00ac7c1b5346f2638f726f16fb284d5ae3ae5906bd3faa2036e65157555b88a7d8a4799d49ed : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.359Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "5ae5efcf25237b8716c37f545c6e1195d466b5617040f2fcc09fcdb75d82a6482feaede772a76b8e1d5f7bdf5fa974cb1602407d4f61c53b2febe487586bd1e8",
+        "object_repr": "5ae5efcf25237b8716c37f545c6e1195d466b5617040f2fcc09fcdb75d82a6482feaede772a76b8e1d5f7bdf5fa974cb1602407d4f61c53b2febe487586bd1e8 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.367Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "33d4fc56463807e24ed581c7b9341c08e1f0a13a54aeb827e5642b50d5ece0fd81d55324d1f8c5f5a367118b898d616c4c14e43b583c139c1e8421d9334d7eff",
+        "object_repr": "33d4fc56463807e24ed581c7b9341c08e1f0a13a54aeb827e5642b50d5ece0fd81d55324d1f8c5f5a367118b898d616c4c14e43b583c139c1e8421d9334d7eff : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.376Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "312d6435675462ba2d711edaab5465a5cd9be598071904f95ff4d2276a953b632c1b9c4699df9e8173ddc9f464e19ecb8fbe833dac908a0e9d489f59107d53f7",
+        "object_repr": "312d6435675462ba2d711edaab5465a5cd9be598071904f95ff4d2276a953b632c1b9c4699df9e8173ddc9f464e19ecb8fbe833dac908a0e9d489f59107d53f7 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-07-12T09:57:31.383Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "30c17fbd6a5342de84cdb1e3c28ebe8dab5008ddca5bdca7b75e29714981fa91fd8bb64370f228dfeeecea4af54aeb49896507ff96e8409267931647038ac7df",
+        "object_repr": "30c17fbd6a5342de84cdb1e3c28ebe8dab5008ddca5bdca7b75e29714981fa91fd8bb64370f228dfeeecea4af54aeb49896507ff96e8409267931647038ac7df : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-07-17T21:34:36.482Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "24",
+        "object_repr": "thisiiiii",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-07-18T09:16:08.737Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "11",
+        "object_repr": "happy",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-07-18T09:19:21.184Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "12",
+        "object_repr": "happy",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-07-18T09:22:00.976Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "13",
+        "object_repr": "happy",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-07-18T09:30:04.213Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "10",
+        "object_repr": "angry",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-07-18T14:30:26.316Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "26",
+        "object_repr": "fine grain renewed",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-07-18T15:29:31.290Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "30",
+        "object_repr": "checking the page reload",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-07-19T06:25:50.731Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "15",
+        "object_repr": "angry",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Profile Picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-07-19T06:52:31.546Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "15",
+        "object_repr": "angry",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Profile Picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-07-19T08:13:06.826Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "15",
+        "object_repr": "angry",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-07-19T08:13:30.514Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "15",
+        "object_repr": "angry",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-07-20T10:12:52.575Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "4",
+        "object_repr": "The Pyramids of Egypt",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-07-20T14:23:06.244Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "19",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-07-20T14:39:23.717Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "20",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-07-20T14:47:23.919Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "21",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-07-20T14:51:20.572Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "22",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-07-20T14:54:09.925Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "23",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-07-20T14:54:59.488Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "24",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-07-20T14:59:03.005Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "25",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-07-20T15:00:53.853Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "26",
+        "object_repr": "trial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-07-22T07:38:39.109Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Profile Picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-07-22T07:57:08.409Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Profile Picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-07-22T08:48:59.107Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka follows love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-07-22T08:49:07.964Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "2",
+        "object_repr": "tobi follows love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-07-22T19:20:33.987Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "2",
+        "object_repr": "tobi follows love",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-07-22T19:20:34.009Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka follows love",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-07-22T19:20:51.382Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "3",
+        "object_repr": "emeka follows love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-07-22T19:21:06.975Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "4",
+        "object_repr": "tobi follows love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-07-22T19:39:52.401Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "follow"
+        ],
+        "object_id": "5",
+        "object_repr": "trial follows love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.691Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "e1f064cb496d482b6866090b2fa15f6c5690f0fe4b557cf0fc9e056c9270b135f25cfce172017ecdb595b63b328175cabebe2a7ca5fee98d16ae3a841de6a41a",
+        "object_repr": "e1f064cb496d482b6866090b2fa15f6c5690f0fe4b557cf0fc9e056c9270b135f25cfce172017ecdb595b63b328175cabebe2a7ca5fee98d16ae3a841de6a41a : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.702Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "d2ccce4e426b64fc09367527a2f14093d8dde7b6b359ea5ab6ad8605edf1666661ed3e5cb15b17ec5bf1365ccea71f4e5acf228ce435612536a8b0f870aaa136",
+        "object_repr": "d2ccce4e426b64fc09367527a2f14093d8dde7b6b359ea5ab6ad8605edf1666661ed3e5cb15b17ec5bf1365ccea71f4e5acf228ce435612536a8b0f870aaa136 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.710Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "c73826c981dd0d8185d3c0e678b2efd01c8d2fcf7495278921fb5466fa2eb57fc622774854c56a4478273956821b433ad5fb439a04768af20e77dc4eb81f42e5",
+        "object_repr": "c73826c981dd0d8185d3c0e678b2efd01c8d2fcf7495278921fb5466fa2eb57fc622774854c56a4478273956821b433ad5fb439a04768af20e77dc4eb81f42e5 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.722Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "b14a2498be2f624b0906154de70bf125c635f276a1436bdccdba49911ffcb95f268b153eb66704046fbd57868275633a6f5129520dc804d1a272ab9c3338fe6c",
+        "object_repr": "b14a2498be2f624b0906154de70bf125c635f276a1436bdccdba49911ffcb95f268b153eb66704046fbd57868275633a6f5129520dc804d1a272ab9c3338fe6c : angry",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.731Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "9990127e3d379a3904cac0d642bee9f6ede999c58f2a78c24a89ff52202e2e2a00268e3d7489a48694b17a143659e1ff6ce3821facc94a9a97ceb29da95ba922",
+        "object_repr": "9990127e3d379a3904cac0d642bee9f6ede999c58f2a78c24a89ff52202e2e2a00268e3d7489a48694b17a143659e1ff6ce3821facc94a9a97ceb29da95ba922 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.740Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "80bd4e10be5694167470a7feb382384cdb7ae053e00c97e5e2b5caf10d93c1724e8d2cc7f55b104222afbd35a9e11073b5193d3714581ac0b4a3f32ce0e3f19b",
+        "object_repr": "80bd4e10be5694167470a7feb382384cdb7ae053e00c97e5e2b5caf10d93c1724e8d2cc7f55b104222afbd35a9e11073b5193d3714581ac0b4a3f32ce0e3f19b : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-07-25T04:02:41.761Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "62584b63f9e56e28ce36dd61aaf6875e812a6e33cbdac2fa44809855ac04ce8e4d009c7c143991848cd60ffec55cc572090ad43ed751dcee95488f40203f6a8a",
+        "object_repr": "62584b63f9e56e28ce36dd61aaf6875e812a6e33cbdac2fa44809855ac04ce8e4d009c7c143991848cd60ffec55cc572090ad43ed751dcee95488f40203f6a8a : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-07-25T04:06:24.836Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "cb1aa7d8db865c537bd619a1f4c1ec4ab9d0c7b9fbdb9d021b3f5662db66b02564cdcc2a133e4f932c8c2f8e81964af2170eb8d8f844dba1359b834c4bbd3a94",
+        "object_repr": "cb1aa7d8db865c537bd619a1f4c1ec4ab9d0c7b9fbdb9d021b3f5662db66b02564cdcc2a133e4f932c8c2f8e81964af2170eb8d8f844dba1359b834c4bbd3a94 : love",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-07-26T12:19:05.526Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "emeka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Profile Picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-07-26T13:40:05.649Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "e7206b39142d83480214d25915eb5b289f5a0c3f4adb21af5db5600660cda07cd451217c5e21da8dc539739a1217961a58330b3baea89d1c602addac2652c267",
+        "object_repr": "e7206b39142d83480214d25915eb5b289f5a0c3f4adb21af5db5600660cda07cd451217c5e21da8dc539739a1217961a58330b3baea89d1c602addac2652c267 : emeka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-07-26T13:40:05.661Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "dfe7f1993403af15fc218c8c85949d34d366985cc07fa474ae8e3e7496ab706f41bdbbdec458c915bb097a03f3e2ef7ed28566d1e09bf1596d9e9a37b8366701",
+        "object_repr": "dfe7f1993403af15fc218c8c85949d34d366985cc07fa474ae8e3e7496ab706f41bdbbdec458c915bb097a03f3e2ef7ed28566d1e09bf1596d9e9a37b8366701 : tobi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-07-26T13:40:05.673Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "7c7c59f76b1632dcc5e57348528e3965de69d4ee13c8aa8f3da7048cfae526e685e02c79a1a74f53b11a78ce6fdab19d77b5a607cf623d226c79744a87e2b5bb",
+        "object_repr": "7c7c59f76b1632dcc5e57348528e3965de69d4ee13c8aa8f3da7048cfae526e685e02c79a1a74f53b11a78ce6fdab19d77b5a607cf623d226c79744a87e2b5bb : angry",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-07-31T06:17:14.965Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "reportcategory"
+        ],
+        "object_id": "4",
+        "object_repr": "('Other', 'Flag content for other reasons not covered by the above categories.')",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-07-31T06:17:14.991Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "reportcategory"
+        ],
+        "object_id": "3",
+        "object_repr": "('Misinformation/Fake News', 'Flag content that is misinformation or fake news.')",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-07-31T06:17:15.013Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "reportcategory"
+        ],
+        "object_id": "2",
+        "object_repr": "('Spam or Self-promotion', 'Flag content that is irrelevant, off-topic, self-promotion, or advertising.')",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-07-31T06:17:15.038Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "reportcategory"
+        ],
+        "object_id": "1",
+        "object_repr": "('Inappropriate Content', 'Flag content that contains offensive language, imagery, hate speech, or harassment/bullying.')",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-07-31T08:54:06.670Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "11",
+        "object_repr": "Talk with Charlie",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-07-31T08:55:04.114Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "jostat",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2023-07-31T11:56:13.536Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "message"
+        ],
+        "object_id": "1",
+        "object_repr": "Message from emeka_of_life to love",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2023-07-31T11:56:29.195Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "message"
+        ],
+        "object_id": "2",
+        "object_repr": "Message from love to emeka_of_life",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2023-07-31T12:36:42.818Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "message"
+        ],
+        "object_id": "3",
+        "object_repr": "Message from solomon to emeka_of_life",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2023-07-31T12:37:03.656Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "message"
+        ],
+        "object_id": "4",
+        "object_repr": "Message from emeka_of_life to solomon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2023-08-01T11:15:06.287Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "33389afa191aec5557a1a180735eec4af6b28d4fcb0c5e5186f89542c0948253b67710a65d5e156434ace7c2edb0f269d75366811289187b6c604cf1e8441baf",
+        "object_repr": "33389afa191aec5557a1a180735eec4af6b28d4fcb0c5e5186f89542c0948253b67710a65d5e156434ace7c2edb0f269d75366811289187b6c604cf1e8441baf : love",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2023-08-01T11:18:08.622Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "knox",
+            "authtoken"
+        ],
+        "object_id": "68ad88e32a48d48b936370af9cf92527f77f663c350d0a880e83b37986478e92925b7123c0ecbc709b24792b325ca18f818a49f2ecc61d7088954d56e70c3c67",
+        "object_repr": "68ad88e32a48d48b936370af9cf92527f77f663c350d0a880e83b37986478e92925b7123c0ecbc709b24792b325ca18f818a49f2ecc61d7088954d56e70c3c67 : angry",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2023-08-02T09:39:19.978Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "user"
+        ],
+        "object_id": "30",
+        "object_repr": "1111",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2023-08-03T07:15:29.940Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "35",
+        "object_repr": "the mighty ocean",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permit all\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2023-08-03T07:16:22.752Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "32",
+        "object_repr": "hhhhh",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2023-08-03T07:16:22.761Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "31",
+        "object_repr": "checking the page reload",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2023-08-03T07:16:22.768Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "25",
+        "object_repr": "fine grain",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2023-08-03T07:16:56.958Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "20",
+        "object_repr": "Study with Simon on the break",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permit all\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2023-08-03T07:17:07.632Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "19",
+        "object_repr": "modern arts of war updated",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permit all\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2023-08-03T07:17:48.520Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "17",
+        "object_repr": "The L-might",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2023-08-03T07:18:07.825Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "15",
+        "object_repr": "Study with Joseph",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permit all\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2023-08-03T07:18:20.150Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "14",
+        "object_repr": "the beauty of a detached system in tech",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permit all\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2023-08-03T07:19:07.827Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "18",
+        "object_repr": "modern arts",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2023-08-03T07:19:26.567Z",
+        "user": [
+            "chukwuemeka@gmail.com"
+        ],
+        "content_type": [
+            "base",
+            "room"
+        ],
+        "object_id": "22",
+        "object_repr": "far away with Java",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"School\"]}}]"
+    }
+}
+]
