@@ -143,11 +143,11 @@ class RoomListCreateAPIView(ListCreateAPIView):
 
         if user_school:
             queryset = Room.objects.filter(
-                Q(category__name__icontains=q) | Q(
-                    name__icontains=q) | Q(description__icontains=q),
-                Q(school__isnull=True) | Q(school=user_school) | Q(
-                    permit_all=True) | Q(host=user)
-            )
+                Q(category__name__icontains=q) |
+                Q(name__icontains=q) | Q(description__icontains=q),
+                Q(school__isnull=True) | Q(school=user_school) |
+                Q(permit_all=True) | Q(host=user)
+            ).distinct()
         else:
             queryset = Room.objects.filter(
                 Q(category__name__icontains=q) | Q(name__icontains=q),
