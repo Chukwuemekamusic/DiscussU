@@ -28,8 +28,6 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=100, blank=False)
     last_name = models.CharField(max_length=100, blank=False)
     email = models.EmailField(unique=True, blank=False)
-
-    # TODO MUST CONTAIN ONLY NUMERIC CHARACTERS, change blank to False
     student_id = models.CharField(max_length=10, unique=True, blank=True)
     school = models.ForeignKey(
         School, on_delete=models.SET_NULL, null=True, blank=True)

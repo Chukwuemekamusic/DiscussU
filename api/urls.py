@@ -12,13 +12,8 @@ from .views import (
     MessageListCreateView, ConversationListView, MessageDeleteAPIView
     # CreateFollowAPIView
 )
-# from rest_framework.routers import SimpleRouter
-app_name = 'api'
-# TODO learn about api schema https://github.com/tfranzel/drf-spectacular
 
-# router = DefaultRouter()
-# router.register('rooms', RoomDetailAPIView, basename='room-detail')
-# router.register('comments', CommentListCreateAPIView, basename='room-comment')
+app_name = 'api'
 
 urlpatterns = [
     path('rooms/', RoomListCreateAPIView.as_view(), name='api-room-list-create'),

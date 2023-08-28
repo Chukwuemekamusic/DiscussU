@@ -1,10 +1,8 @@
-# from django.shortcuts import render
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.generics import (
     UpdateAPIView, ListCreateAPIView, ListAPIView,
-    RetrieveAPIView, DestroyAPIView,
-    CreateAPIView
+    RetrieveAPIView, DestroyAPIView, CreateAPIView
 )
 from rest_framework.response import Response
 from rest_framework import status, serializers
@@ -12,7 +10,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 
 from django.shortcuts import get_object_or_404
 from base.models import (
-    Room, User, Comment, Category, Participant, School, Follow,
+    Room, User, Comment, Category, School, Follow,
     ReportCategory, ReportComment, Message)
 from .serializers import (
     RoomSerializer, UserSerializer, CommentSerializer, CommentCreateSerializer,
@@ -43,15 +41,8 @@ from rest_framework.parsers import MultiPartParser, FormParser
 
 # Users API views
 
-class CreateUserAPIView(CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = CreateUserSerializer
-    permission_classes = (AllowAny,)
-    parser_classes = [MultiPartParser, FormParser]
-    # new additions
 
-
-class UserAvatarUpload(APIView):
+class UserAvatarUpload(APIView):    # no longer used
     permission_classes = (AllowAny,)
     parser_classes = [MultiPartParser, FormParser]
 
@@ -63,6 +54,14 @@ class UserAvatarUpload(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response()
+
+
+class CreateUserAPIView(CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = CreateUserSerializer
+    permission_classes = (AllowAny,)
+    parser_classes = [MultiPartParser, FormParser]
+    # new additions
 
 
 class AllUsersListView(ListAPIView):

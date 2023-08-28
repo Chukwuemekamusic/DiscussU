@@ -13,10 +13,8 @@ from base64 import b64encode
 # user serializers
 class UserSerializer(ModelSerializer):
     school_name = SerializerMethodField()
-    # profile_pic_url = SerializerMethodField()
     no_of_followers = SerializerMethodField()
     no_of_followed = SerializerMethodField()
-
     followers = SerializerMethodField()
     followed_users = SerializerMethodField()
 
@@ -61,7 +59,6 @@ class ProfileSerializer(ModelSerializer):
 
     followers = SerializerMethodField()
     followed_users = SerializerMethodField()
-    # profile_pic_url = SerializerMethodField()
 
     class Meta:
         model = User
@@ -110,6 +107,7 @@ class CreateUserSerializer(ModelSerializer):
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError(
                 'User with this email id already exists.')
+        return attrs
 
         # if attrs['password'] != attrs['password2']:
         #     raise serializers.ValidationError(
@@ -117,7 +115,7 @@ class CreateUserSerializer(ModelSerializer):
         # if User.objects.filter(student_id=student_id).exists():
         #     raise serializers.ValidationError(
         #       'User with this student id already exists.')
-        return attrs
+        
 
     def create(self, validated_data):
         password = validated_data.pop('password')
