@@ -269,7 +269,6 @@ class CommentSerializer(ModelSerializer):
 
 
 class CommentCreateSerializer(serializers.ModelSerializer):
-    # newComment = serializers.CharField(write_only=True)
 
     class Meta:
         model = Comment

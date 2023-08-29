@@ -1,16 +1,8 @@
-<a href="/"><h1>LOGO</h1></a>
-
-<form action="" action="{% url 'home' %}">
-    <input type="text" name="q" placeholder="Search Room...">
-</form>
+<a href="/"><h1>DISCUSSU</h1></a>
 
 
-{% if request.user.is_authenticated %}
-<p>Hello {{request.user|title}}</p>
-<a href="{% url 'logout' %}">LOG OUT</a>
-{% else %}
-<a href="{% url 'login' %}">LOG IN</a> <br>
-<a href="{% url 'register-user' %}">REGISTER</a>
-{% endif %}
+
+<a href="{% url 'schema-swagger-ui' %}">DISCUSSU API-ENDPOINT</a>
+
 
 <hr>

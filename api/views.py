@@ -400,8 +400,8 @@ class SchoolListAPIView(ListAPIView):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
 
-
 # Follow API
+
 
 class FollowAPIView(CreateAPIView):
     serializer_class = FollowSerializer
